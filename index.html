@@ -157,63 +157,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/27/hahah/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Pot">
-      <meta itemprop="description" content="实事求是 攀登高峰">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pot & boke">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/02/27/hahah/" class="post-title-link" itemprop="url">hahah</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-02-27 16:02:06" itemprop="dateCreated datePublished" datetime="2025-02-27T16:02:06+08:00">2025-02-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -239,7 +182,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-02-27 15:43:38 / 修改时间：16:21:26" itemprop="dateCreated datePublished" datetime="2025-02-27T15:43:38+08:00">2025-02-27</time>
+              <time title="创建时间：2025-02-27 15:43:38 / 修改时间：16:28:58" itemprop="dateCreated datePublished" datetime="2025-02-27T15:43:38+08:00">2025-02-27</time>
             </span>
 
           
@@ -253,142 +196,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><h2 id="1-系统之间文件共享-linux系统和windows系统"><a href="#1-系统之间文件共享-linux系统和windows系统" class="headerlink" title="1.系统之间文件共享(linux系统和windows系统)"></a>1.系统之间文件共享(linux系统和windows系统)</h2><blockquote>
-<p>1.点击VMware菜单栏的“虚拟机”，然后点击“设置”，点  击“选项”，点击“共享文件夹”</p>
-</blockquote>
-<p>！<a href="/images/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B91.png">共享文件夹1</a></p>
-<p>![共享文件夹1](主机，linux系统，开发板互相通信&#x2F;共享文件夹1.png</p>
-<blockquote>
-<p>2.设置主机路径（windows系统的路径，），设置名称（linux系统的文件夹的名称，英文）</p>
-</blockquote>
-<p>！<a href="/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B92.png">共享文件夹2</a></p>
-<blockquote>
-<p>3.然后打开Terminal终端，输入命令cd  <em><strong>*&#x2F;mnt&#x2F;hgfs&#x2F;*</strong></em> 然后按下回车，输入ls命令查看</p>
-</blockquote>
-<p>！<a href="%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B93.png">共享文件夹3</a></p>
-<blockquote>
-<p>4.可以看到share文件夹就是设置好的共享文件夹的名称，切换到该目录即可实现共享。</p>
-</blockquote>
-<p>！<a href="/images/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B94.png">共享文件夹4</a></p>
-<h2 id="2-ARM开发板"><a href="#2-ARM开发板" class="headerlink" title="2.ARM开发板"></a>2.ARM开发板</h2><blockquote>
-<p>1.进行硬件接线，安装USB转串口线的CH340驱动，检查驱动是否安装成功</p>
-</blockquote>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF1.png">开发板1</a></p>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF2.png">开发板2</a></p>
-<blockquote>
-<p>2.打开secureCRT软件之后，点击“快速连接”，并选择“serial”协议，进行配置，如下：</p>
-</blockquote>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF3.png">开发板3</a></p>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF4.png">开发板4</a></p>
-<ul>
-<li><strong>配置完成后，点击“连接”，如果软件左上角出现绿色对勾，说明端口选择正确，如下：</strong></li>
-</ul>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF5.png">开发板5</a></p>
-<ul>
-<li><strong>如果端口正确，则打开开发板的电源开关（往上拨），等待系统启动，此时不要按键盘！</strong></li>
-</ul>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF6.png">开发板6</a></p>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF7.png">开发板7</a></p>
-<ul>
-<li><p><em>注意：如果启动的过程中卡在某一行不动，原因是开发板启动后会自动运行一个应用程序，该应用程序占用了shell终端，此时只需要按</em>**快捷键Ctrl+C**<em>就可以强制结束进程，此时可以顺利使用shell终端。</em></p>
-</li>
-<li><p><strong>由于开发板板载的是Linux系统，所以可以通过secureCRT调试工具发送shell命令</strong></p>
-</li>
-<li><p><strong>点击secureCRT菜单栏“选项”-&gt;“会话选项”-&gt;“外观”，修改字体大小和字符编码：</strong></p>
-</li>
-</ul>
-<p>！<a href="/images/%E5%BC%80%E5%8F%91%E6%9D%BF8.png">开发板8</a></p>
-<h1 id="3-传输文件-从主机-windows-到开发板-Linux"><a href="#3-传输文件-从主机-windows-到开发板-Linux" class="headerlink" title="3.传输文件 (从主机(windows)到开发板(Linux))"></a>3.传输文件 (从主机(windows)到开发板(Linux))</h1><pre><code>### 3.1检查开发板内存
-</code></pre>
-<blockquote>
-<p>1.示意图。windows写代码，虚拟机编译，开发板执行</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%931.png">传输1</a></p>
-<ul>
-<li><strong>在开发板中创建一个新目录，来存储文件，防止误操作</strong></li>
-</ul>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%932.png">传输2</a></p>
-<blockquote>
-<p>2.挂载内存 :把硬盘剩余的空间挂在到根文件系统中进行使用。</p>
-<p>[root@GEC6818 &#x2F;]# df  -h #查看根目录磁盘分布情况</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%933.png">传输3</a></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# cat  &#x2F;proc&#x2F;partitions #查看分区使用情况</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%934.png">传输4</a></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# mkfs.vfat  &#x2F;dev&#x2F;mmcblk0p7  #格式化暂未被使用的硬盘分区mmcblk0p7</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%935.png">传输5</a></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# mount  -t  vfat  &#x2F;dev&#x2F;mmcblk0p7   &#x2F;workspace   #把该分区挂载到指定目录下</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%936.png">传输6</a></p>
-<ul>
-<li>[root@GEC6818 &#x2F;]# df  -h   #(1) 检测是否挂载成功，分区挂载指令是单次有效的，所以需要把挂载指令写入自启脚本中</li>
-</ul>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%937.png">传输7</a></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile  #打开开发板配置文件，该文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%938.png">传输8</a></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# reboot  #重启开发板使配置文件生效</p>
-</blockquote>
-<h3 id="3-2指令传输（单个文件传输）-线传输"><a href="#3-2指令传输（单个文件传输）-线传输" class="headerlink" title="3.2指令传输（单个文件传输）(线传输)"></a>3.2指令传输（单个文件传输）(线传输)</h3><blockquote>
-<p>1.切换到开发板的个人工作路径，然后在secureCRT的shell终端中输入命令：rx 文件名</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%939.png">传输9</a></p>
-<blockquote>
-<p>2.点击软件菜单栏的“传输”，然后点击“发送Xmodem”，选择windows系统中的文件：</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9310.png">传输10</a></p>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9311.png">传输11</a></p>
-<ul>
-<li><strong>等待文件发送完成即可，可以通过进度条来检查文件是否发送完成，具体操作如下所示：</strong></li>
-</ul>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9312.png">传输12</a></p>
-<h3 id="3-2指令传输（多个文件传输）（线传输）"><a href="#3-2指令传输（多个文件传输）（线传输）" class="headerlink" title="3.2指令传输（多个文件传输）（线传输）"></a>3.2指令传输（多个文件传输）（线传输）</h3><p><em>注意：并且rx命令也无法一次传输多个文件，并且rx命令的传输速度较慢，为了解决该问题，可以把rz命令传输到开发板的 &#x2F;bin 目录下，这样可以使用rz命令一次传输多个文件，如下：</em></p>
-<blockquote>
-<p>1.在secureCRT的shell终端中输入命令：rx  rz，按下回车，然后找到rz命令所在文件夹</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9313.png">传输13</a></p>
-<blockquote>
-<p>2.等待文件传输完成，由于该文件是一个shell命令，所以需要修改权限： chmod 777 rz</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9314.png">传输14</a></p>
-<blockquote>
-<p>3.由于系统shell命令的环境变量设置在&#x2F;bin目录下，所以需要把rz命令移动到 &#x2F;bin目录</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9315.png">传输15</a></p>
-<blockquote>
-<p>4.测试rz命令是否正常，在secureCRT的shell终端中输入命令：rz  然后按下回车，如：</p>
-</blockquote>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9316.png">传输16</a></p>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9317.png">传输17</a></p>
-<p><em>注意：可修改secureCRT软件下载文件的路径，固定每次弹出窗口的路径位置，快速定位下载文件，如下所示</em></p>
-<p>！<a href="/images/%E4%BC%A0%E8%BE%9318.png">传输18</a></p>
-<h3 id="3-3网络传输"><a href="#3-3网络传输" class="headerlink" title="3.3网络传输"></a>3.3网络传输</h3><p><strong>在开发板和计算机处于同一个局域网的情况下，采用网口的方式来传输文件是最高效的一种方式（即通过网线把主机的文件传输到开发板上），此时可以利用tftp工具实现，tftp的全称是 tiny FTP，此工具专用于文件传输，其所为tiny意指匿名传输，是一种轻量级的FTP工具。</strong></p>
-<blockquote>
-<p>1.开发板的网口用网线路由器，电脑用网线连路由器，还得在同一个网段，否则配置IP地址</p>
-</blockquote>
-<blockquote>
-<p>在终端输入shell命令: ifconfig  eth0  192.168.xxx.xxx，xxx指的是用户拥有的IP地址！</p>
-</blockquote>
-<p>！<a href="/images/%E7%BD%91%E4%BC%A01.png">网传1</a></p>
-<p><em>注意：配置的开发板的IP地址是单次有效的，所以需要把该指令写入到开发板的开机自启动的脚本文件，开发板linux系统中开机自启动的脚本文件的路径是 &#x2F;etc&#x2F;profile，可以使用vi编辑器打开该脚本，并在脚本文件的末尾写入该指令。</em></p>
-<p>！<a href="/images/%E7%BD%91%E4%BC%A02.png">网传2</a></p>
-<blockquote>
-<p>2.重启开发板</p>
-</blockquote>
-<blockquote>
-<p>3.检查ip，测试开发板和计算机是否网络处于连通状态，指令:  ping 计算机IP地址</p>
-</blockquote>
-<p>！<a href="/images/%E7%BD%91%E4%BC%A03.png">网传3</a></p>
-<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E7%BD%91%E4%BC%A03.png" class="" title="网传3">
-
-
+          <h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -613,7 +429,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
