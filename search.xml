@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/02/26/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Markdown语法</title>
+    <url>/2025/02/26/Markdown%E5%88%9D%E7%BA%A7/</url>
+    <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><span id="more"></span>
+
+<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><ul>
+<li><strong>“#”放在语句的前面，中间用一个空格隔开，其数量代表标题的级别，数量越多，字体越小。</strong></li>
+</ul>
+<h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><ul>
+<li><p><strong>星号和下划线都可以，单是斜体，双是粗体，三是粗斜体。</strong></p>
+</li>
+<li><p><strong>加粗Ctrl + B,</strong></p>
+</li>
+<li><p><strong>斜体Ctrl + I</strong></p>
+</li>
+</ul>
+<h2 id="3-换行"><a href="#3-换行" class="headerlink" title="3.换行"></a>3.换行</h2><ul>
+<li><p><strong>直接在一句话后面敲两个空格</strong></p>
+</li>
+<li><p><strong>两句话之间加一个空行</strong></p>
+</li>
+</ul>
+<h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><ul>
+<li><strong>“&gt;”代表引用，可以嵌套，需要一行空白行，结束引用</strong></li>
+</ul>
+<h2 id="5-链接"><a href="#5-链接" class="headerlink" title="5.链接"></a>5.链接</h2><ul>
+<li><strong>[链接名称]（链接地址）或者&lt;链接地址&gt;</strong></li>
+</ul>
+<h2 id="6-图片"><a href="#6-图片" class="headerlink" title="6.图片"></a>6.图片</h2><ul>
+<li><strong>！[图片描述，中括号必须有]（图片地址或者本地链接 #pic_center “中间有空格”&#x3D;长x宽）</strong></li>
+</ul>
+<h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ol>
+<li><p><em><em>无序列表，使用</em>，+，-，再加一个空格作为列表的标记</em>*</p>
+</li>
+<li><p><strong>有序列表，使用数字并加上.号，再加一个空格</strong></p>
+</li>
+<li><p><strong>想要控制列表的层级，再列表符号前使用Tab</strong></p>
+</li>
+<li><p><strong>shift + Tab 退出列表</strong></p>
+</li>
+</ol>
+<h2 id="8-分割线"><a href="#8-分割线" class="headerlink" title="8.分割线"></a>8.分割线</h2><ul>
+<li><strong>一行中用3个”-“或者”*”建立分割线；注意：分割线上面要空一行</strong></li>
+</ul>
+<h2 id="9-删除线"><a href="#9-删除线" class="headerlink" title="9.删除线"></a>9.删除线</h2><ul>
+<li><strong>要加删除线的文字前后添加两个~</strong></li>
+</ul>
+<h2 id="10-下划线"><a href="#10-下划线" class="headerlink" title="10.下划线"></a>10.下划线</h2><ul>
+<li><strong>需要添加下划线的文字首尾添加<u>文本</u></strong></li>
+</ul>
+<h2 id="11-代码块"><a href="#11-代码块" class="headerlink" title="11.代码块"></a>11.代码块</h2><ul>
+<li><strong>一行代码引用，前后各加一个&#96;(反引号)</strong></li>
+<li><strong>多行代码引用，前后各加三个·（反引号）</strong></li>
+</ul>
+<h2 id="12-表格"><a href="#12-表格" class="headerlink" title="12.表格"></a>12.表格</h2><ul>
+<li><strong>“|” 分隔不通的单元格</strong></li>
+<li><strong>“:-“  一竖内容和表格左对齐；”-:”  一竖内容和表格右对齐； “:-:” 一竖内容和表格居中对齐</strong></li>
+</ul>
+<h2 id="13-特殊符号"><a href="#13-特殊符号" class="headerlink" title="13.特殊符号"></a>13.特殊符号</h2><ul>
+<li>反斜杠”\“可以显示符号本身</li>
+</ul>
+<h1 id="Markdown高级"><a href="#Markdown高级" class="headerlink" title="Markdown高级"></a>Markdown高级</h1><h2 id="1-制作代办事项"><a href="#1-制作代办事项" class="headerlink" title="1.制作代办事项"></a>1.制作代办事项</h2><ul>
+<li><strong>-[ ]表示未完成；-[x]表示已完成</strong></li>
+</ul>
+<h2 id="2-书写公式"><a href="#2-书写公式" class="headerlink" title="2.书写公式"></a>2.书写公式</h2><ul>
+<li>在公式的两侧各加$$</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>交叉编译器安装</title>
+    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
+
+<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
+<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
+<blockquote>
+<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
+
+<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
+<blockquote>
+<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
+
+<blockquote>
+<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
+
+<blockquote>
+<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
+</blockquote>
+<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
+<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
+<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
+
+<blockquote>
+<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
+
+<blockquote>
+<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
+
+<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
+<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
+<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
+<blockquote>
+<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
+
+<p>执行以下代码即可</p>
+<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
+
+<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
+<ul>
+<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
+</ul>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
+
+<blockquote>
+<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
+
+<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
+]]></content>
+  </entry>
+  <entry>
+    <title>主机，linux系统，开发板互相通信</title>
+    <url>/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><span id="more"></span>
+
+<h2 id="1-系统之间文件共享-linux系统和windows系统"><a href="#1-系统之间文件共享-linux系统和windows系统" class="headerlink" title="1.系统之间文件共享(linux系统和windows系统)"></a>1.系统之间文件共享(linux系统和windows系统)</h2><blockquote>
+<p>1.点击VMware菜单栏的“虚拟机”，然后点击“设置”，点  击“选项”，点击“共享文件夹”</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250227162840228.png" class="" title="image-20250227162840228">
+
+<p>![共享文件夹1](主机，linux系统，开发板互相通信&#x2F;共享文件夹1.png</p>
+<blockquote>
+<p>2.设置主机路径（windows系统的路径，），设置名称（linux系统的文件夹的名称，英文）</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250227162758815.png" class="" title="image-20250227162758815">
+
+<blockquote>
+<p>3.然后打开Terminal终端，输入命令cd  <em><strong>*&#x2F;mnt&#x2F;hgfs&#x2F;*</strong></em> 然后按下回车，输入ls命令查看</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B93.png" class="" title="共享文件夹3">
+
+<blockquote>
+<p>4.可以看到share文件夹就是设置好的共享文件夹的名称，切换到该目录即可实现共享。</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B94.png" class="" title="共享文件夹4">
+
+<h2 id="2-ARM开发板"><a href="#2-ARM开发板" class="headerlink" title="2.ARM开发板"></a>2.ARM开发板</h2><blockquote>
+<p>1.进行硬件接线，安装USB转串口线的CH340驱动，检查驱动是否安装成功</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF1.png" class="" title="开发板1">
+
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF2.png" class="" title="开发板2">
+
+<blockquote>
+<p>2.打开secureCRT软件之后，点击“快速连接”，并选择“serial”协议，进行配置，如下：</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF3.png" class="" title="开发板3">
+
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF4.png" class="" title="开发板4">
+
+<ul>
+<li><strong>配置完成后，点击“连接”，如果软件左上角出现绿色对勾，说明端口选择正确，如下：</strong></li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF5.png" class="" title="开发板5">
+
+<ul>
+<li><strong>如果端口正确，则打开开发板的电源开关（往上拨），等待系统启动，此时不要按键盘！</strong></li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF6.png" class="" title="开发板6">
+
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF7.png" class="" title="开发板7">
+
+<ul>
+<li><p><em>注意：如果启动的过程中卡在某一行不动，原因是开发板启动后会自动运行一个应用程序，该应用程序占用了shell终端，此时只需要按</em>**快捷键Ctrl+C**<em>就可以强制结束进程，此时可以顺利使用shell终端。</em></p>
+</li>
+<li><p><strong>由于开发板板载的是Linux系统，所以可以通过secureCRT调试工具发送shell命令</strong></p>
+</li>
+<li><p><strong>点击secureCRT菜单栏“选项”-&gt;“会话选项”-&gt;“外观”，修改字体大小和字符编码：</strong></p>
+</li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E5%BC%80%E5%8F%91%E6%9D%BF8.png" class="" title="开发板8">
+
+<h1 id="3-传输文件-从主机-windows-到开发板-Linux"><a href="#3-传输文件-从主机-windows-到开发板-Linux" class="headerlink" title="3.传输文件 (从主机(windows)到开发板(Linux))"></a>3.传输文件 (从主机(windows)到开发板(Linux))</h1><pre><code>### 3.1检查开发板内存
+</code></pre>
+<blockquote>
+<p>1.示意图。windows写代码，虚拟机编译，开发板执行</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%931.png" class="" title="传输1">
+
+<ul>
+<li><strong>在开发板中创建一个新目录，来存储文件，防止误操作</strong></li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%932.png" class="" title="传输2">
+
+<blockquote>
+<p>2.挂载内存 :把硬盘剩余的空间挂在到根文件系统中进行使用。</p>
+<p>[root@GEC6818 &#x2F;]# df  -h #查看根目录磁盘分布情况</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%933.png" class="" title="传输3">
+
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# cat  &#x2F;proc&#x2F;partitions #查看分区使用情况</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%934.png" class="" title="传输4">
+
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# mkfs.vfat  &#x2F;dev&#x2F;mmcblk0p7  #格式化暂未被使用的硬盘分区mmcblk0p7</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%935.png" class="" title="传输5">
+
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# mount  -t  vfat  &#x2F;dev&#x2F;mmcblk0p7   &#x2F;workspace   #把该分区挂载到指定目录下</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%936.png" class="" title="传输6">
+
+<ul>
+<li>[root@GEC6818 &#x2F;]# df  -h   #(1) 检测是否挂载成功，分区挂载指令是单次有效的，所以需要把挂载指令写入自启脚本中</li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%937.png" class="" title="传输7">
+
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile  #打开开发板配置文件，该文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%938.png" class="" title="传输8">
+
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# reboot  #重启开发板使配置文件生效</p>
+</blockquote>
+<h3 id="3-2指令传输（单个文件传输）-线传输"><a href="#3-2指令传输（单个文件传输）-线传输" class="headerlink" title="3.2指令传输（单个文件传输）(线传输)"></a>3.2指令传输（单个文件传输）(线传输)</h3><blockquote>
+<p>1.切换到开发板的个人工作路径，然后在secureCRT的shell终端中输入命令：rx 文件名</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%939.png" class="" title="传输9">
+
+<blockquote>
+<p>2.点击软件菜单栏的“传输”，然后点击“发送Xmodem”，选择windows系统中的文件：</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9310.png" class="" title="传输10">
+
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9311.png" class="" title="传输11">
+
+<ul>
+<li><strong>等待文件发送完成即可，可以通过进度条来检查文件是否发送完成，具体操作如下所示：</strong></li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9312.png" class="" title="传输12">
+
+<h3 id="3-2指令传输（多个文件传输）（线传输）"><a href="#3-2指令传输（多个文件传输）（线传输）" class="headerlink" title="3.2指令传输（多个文件传输）（线传输）"></a>3.2指令传输（多个文件传输）（线传输）</h3><p><em>注意：并且rx命令也无法一次传输多个文件，并且rx命令的传输速度较慢，为了解决该问题，可以把rz命令传输到开发板的 &#x2F;bin 目录下，这样可以使用rz命令一次传输多个文件，如下：</em></p>
+<blockquote>
+<p>1.在secureCRT的shell终端中输入命令：rx  rz，按下回车，然后找到rz命令所在文件夹</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9313.png" class="" title="传输13">
+
+<blockquote>
+<p>2.等待文件传输完成，由于该文件是一个shell命令，所以需要修改权限： chmod 777 rz</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9314.png" class="" title="传输14">
+
+<blockquote>
+<p>3.由于系统shell命令的环境变量设置在&#x2F;bin目录下，所以需要把rz命令移动到 &#x2F;bin目录</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9315.png" class="" title="传输15">
+
+<blockquote>
+<p>4.测试rz命令是否正常，在secureCRT的shell终端中输入命令：rz  然后按下回车，如：</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9316.png" class="" title="传输16">
+
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9317.png" class="" title="传输17">
+
+<p><em>注意：可修改secureCRT软件下载文件的路径，固定每次弹出窗口的路径位置，快速定位下载文件，如下所示</em></p>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E4%BC%A0%E8%BE%9318.png" class="" title="传输18">
+
+<h3 id="3-3网络传输"><a href="#3-3网络传输" class="headerlink" title="3.3网络传输"></a>3.3网络传输</h3><p><strong>在开发板和计算机处于同一个局域网的情况下，采用网口的方式来传输文件是最高效的一种方式（即通过网线把主机的文件传输到开发板上），此时可以利用tftp工具实现，tftp的全称是 tiny FTP，此工具专用于文件传输，其所为tiny意指匿名传输，是一种轻量级的FTP工具。</strong></p>
+<blockquote>
+<p>在windows中通过C:\Users\G&gt;ipconfig -all  #获得以太网的ip地址，子网掩码，网关和DNS，只要将以上等设置和静态的一样，就可以既可以连接到网络，也可以实现主机，linux，开发板之间的传送</p>
+</blockquote>
+<h4 id="3-3-1简单的介绍"><a href="#3-3-1简单的介绍" class="headerlink" title="3.3.1简单的介绍"></a>3.3.1简单的介绍</h4><h4 id="3-3-2linux网络环境配置"><a href="#3-3-2linux网络环境配置" class="headerlink" title="3.3.2linux网络环境配置"></a>3.3.2linux网络环境配置</h4><p><strong>虚拟机的网络适配器的模式有两种，分别是桥接模式和NAT模式，两者具体区别如下所示：</strong></p>
+<blockquote>
+<p>1.桥接模式：虚拟机跟物理机各自拥有独立的IP地址</p>
+<p>2.NAT模式：虚拟机直接共享物理机的IP，虚拟机本身没有独立的IP地址</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250227221223975.png" class="" title="image-20250227221223975">
+
+<p><em>对于桥接模式需要注意，必须要仔细选择桥接的物理网卡，否则会出现无法联网的情形。</em></p>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228001050209.png" class="" title="image-20250228001050209">
+
+<ul>
+<li><strong>桥接是指虚拟网卡通过物理机的某一个网络接口，直接连接到路由器去获取 IP 地址。假设物理机有WiFi、以太网等多个网口，其中无线WiFi网口连接到了互联网，而有线以太网口连接到了嵌入式板卡，那么桥接时就要注意需要桥接到哪个网口</strong></li>
+</ul>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228171954371.png" class="" title="image-20250228171954371">
+
+<ul>
+<li>注意：如果网络参数经过多次配置导致无法再正确联网，可以通过点击上图中的“还原默认设置”<em>按钮来重置虚拟机的网络</em>。</li>
+</ul>
+<h4 id="3-3-3修改主机的ip"><a href="#3-3-3修改主机的ip" class="headerlink" title="3.3.3修改主机的ip"></a>3.3.3修改主机的ip</h4><blockquote>
+<p>1.比如电脑通过网线连接到教室的网络，也就是物理机通过有线连接到网络</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172305369.png" class="" title="image-20250228172305369">
+
+<blockquote>
+<p>2.通过查看以太网的网络配置可以知道物理机的IP地址</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172339676.png" class="" title="image-20250228172339676">
+
+<blockquote>
+<p>3.此时把vmware软件的网络适配器设置为桥接模式，然后修改虚拟机桥接到有线网卡</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172415935.png" class="" title="image-20250228172415935">
+
+<h4 id="3-3-3修改虚拟机的ip"><a href="#3-3-3修改虚拟机的ip" class="headerlink" title="3.3.3修改虚拟机的ip"></a>3.3.3修改虚拟机的ip</h4><blockquote>
+<p>1.打开ubuntu系统，并通过图形界面来设置ubuntu的网络为静态IP即可</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172604586.png" class="" title="image-20250228172604586">
+
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172614636.png" class="" title="image-20250228172614636">
+
+<blockquote>
+<p>2.终端输入命令ifconfig查看ubuntu的IP地址，可以看到虚拟机和物理机各自有独立IP</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172705059.png" class="" title="image-20250228172705059">
+
+<blockquote>
+<p>3.通过ping命令测试虚拟机是否网络正常，比如输入命令 ping <a href="http://www.baidu.com/">www.baidu.com</a></p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228172803029.png" class="" title="image-20250228172803029">
+
+<p><em>注意：如果准备设置网络时，发现没有ubuntu没有网络图标，则可以选择重置网络管理器</em></p>
+<p><code>gec@ubuntu:$ sudo  service  NetworkManager  stop     //停止网络服务</code></p>
+<p><code>gec@ubuntu:$ sudo  rm  /var/lib/NetworkManager/NetworkManager.state //删除配置文件</code></p>
+<p><code>gec@ubuntu:$ sudo  service  NetworkManager  start          //开启网络服务</code></p>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p><strong>在NAT模式下Ubuntu主机与物理网络之间的通信使用网络地址转换技术。这种模式下虚拟机共享主机的IP地址，可以访问外部网络，但外部网络无法直接访问虚拟机内部</strong></p>
+<h5 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h5><p><strong>在ubuntu17.10之后的发行版中，网络参数配置可以统一通过 Netplan 来管理。具体的操作就是通过统一对 &#x2F;etc&#x2F;netplan&#x2F; 下的 yaml 文件的配置，Netplan 将读取该 yaml 描述文件来配置网络接口，然后，通过这些描述为任何给定的呈现工具生成必要的配置选项。</strong></p>
+<blockquote>
+<p>gec@ubuntu:~$ sudo cat &#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml    #查看 NetworkManager 配置自动获取IP的信息</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228173853417.png" class="" title="image-20250228173853417">
+
+<hr>
+<p>renderer：指定yaml文件针对配置的网络工具</p>
+<p>ethernets：配置以太网</p>
+<p>ens33：以太网口名称  注意：需要使用ifconfig来查看，不是所有电脑都是一样的</p>
+<p>dhcp4：自动获取IPv4的网络地址</p>
+<p>dhcp6：自动获取IPv6的网络地址</p>
+<p>注意：</p>
+<p>冒号后面必须有空格</p>
+<p>缩进的空格数必须一致</p>
+<p>图片中的IP地址等参数只是例子，大家需要根据实际情况进行修改，否则会导致无法联网。 </p>
+<p>注意：</p>
+<p>想要设置自动获取IP，在终端中可以使用gedit编辑器打开该文件进行编写，但是必须使用sudo获取超级用户权限，否则无法修改该文件。</p>
+<hr>
+<blockquote>
+<p>gec@ubuntu:~$ sudo gedit &#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml   #使用 netplan 来给 NetworkManager 配置自动获取IP</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250228174254298.png" class="" title="image-20250228174254298">
+
+<hr>
+<p>[192.168.100.100&#x2F;24] 中的24代表设定的IP地址的前24比特位为子网掩码，也就是255.255.255.0</p>
+<p>nameservers 代表 DNS 服务器</p>
+<hr>
+<blockquote>
+<p>gec@ubuntu:$ sudo  netplan  apply  #配置好 yaml 文件之后，需要执行如下命令来使之生效</p>
+</blockquote>
+<h4 id="3-3-3修改开发板的ip"><a href="#3-3-3修改开发板的ip" class="headerlink" title="3.3.3修改开发板的ip"></a>3.3.3修改开发板的ip</h4><blockquote>
+<p>1.开发板的网口用网线路由器，电脑用网线连路由器，还得在同一个网段，否则配置IP地址</p>
+</blockquote>
+<blockquote>
+<p>在终端输入shell命令: ifconfig  eth0  192.168.xxx.xxx，xxx指的是用户拥有的IP地址！</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E7%BD%91%E4%BC%A01.png" class="" title="网传1">
+
+<p><em>注意：配置的开发板的IP地址是单次有效的，所以需要把该指令写入到开发板的开机自启动的脚本文件，开发板linux系统中开机自启动的脚本文件的路径是 &#x2F;etc&#x2F;profile，可以使用vi编辑器打开该脚本，并在脚本文件的末尾写入该指令。</em></p>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E7%BD%91%E4%BC%A02-1740644621234-3.png" class="" title="网传2">
+
+<blockquote>
+<p>2.重启开发板</p>
+</blockquote>
+<blockquote>
+<p>3.检查ip，测试开发板和计算机是否网络处于连通状态，指令:  ping 计算机IP地址</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/%E7%BD%91%E4%BC%A03.png" class="" title="网传3">
+
+<h4 id="3-3-4tftp网络传输"><a href="#3-3-4tftp网络传输" class="headerlink" title="3.3.4tftp网络传输"></a>3.3.4tftp网络传输</h4><blockquote>
+<p>1.如果开发板和计算机的网络连通，则打开tftpd32.exe应用程序，然后进行配置</p>
+</blockquote>
+<img src="/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/image-20250302110429050.png" class="" title="image-20250302110429050">
+
+<p><em>注意：tftp工具不要关闭，只需要最小化即可，另外，如果文件的路径更改，则需要修改tftp的文件路径</em></p>
+<blockquote>
+<p>[root@root:~]# tftp -g 192.168.xxx.xxx -r xxx   xxx指的是文件名     #把计算机的文件下载到开发板上（IP地址为服务器IP 也就是计算机的IP地址）</p>
+<p>[root@root:~]# tftp -p 192.168.zzz.zzz -r zzz    zzz指的是文件名     #把开发板的文件上传到计算机中（IP地址为服务器IP 也就是计算机的IP地址）</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>集成开发</title>
+    <url>/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="集成开发"><a href="#集成开发" class="headerlink" title="集成开发"></a>集成开发</h1><span id="more"></span>
+
+<p><em>比如可以把vmware虚拟机、secureCRT软件、tftp工具进行合并，也就是用一个软件来代替这三款软件，所以可以选择使用MobaXterm工具。</em></p>
+<h2 id="1-从windows系统中传入到linux中"><a href="#1-从windows系统中传入到linux中" class="headerlink" title="1.从windows系统中传入到linux中"></a>1.从windows系统中传入到linux中</h2><blockquote>
+<p>1.利用该软件连接到开发板的linux系统，注意：端口号不要选错</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220121940.png" class="" title="image-20250302220121940">
+
+<blockquote>
+<p>2.为了提高文件的传输效率，所以可以利用该软件的tftp协议来实现文件的传输</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220151338.png" class="" title="image-20250302220151338">
+
+<ul>
+<li>从电脑的TFTP主目录传送文件（比如a.txt）到开发板   参数 -g 获取  -r 指定文件名</li>
+</ul>
+<p><code>[root@GEC6818 ~]# tftp -g  192.168.10.xxx -r  a.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
+<ul>
+<li><p>将开发板的文件（比如b.txt）发送到电脑的TFTP主目录  参数 -p 上传  -r 指定文件名</p>
+<p><code>[root@GEC6818 ~]# tftp  -p  192.168.10.xxx -r  b.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
+</li>
+</ul>
+<blockquote>
+<p>3.打开vmware虚拟机的linux系统，在终端安装SSH工具，方便使用SSH工具远程登录基本使用格式</p>
+</blockquote>
+<p><code>gec@ubuntu:~$ sudo  apt  install  openssh-server ssh</code></p>
+<p><code>gec@ubuntu:~$ sudo  systemctl  start   ssh   //启动SSH服务</code></p>
+<p><code>gec@ubuntu:~$ sudo systemctl  enable  ssh      //SSH服务开机自启</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220614728.png" class="" title="image-20250302220614728">
+
+<p><strong>SSH被称为安全外壳协议（Secure Shell，简称SSH），是一种在不安全网络上用于安全远程登录和其他安全网络服务的协议。</strong></p>
+<blockquote>
+<p>4.利用MobaXterm软件的SSH工具连接到虚拟机的linux系统</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220701951.png" class="" title="image-20250302220701951">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220709311.png" class="" title="image-20250302220709311">
+
+<blockquote>
+<p>5.另外6818开发板也是支持ssh远程登录，只不过需要在6818开发板中安装ssh工具</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220751989.png" class="" title="image-20250302220751989">
+
+<blockquote>
+<p>6.利用tftp服务器把openssh.tar.bz压缩包传输到开发板的工作路径下，并完成解压动作</p>
+</blockquote>
+<p><code>[root@GEC6818 /workspace]# tar  -zxvf  openssh.tar.bz</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220825568.png" class="" title="image-20250302220825568">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220834311.png" class="" title="image-20250302220834311">
+
+<blockquote>
+<p>7.切换到解压之后的openssh文件夹内，然后执行一个名字叫做auto的可执行文件</p>
+</blockquote>
+<p><code>[root@GEC6818 /workspace]# ./auto</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220909577.png" class="" title="image-20250302220909577">
+
+<blockquote>
+<p>8.可执行文件完成后，需要设置开发板的SSH服务的密码，此时输入指令:  passwd  root</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220939169.png" class="" title="image-20250302220939169">
+
+<blockquote>
+<p>9.根据下图的配置，利用MobaXterm软件的SSH工具连接到开发板的Linux系统</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220958822.png" class="" title="image-20250302220958822">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302221005461.png" class="" title="image-20250302221005461">
+
+<p><strong>安装的脚本要重启才能生效</strong></p>
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile   #配置文件 文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303001415142.png" class="" title="image-20250303001415142">
+
+<blockquote>
+<p>tftp用于在windows系统和开发板之间的传递，共享文件夹用于在windows系统和虚拟机之间的传递</p>
+<p>scp三方都可以互传(三方都联网，用ssh连接，处于同一区域网下)，可以传文件和文件夹</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303002010993.png" class="" title="image-20250303002010993">
+
+<p><code>[root@GEC6818 /]# scp gec@192.168.5.2:/home/gec/demo_arm .  #scp + 用户名@ip：文件位置 存储位置  下载文件</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303003416779.png" class="" title="image-20250303003416779">
+
+<p><code>[root@GEC6818 /]# scp 14.c gec@192.168.5.2:/home/ged #scp + 文件名 + 用户名@ip：放文件的位置   上传文件</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303003753997.png" class="" title="image-20250303003753997">
+
+<p><code>[root@GEC6818 /]# scp -r llwork/ gec@192.168.5.2:/home/gec #上传文件夹   -r代表递进</code></p>
+<h2 id="集写代码，编译，执行为一体-VScode"><a href="#集写代码，编译，执行为一体-VScode" class="headerlink" title="集写代码，编译，执行为一体(VScode)"></a>集写代码，编译，执行为一体(VScode)</h2>]]></content>
+  </entry>
+</search>
