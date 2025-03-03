@@ -90,222 +90,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>模块化编程</title>
-    <url>/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><span id="more"></span>
-]]></content>
-  </entry>
-  <entry>
-    <title>交叉编译器安装</title>
-    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
-
-<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
-<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
-<blockquote>
-<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
-
-<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
-<blockquote>
-<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
-
-<blockquote>
-<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
-
-<blockquote>
-<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
-</blockquote>
-<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
-<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
-<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
-
-<blockquote>
-<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
-
-<blockquote>
-<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
-
-<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
-<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
-<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
-<blockquote>
-<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
-
-<p>执行以下代码即可</p>
-<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
-
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
-
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
-
-<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
-<ul>
-<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
-</ul>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
-
-<blockquote>
-<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
-
-<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
-]]></content>
-  </entry>
-  <entry>
-    <title>集成开发</title>
-    <url>/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<h1 id="集成开发"><a href="#集成开发" class="headerlink" title="集成开发"></a>集成开发</h1><span id="more"></span>
-
-<p><em>比如可以把vmware虚拟机、secureCRT软件、tftp工具进行合并，也就是用一个软件来代替这三款软件，所以可以选择使用MobaXterm工具。</em></p>
-<h2 id="1-从windows系统中传入到linux中"><a href="#1-从windows系统中传入到linux中" class="headerlink" title="1.从windows系统中传入到linux中"></a>1.从windows系统中传入到linux中</h2><blockquote>
-<p>1.利用该软件连接到开发板的linux系统，注意：端口号不要选错</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220121940.png" class="" title="image-20250302220121940">
-
-<blockquote>
-<p>2.为了提高文件的传输效率，所以可以利用该软件的tftp协议来实现文件的传输</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220151338.png" class="" title="image-20250302220151338">
-
-<ul>
-<li>从电脑的TFTP主目录传送文件（比如a.txt）到开发板   参数 -g 获取  -r 指定文件名</li>
-</ul>
-<p><code>[root@GEC6818 ~]# tftp -g  192.168.10.xxx -r  a.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
-<ul>
-<li><p>将开发板的文件（比如b.txt）发送到电脑的TFTP主目录  参数 -p 上传  -r 指定文件名</p>
-<p><code>[root@GEC6818 ~]# tftp  -p  192.168.10.xxx -r  b.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
-</li>
-</ul>
-<blockquote>
-<p>3.打开vmware虚拟机的linux系统，在终端安装SSH工具，方便使用SSH工具远程登录基本使用格式</p>
-</blockquote>
-<p><code>gec@ubuntu:~$ sudo  apt  install  openssh-server ssh</code></p>
-<p><code>gec@ubuntu:~$ sudo  systemctl  start   ssh   //启动SSH服务</code></p>
-<p><code>gec@ubuntu:~$ sudo systemctl  enable  ssh      //SSH服务开机自启</code></p>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220614728.png" class="" title="image-20250302220614728">
-
-<p><strong>SSH被称为安全外壳协议（Secure Shell，简称SSH），是一种在不安全网络上用于安全远程登录和其他安全网络服务的协议。</strong></p>
-<blockquote>
-<p>4.利用MobaXterm软件的SSH工具连接到虚拟机的linux系统</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220701951.png" class="" title="image-20250302220701951">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220709311.png" class="" title="image-20250302220709311">
-
-<blockquote>
-<p>5.另外6818开发板也是支持ssh远程登录，只不过需要在6818开发板中安装ssh工具</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220751989.png" class="" title="image-20250302220751989">
-
-<blockquote>
-<p>6.利用tftp服务器把openssh.tar.bz压缩包传输到开发板的工作路径下，并完成解压动作</p>
-</blockquote>
-<p><code>[root@GEC6818 /workspace]# tar  -zxvf  openssh.tar.bz</code></p>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220825568.png" class="" title="image-20250302220825568">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220834311.png" class="" title="image-20250302220834311">
-
-<blockquote>
-<p>7.切换到解压之后的openssh文件夹内，然后执行一个名字叫做auto的可执行文件</p>
-</blockquote>
-<p><code>[root@GEC6818 /workspace]# ./auto</code></p>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220909577.png" class="" title="image-20250302220909577">
-
-<blockquote>
-<p>8.可执行文件完成后，需要设置开发板的SSH服务的密码，此时输入指令:  passwd  root</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220939169.png" class="" title="image-20250302220939169">
-
-<blockquote>
-<p>9.根据下图的配置，利用MobaXterm软件的SSH工具连接到开发板的Linux系统</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220958822.png" class="" title="image-20250302220958822">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302221005461.png" class="" title="image-20250302221005461">
-
-<p><strong>安装的脚本要重启才能生效</strong></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile   #配置文件 文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303001415142.png" class="" title="image-20250303001415142">
-
-<blockquote>
-<p>tftp用于在windows系统和开发板之间的传递，共享文件夹用于在windows系统和虚拟机之间的传递</p>
-<p>scp三方都可以互传(三方都联网，用ssh连接，处于同一区域网下)，可以传文件和文件夹</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303002010993.png" class="" title="image-20250303002010993">
-
-<p><code>[root@GEC6818 /]# scp gec@192.168.5.2:/home/gec/demo_arm .  #scp + 用户名@ip：文件位置 存储位置  下载文件</code></p>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303003416779.png" class="" title="image-20250303003416779">
-
-<p><code>[root@GEC6818 /]# scp 14.c gec@192.168.5.2:/home/ged #scp + 文件名 + 用户名@ip：放文件的位置   上传文件</code></p>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303003753997.png" class="" title="image-20250303003753997">
-
-<p><code>[root@GEC6818 /]# scp -r llwork/ gec@192.168.5.2:/home/gec #上传文件夹   -r代表递进</code></p>
-<h2 id="集写代码，编译，执行为一体-VScode"><a href="#集写代码，编译，执行为一体-VScode" class="headerlink" title="集写代码，编译，执行为一体(VScode)"></a>集写代码，编译，执行为一体(VScode)</h2><blockquote>
-<p> 1.VScode拓展中有一款叫做Remote-SSH的插件，该插件支持在Vscode中远程登录主机</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114556324.png" class="" title="image-20250303114556324">
-
-<blockquote>
-<p>2.点击Vscode左下角的远程连接选项，然后选择“连接到主机”—&gt;点击“增加新的主机”</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114627539.png" class="" title="image-20250303114627539">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114651099.png" class="" title="image-20250303114651099">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114658315.png" class="" title="image-20250303114658315">
-
-<blockquote>
-<p>3.选择默认的配置文件，并输入要远程登录的主机信息，格式为：主机名@主机IP</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114724874.png" class="" title="image-20250303114724874">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114732891.png" class="" title="image-20250303114732891">
-
-<blockquote>
-<p>4.配置成功后点击“连接”，并输入远程主机的密码，连接成功后再次输入主机的密码！</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114817220.png" class="" title="image-20250303114817220">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114837158.png" class="" title="image-20250303114837158">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114920995.png" class="" title="image-20250303114920995">
-
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114931794.png" class="" title="image-20250303114931794">
-
-<blockquote>
-<p>5.如果打算在Vscode中同时连接虚拟机以及开发板的linux系统，则需要开启两个终端</p>
-</blockquote>
-<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303115004336.png" class="" title="image-20250303115004336">
-
-<blockquote>
-<p>7.另外如果打算在Vscode中完成虚拟机和开发板的文件互传，则可以使用scp命令实现</p>
-</blockquote>
-<p><code>[root@GEC6818 /workspace]# scp  &lt;file&gt;  &lt;host&gt;@&lt;ip&gt;:&lt;path&gt;   //上传文件给远程主机</code></p>
-<p><code>[root@GEC6818 /workspace]# scp  &lt;host&gt;@&lt;ip&gt;:&lt;file&gt;  &lt;path&gt;   //从远程主机下载文件</code></p>
-<ul>
-<li><strong>注意：如果打算上传或者下载的文件是一个目录，可以使用scp命令的选项[-r]，递归实现！</strong></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>主机，linux系统，开发板互相通信</title>
     <url>/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/</url>
     <content><![CDATA[<h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><span id="more"></span>
@@ -575,6 +359,222 @@
 <p>[root@root:~]# tftp -g 192.168.xxx.xxx -r xxx   xxx指的是文件名     #把计算机的文件下载到开发板上（IP地址为服务器IP 也就是计算机的IP地址）</p>
 <p>[root@root:~]# tftp -p 192.168.zzz.zzz -r zzz    zzz指的是文件名     #把开发板的文件上传到计算机中（IP地址为服务器IP 也就是计算机的IP地址）</p>
 </blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>交叉编译器安装</title>
+    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
+
+<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
+<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
+<blockquote>
+<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
+
+<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
+<blockquote>
+<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
+
+<blockquote>
+<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
+
+<blockquote>
+<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
+</blockquote>
+<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
+<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
+<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
+
+<blockquote>
+<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
+
+<blockquote>
+<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
+
+<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
+<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
+<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
+<blockquote>
+<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
+
+<p>执行以下代码即可</p>
+<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
+
+<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
+<ul>
+<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
+</ul>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
+
+<blockquote>
+<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
+
+<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
+]]></content>
+  </entry>
+  <entry>
+    <title>模块化编程</title>
+    <url>/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><span id="more"></span>
+]]></content>
+  </entry>
+  <entry>
+    <title>集成开发</title>
+    <url>/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<h1 id="集成开发"><a href="#集成开发" class="headerlink" title="集成开发"></a>集成开发</h1><span id="more"></span>
+
+<p><em>比如可以把vmware虚拟机、secureCRT软件、tftp工具进行合并，也就是用一个软件来代替这三款软件，所以可以选择使用MobaXterm工具。</em></p>
+<h2 id="1-从windows系统中传入到linux中"><a href="#1-从windows系统中传入到linux中" class="headerlink" title="1.从windows系统中传入到linux中"></a>1.从windows系统中传入到linux中</h2><blockquote>
+<p>1.利用该软件连接到开发板的linux系统，注意：端口号不要选错</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220121940.png" class="" title="image-20250302220121940">
+
+<blockquote>
+<p>2.为了提高文件的传输效率，所以可以利用该软件的tftp协议来实现文件的传输</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220151338.png" class="" title="image-20250302220151338">
+
+<ul>
+<li>从电脑的TFTP主目录传送文件（比如a.txt）到开发板   参数 -g 获取  -r 指定文件名</li>
+</ul>
+<p><code>[root@GEC6818 ~]# tftp -g  192.168.10.xxx -r  a.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
+<ul>
+<li><p>将开发板的文件（比如b.txt）发送到电脑的TFTP主目录  参数 -p 上传  -r 指定文件名</p>
+<p><code>[root@GEC6818 ~]# tftp  -p  192.168.10.xxx -r  b.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
+</li>
+</ul>
+<blockquote>
+<p>3.打开vmware虚拟机的linux系统，在终端安装SSH工具，方便使用SSH工具远程登录基本使用格式</p>
+</blockquote>
+<p><code>gec@ubuntu:~$ sudo  apt  install  openssh-server ssh</code></p>
+<p><code>gec@ubuntu:~$ sudo  systemctl  start   ssh   //启动SSH服务</code></p>
+<p><code>gec@ubuntu:~$ sudo systemctl  enable  ssh      //SSH服务开机自启</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220614728.png" class="" title="image-20250302220614728">
+
+<p><strong>SSH被称为安全外壳协议（Secure Shell，简称SSH），是一种在不安全网络上用于安全远程登录和其他安全网络服务的协议。</strong></p>
+<blockquote>
+<p>4.利用MobaXterm软件的SSH工具连接到虚拟机的linux系统</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220701951.png" class="" title="image-20250302220701951">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220709311.png" class="" title="image-20250302220709311">
+
+<blockquote>
+<p>5.另外6818开发板也是支持ssh远程登录，只不过需要在6818开发板中安装ssh工具</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220751989.png" class="" title="image-20250302220751989">
+
+<blockquote>
+<p>6.利用tftp服务器把openssh.tar.bz压缩包传输到开发板的工作路径下，并完成解压动作</p>
+</blockquote>
+<p><code>[root@GEC6818 /workspace]# tar  -zxvf  openssh.tar.bz</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220825568.png" class="" title="image-20250302220825568">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220834311.png" class="" title="image-20250302220834311">
+
+<blockquote>
+<p>7.切换到解压之后的openssh文件夹内，然后执行一个名字叫做auto的可执行文件</p>
+</blockquote>
+<p><code>[root@GEC6818 /workspace]# ./auto</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220909577.png" class="" title="image-20250302220909577">
+
+<blockquote>
+<p>8.可执行文件完成后，需要设置开发板的SSH服务的密码，此时输入指令:  passwd  root</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220939169.png" class="" title="image-20250302220939169">
+
+<blockquote>
+<p>9.根据下图的配置，利用MobaXterm软件的SSH工具连接到开发板的Linux系统</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302220958822.png" class="" title="image-20250302220958822">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250302221005461.png" class="" title="image-20250302221005461">
+
+<p><strong>安装的脚本要重启才能生效</strong></p>
+<blockquote>
+<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile   #配置文件 文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303001415142.png" class="" title="image-20250303001415142">
+
+<blockquote>
+<p>tftp用于在windows系统和开发板之间的传递，共享文件夹用于在windows系统和虚拟机之间的传递</p>
+<p>scp三方都可以互传(三方都联网，用ssh连接，处于同一区域网下)，可以传文件和文件夹</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303002010993.png" class="" title="image-20250303002010993">
+
+<p><code>[root@GEC6818 /]# scp gec@192.168.5.2:/home/gec/demo_arm .  #scp + 用户名@ip：文件位置 存储位置  下载文件</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303003416779.png" class="" title="image-20250303003416779">
+
+<p><code>[root@GEC6818 /]# scp 14.c gec@192.168.5.2:/home/ged #scp + 文件名 + 用户名@ip：放文件的位置   上传文件</code></p>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303003753997.png" class="" title="image-20250303003753997">
+
+<p><code>[root@GEC6818 /]# scp -r llwork/ gec@192.168.5.2:/home/gec #上传文件夹   -r代表递进</code></p>
+<h2 id="集写代码，编译，执行为一体-VScode"><a href="#集写代码，编译，执行为一体-VScode" class="headerlink" title="集写代码，编译，执行为一体(VScode)"></a>集写代码，编译，执行为一体(VScode)</h2><blockquote>
+<p> 1.VScode拓展中有一款叫做Remote-SSH的插件，该插件支持在Vscode中远程登录主机</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114556324.png" class="" title="image-20250303114556324">
+
+<blockquote>
+<p>2.点击Vscode左下角的远程连接选项，然后选择“连接到主机”—&gt;点击“增加新的主机”</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114627539.png" class="" title="image-20250303114627539">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114651099.png" class="" title="image-20250303114651099">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114658315.png" class="" title="image-20250303114658315">
+
+<blockquote>
+<p>3.选择默认的配置文件，并输入要远程登录的主机信息，格式为：主机名@主机IP</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114724874.png" class="" title="image-20250303114724874">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114732891.png" class="" title="image-20250303114732891">
+
+<blockquote>
+<p>4.配置成功后点击“连接”，并输入远程主机的密码，连接成功后再次输入主机的密码！</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114817220.png" class="" title="image-20250303114817220">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114837158.png" class="" title="image-20250303114837158">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114920995.png" class="" title="image-20250303114920995">
+
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303114931794.png" class="" title="image-20250303114931794">
+
+<blockquote>
+<p>5.如果打算在Vscode中同时连接虚拟机以及开发板的linux系统，则需要开启两个终端</p>
+</blockquote>
+<img src="/2025/03/02/%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91/image-20250303115004336.png" class="" title="image-20250303115004336">
+
+<blockquote>
+<p>7.另外如果打算在Vscode中完成虚拟机和开发板的文件互传，则可以使用scp命令实现</p>
+</blockquote>
+<p><code>[root@GEC6818 /workspace]# scp  &lt;file&gt;  &lt;host&gt;@&lt;ip&gt;:&lt;path&gt;   //上传文件给远程主机</code></p>
+<p><code>[root@GEC6818 /workspace]# scp  &lt;host&gt;@&lt;ip&gt;:&lt;file&gt;  &lt;path&gt;   //从远程主机下载文件</code></p>
+<ul>
+<li><strong>注意：如果打算上传或者下载的文件是一个目录，可以使用scp命令的选项[-r]，递归实现！</strong></li>
+</ul>
 ]]></content>
   </entry>
 </search>
