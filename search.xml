@@ -70,6 +70,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2025/02/26/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>主机，linux系统，开发板互相通信</title>
     <url>/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/</url>
     <content><![CDATA[<h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><span id="more"></span>
@@ -414,29 +434,81 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/02/26/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>模块化编程</title>
     <url>/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><span id="more"></span>
+
+<h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><ul>
+<li><strong>降低程序耦合，增加内聚</strong></li>
+<li><strong>户会把封装好的函数接口按照不同的功能放在不同的源文件中，这样一个项目工程中就可能会存在多个源文件，但是一个项目中只能有一个程序入口，所以只能有一个源文件中有main函数。</strong></li>
+</ul>
+<h2 id="2-封装流程"><a href="#2-封装流程" class="headerlink" title="2.封装流程"></a>2.封装流程</h2><img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303144445715.png" class="" title="image-20250303144445715">
+
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303144450989.png" class="" title="image-20250303144450989">
+
+<p><em>注意：如果在一个源文件中调用另一个源文件中的函数接口，则可以选择把函数的声明都单独的写入在头文件中，然后在源文件中利用预处理指令#include进行包含即可。</em></p>
+<blockquote>
+<p>创建.h头文件，引用的时候要加””,因为是本地引用，系统引用加&lt; &gt;</p>
+</blockquote>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303144902687.png" class="" title="image-20250303144902687">
+
+<blockquote>
+<p>.c文件里面包含本文件的.h文件</p>
+</blockquote>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303145008954.png" class="" title="image-20250303145008954">
+
+<blockquote>
+<p>.h文件里面包含需要用到的系统头文件和.c文件中函数的声明</p>
+</blockquote>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303145404200.png" class="" title="image-20250303145404200">
+
+<blockquote>
+<p>在main函数的源文件中，引用另一个源文件中的函数，包含头文件即可</p>
+</blockquote>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303145239526.png" class="" title="image-20250303145239526">
+
+<blockquote>
+<p>将用到的.c文件都要gcc编译成一个文件</p>
+</blockquote>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303145527576.png" class="" title="image-20250303145527576">
+
+<p>如果在一个源文件中使用另一个源文件的全局变量，这种是不允许的，是不能直接使用的！全局变量的作用域是针对整个文件有效，并不针对整个工程有效，所以可以使用C语言中提供的extern关键字来声明全局变量。</p>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303145801687.png" class="" title="image-20250303145801687">
+
+<p><code>思考：为什么函数没有声明是外部的，但是却可以正常调用，而对于全局变量就不可以呢？</code></p>
+<p>回答：因为C语言标准中规定函数定义的时候默认是可以被外部链接的，也就是函数声明的时候默认是有extern的，因为函数定义时有函数体，函数声明时没有函数体，所以编译器可以区分函数声明和函数定义。</p>
+<p>但是变量则不同，变量遵循“先定义，后使用”的原则。变量在定义的时候内核就会分配内存空间，所以编译器没办法区分用户是打算声明一个变量还是定义一个变量，所以为了避免二义性，C语言就规定如果打算声明一个变量可以被外部链接，就必须使用extern关键字进行声明。</p>
+<p><code>思考：在设计程序时使用extern来声明函数或者变量非常麻烦，请问有没有更简单的一种方案实现相同的效果，如果有，应该如何设计？</code></p>
+<p>回答：是有的，可以设计一个头文件，这样就可以把函数的声明、全局变量、宏定义等都放在头文件中，源文件只需要包含头文件就可以使用。C语言中头文件以xxx.h结尾</p>
+<p><em>注意：在实际开发中，可能会出现头文件的嵌套包含，这样就会导致如果多个源文件都引入相同的头文件，就会出现重复定义的现象，为了避免这种问题出现，所以用户在设计头文件的时候需要使用条件编译指令来防止头文件的重复包含。头文件的标准写法如下所示：</em></p>
+<p><code>#ifndef   _XXX_H    //XXX是头文件的名称的大写，作为宏</code></p>
+<p><code>#define  _XXX_H</code></p>
+<p><code>//头文件的内容</code></p>
+<p><code>#endif  注意：头文件的有效内容应该写在 #endif 预处理指令之前</code></p>
+<p><code>思考：用户在某些情况下并不想让源文件中的所有函数被可以被其他文件调用，但是函数定时默认的属性都是extern的，请问如何解决这种问题？</code></p>
+<p><em>回答：可以在定义函数的时候使用关键字static进行修饰，static关键字表示静态的，也属于C语言中的存储类说明符，如果用来修饰函数，则表达该函数的作用域只对本文件有效。</em></p>
+<p><em>使用static关键字修饰的函数也被称为静态函数，静态函数只能在函数定义的源文件中使用。由于静态函数的作用域只在当前文件有效，所以静态函数的名称可以和其他源文件中的函数重复。</em></p>
+<p><em>注意：如果静态函数被定义在头文件中，则包含该头文件的源文件都可以使用该静态函数，因为预处理阶段头文件中所有内容会被预处理器拷贝到源文件中。</em></p>
+<blockquote>
+<p>auto是C语言关键字之一，中文具有自动的含义，属于存储类说明符之一，只能用来修饰局部变量，所以只能在函数中使用，auto关键字具有隐式说明，在局部变量创建的时候默认存在，一般用auto修饰的变量也被称为自动变量，指的是变量由系统自动管理，变量创建时系统自动分配内存单元，变量的作用域结束时系统自动释放。</p>
+</blockquote>
+<blockquote>
+<p>register是C语言关键字之一，中文具有寄存器的含义，属于存储类说明符之一。使用register关键字修饰的变量也被称为寄存器变量，只能用来修饰存储在寄存器中的局部变量，目的是提高程序的运行效率，实际开发中基本不用，了解即可。</p>
+<p>注意：register修饰定义并不意味着变量将被存储在寄存器中，它意味着变量可能存储在寄存器中，这取决于硬件和实现的限制。</p>
+</blockquote>
+<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><blockquote>
+<p>C语言标准中提供了一个关键字叫做inline，被inline关键字修饰的函数被称为内联函数，一般在定义函数接口的时候才可以使用inline进行修饰。</p>
+</blockquote>
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303150908364.png" class="" title="image-20250303150908364">
+
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303150925612.png" class="" title="image-20250303150925612">
+
+<img src="/2025/03/03/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B/image-20250303150933615.png" class="" title="image-20250303150933615">
+
+<p>可以知道，内联函数和普通函数的区别只是在函数调用的时候不需要进行函数跳转，也不需要保存函数上下文，因为编译器会把内联函数的代码段拷贝一份到被调用的位置，所以内联函数中不应该使用递归或者循环等代码，要求内联函数一定要精简，越短越好</p>
+<p>当然，一个普通函数如果代码段很多，其实也可以使用关键字inline进行修饰，但是编译器不一定会把这种函数当做内联函数来对待</p>
+<p>注意：在函数定义的时候用inline修饰是有效的，在函数声明的时候用inline来修饰是无效的。</p>
+<p>具有内部链接的函数都可以作为内联函数，但是要和被调用的函数在同一个源文件中，如果两个源文件都打算使用内联函数，此时有两种方案：第一种是在另一个源文件中重新定义一个相同的内联函数，第二种则是把内联函数定义在头文件中，需要使用的源文件就只需要包含头文件即可。</p>
 ]]></content>
   </entry>
   <entry>
