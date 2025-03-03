@@ -70,26 +70,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/02/26/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>主机，linux系统，开发板互相通信</title>
     <url>/2025/02/27/%E4%B8%BB%E6%9C%BA%EF%BC%8Clinux%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%BC%80%E5%8F%91%E6%9D%BF%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/</url>
     <content><![CDATA[<h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><span id="more"></span>
@@ -362,6 +342,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2025/02/26/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>交叉编译器安装</title>
     <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
@@ -509,6 +509,28 @@
 <p>当然，一个普通函数如果代码段很多，其实也可以使用关键字inline进行修饰，但是编译器不一定会把这种函数当做内联函数来对待</p>
 <p>注意：在函数定义的时候用inline修饰是有效的，在函数声明的时候用inline来修饰是无效的。</p>
 <p>具有内部链接的函数都可以作为内联函数，但是要和被调用的函数在同一个源文件中，如果两个源文件都打算使用内联函数，此时有两种方案：第一种是在另一个源文件中重新定义一个相同的内联函数，第二种则是把内联函数定义在头文件中，需要使用的源文件就只需要包含头文件即可。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>编译流程</title>
+    <url>/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span>
+
+<p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p>
+<img src="/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/image-20250303151534298.png" class="" title="image-20250303151534298">
+
+<blockquote>
+<p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p>
+</blockquote>
+<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p>
+<p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p>
+<p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p>
+<p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p>
+<h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p>
+<p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p>
+<p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>
 ]]></content>
   </entry>
   <entry>
