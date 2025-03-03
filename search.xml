@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Markdown语法</title>
+    <url>/2025/02/26/Markdown%E5%88%9D%E7%BA%A7/</url>
+    <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><span id="more"></span>
+
+<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><ul>
+<li><strong>“#”放在语句的前面，中间用一个空格隔开，其数量代表标题的级别，数量越多，字体越小。</strong></li>
+</ul>
+<h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><ul>
+<li><p><strong>星号和下划线都可以，单是斜体，双是粗体，三是粗斜体。</strong></p>
+</li>
+<li><p><strong>加粗Ctrl + B,</strong></p>
+</li>
+<li><p><strong>斜体Ctrl + I</strong></p>
+</li>
+</ul>
+<h2 id="3-换行"><a href="#3-换行" class="headerlink" title="3.换行"></a>3.换行</h2><ul>
+<li><p><strong>直接在一句话后面敲两个空格</strong></p>
+</li>
+<li><p><strong>两句话之间加一个空行</strong></p>
+</li>
+</ul>
+<h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><ul>
+<li><strong>“&gt;”代表引用，可以嵌套，需要一行空白行，结束引用</strong></li>
+</ul>
+<h2 id="5-链接"><a href="#5-链接" class="headerlink" title="5.链接"></a>5.链接</h2><ul>
+<li><strong>[链接名称]（链接地址）或者&lt;链接地址&gt;</strong></li>
+</ul>
+<h2 id="6-图片"><a href="#6-图片" class="headerlink" title="6.图片"></a>6.图片</h2><ul>
+<li><strong>！[图片描述，中括号必须有]（图片地址或者本地链接 #pic_center “中间有空格”&#x3D;长x宽）</strong></li>
+</ul>
+<h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ol>
+<li><p><em><em>无序列表，使用</em>，+，-，再加一个空格作为列表的标记</em>*</p>
+</li>
+<li><p><strong>有序列表，使用数字并加上.号，再加一个空格</strong></p>
+</li>
+<li><p><strong>想要控制列表的层级，再列表符号前使用Tab</strong></p>
+</li>
+<li><p><strong>shift + Tab 退出列表</strong></p>
+</li>
+</ol>
+<h2 id="8-分割线"><a href="#8-分割线" class="headerlink" title="8.分割线"></a>8.分割线</h2><ul>
+<li><strong>一行中用3个”-“或者”*”建立分割线；注意：分割线上面要空一行</strong></li>
+</ul>
+<h2 id="9-删除线"><a href="#9-删除线" class="headerlink" title="9.删除线"></a>9.删除线</h2><ul>
+<li><strong>要加删除线的文字前后添加两个~</strong></li>
+</ul>
+<h2 id="10-下划线"><a href="#10-下划线" class="headerlink" title="10.下划线"></a>10.下划线</h2><ul>
+<li><strong>需要添加下划线的文字首尾添加<u>文本</u></strong></li>
+</ul>
+<h2 id="11-代码块"><a href="#11-代码块" class="headerlink" title="11.代码块"></a>11.代码块</h2><ul>
+<li><strong>一行代码引用，前后各加一个&#96;(反引号)</strong></li>
+<li><strong>多行代码引用，前后各加三个&#96;（反引号），指定语言：在开头的三个反引号后指定语言，可以启用代码高亮。</strong></li>
+</ul>
+<h2 id="12-表格"><a href="#12-表格" class="headerlink" title="12.表格"></a>12.表格</h2><ul>
+<li><strong>“|” 分隔不通的单元格</strong></li>
+<li><strong>“:-“  一竖内容和表格左对齐；”-:”  一竖内容和表格右对齐； “:-:” 一竖内容和表格居中对齐</strong></li>
+</ul>
+<h2 id="13-特殊符号"><a href="#13-特殊符号" class="headerlink" title="13.特殊符号"></a>13.特殊符号</h2><ul>
+<li>反斜杠”\“可以显示符号本身</li>
+</ul>
+<h2 id="14-引用超链接"><a href="#14-引用超链接" class="headerlink" title="14.引用超链接"></a>14.引用超链接</h2><ul>
+<li>访问[Google] (网址)搜索信息</li>
+</ul>
+<img src="/2025/02/26/Markdown%E5%88%9D%E7%BA%A7/v2-9f8180b2ea98637548997b7631300764_1440w.jpg" class="" title="img">
+
+<ul>
+<li><img src="/2025/02/26/Markdown%E5%88%9D%E7%BA%A7/v2-3d6e75dd07bc406db8711964ae5419a0_1440w.jpg" class="" title="img"></li>
+</ul>
+<h1 id="Markdown高级"><a href="#Markdown高级" class="headerlink" title="Markdown高级"></a>Markdown高级</h1><h2 id="1-制作代办事项"><a href="#1-制作代办事项" class="headerlink" title="1.制作代办事项"></a>1.制作代办事项</h2><ul>
+<li><strong>-[ ]表示未完成；-[x]表示已完成</strong></li>
+</ul>
+<h2 id="2-书写公式"><a href="#2-书写公式" class="headerlink" title="2.书写公式"></a>2.书写公式</h2><ul>
+<li>在公式的两侧各加$$</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2025/02/26/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -293,75 +370,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Markdown语法</title>
-    <url>/2025/02/26/Markdown%E5%88%9D%E7%BA%A7/</url>
-    <content><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><span id="more"></span>
-
-<h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><ul>
-<li><strong>“#”放在语句的前面，中间用一个空格隔开，其数量代表标题的级别，数量越多，字体越小。</strong></li>
-</ul>
-<h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><ul>
-<li><p><strong>星号和下划线都可以，单是斜体，双是粗体，三是粗斜体。</strong></p>
-</li>
-<li><p><strong>加粗Ctrl + B,</strong></p>
-</li>
-<li><p><strong>斜体Ctrl + I</strong></p>
-</li>
-</ul>
-<h2 id="3-换行"><a href="#3-换行" class="headerlink" title="3.换行"></a>3.换行</h2><ul>
-<li><p><strong>直接在一句话后面敲两个空格</strong></p>
-</li>
-<li><p><strong>两句话之间加一个空行</strong></p>
-</li>
-</ul>
-<h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4.引用"></a>4.引用</h2><ul>
-<li><strong>“&gt;”代表引用，可以嵌套，需要一行空白行，结束引用</strong></li>
-</ul>
-<h2 id="5-链接"><a href="#5-链接" class="headerlink" title="5.链接"></a>5.链接</h2><ul>
-<li><strong>[链接名称]（链接地址）或者&lt;链接地址&gt;</strong></li>
-</ul>
-<h2 id="6-图片"><a href="#6-图片" class="headerlink" title="6.图片"></a>6.图片</h2><ul>
-<li><strong>！[图片描述，中括号必须有]（图片地址或者本地链接 #pic_center “中间有空格”&#x3D;长x宽）</strong></li>
-</ul>
-<h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ol>
-<li><p><em><em>无序列表，使用</em>，+，-，再加一个空格作为列表的标记</em>*</p>
-</li>
-<li><p><strong>有序列表，使用数字并加上.号，再加一个空格</strong></p>
-</li>
-<li><p><strong>想要控制列表的层级，再列表符号前使用Tab</strong></p>
-</li>
-<li><p><strong>shift + Tab 退出列表</strong></p>
-</li>
-</ol>
-<h2 id="8-分割线"><a href="#8-分割线" class="headerlink" title="8.分割线"></a>8.分割线</h2><ul>
-<li><strong>一行中用3个”-“或者”*”建立分割线；注意：分割线上面要空一行</strong></li>
-</ul>
-<h2 id="9-删除线"><a href="#9-删除线" class="headerlink" title="9.删除线"></a>9.删除线</h2><ul>
-<li><strong>要加删除线的文字前后添加两个~</strong></li>
-</ul>
-<h2 id="10-下划线"><a href="#10-下划线" class="headerlink" title="10.下划线"></a>10.下划线</h2><ul>
-<li><strong>需要添加下划线的文字首尾添加<u>文本</u></strong></li>
-</ul>
-<h2 id="11-代码块"><a href="#11-代码块" class="headerlink" title="11.代码块"></a>11.代码块</h2><ul>
-<li><strong>一行代码引用，前后各加一个&#96;(反引号)</strong></li>
-<li><strong>多行代码引用，前后各加三个&#96;（反引号），指定语言：在开头的三个反引号后指定语言，可以启用代码高亮。</strong></li>
-</ul>
-<h2 id="12-表格"><a href="#12-表格" class="headerlink" title="12.表格"></a>12.表格</h2><ul>
-<li><strong>“|” 分隔不通的单元格</strong></li>
-<li><strong>“:-“  一竖内容和表格左对齐；”-:”  一竖内容和表格右对齐； “:-:” 一竖内容和表格居中对齐</strong></li>
-</ul>
-<h2 id="13-特殊符号"><a href="#13-特殊符号" class="headerlink" title="13.特殊符号"></a>13.特殊符号</h2><ul>
-<li>反斜杠”\“可以显示符号本身</li>
-</ul>
-<h1 id="Markdown高级"><a href="#Markdown高级" class="headerlink" title="Markdown高级"></a>Markdown高级</h1><h2 id="1-制作代办事项"><a href="#1-制作代办事项" class="headerlink" title="1.制作代办事项"></a>1.制作代办事项</h2><ul>
-<li><strong>-[ ]表示未完成；-[x]表示已完成</strong></li>
-</ul>
-<h2 id="2-书写公式"><a href="#2-书写公式" class="headerlink" title="2.书写公式"></a>2.书写公式</h2><ul>
-<li>在公式的两侧各加$$</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>交叉编译器安装</title>
     <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
@@ -436,7 +444,9 @@
   <entry>
     <title>基础代码</title>
     <url>/2025/03/03/%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h1 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h1><h3 id="1-判断机器的大小端"><a href="#1-判断机器的大小端" class="headerlink" title="1.判断机器的大小端"></a>1.判断机器的大小端</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	file name:	IsEndian.c</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2025/03/17</span></span><br><span class="line"><span class="comment">*	function :  该案例是掌握进行模块化编程思想，以及封装函数接口流程</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	CopyRight (c)  2023-2024   cecelmx@126.com   All Right Reseverd </span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;IsEndian.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//用户自定义的联合体类型</span></span><br><span class="line"><span class="class"><span class="keyword">union</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">int</span>  a;</span><br><span class="line">	<span class="type">char</span> b;</span><br><span class="line">&#125;Endian;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	IsEndian</span></span><br><span class="line"><span class="comment">*	function :  判断机器的大小端</span></span><br><span class="line"><span class="comment">*	argument :  None</span></span><br><span class="line"><span class="comment">*	retval	 :  None</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2025/03/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">IsEndian</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对联合体的成员a进行赋值</span></span><br><span class="line">	Endian.a = <span class="number">0x12345678</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (<span class="number">0x12</span> == Endian.b)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Big-Endian\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Little-Endian\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h1><span id="more"></span>
+
+<h3 id="1-判断机器的大小端"><a href="#1-判断机器的大小端" class="headerlink" title="1.判断机器的大小端"></a>1.判断机器的大小端</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	file name:	IsEndian.c</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2025/03/17</span></span><br><span class="line"><span class="comment">*	function :  该案例是掌握进行模块化编程思想，以及封装函数接口流程</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	CopyRight (c)  2023-2024   cecelmx@126.com   All Right Reseverd </span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;IsEndian.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//用户自定义的联合体类型</span></span><br><span class="line"><span class="class"><span class="keyword">union</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">int</span>  a;</span><br><span class="line">	<span class="type">char</span> b;</span><br><span class="line">&#125;Endian;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	IsEndian</span></span><br><span class="line"><span class="comment">*	function :  判断机器的大小端</span></span><br><span class="line"><span class="comment">*	argument :  None</span></span><br><span class="line"><span class="comment">*	retval	 :  None</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2025/03/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">IsEndian</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对联合体的成员a进行赋值</span></span><br><span class="line">	Endian.a = <span class="number">0x12345678</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (<span class="number">0x12</span> == Endian.b)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Big-Endian\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Little-Endian\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-实现计算一个输入的整数n的阶乘"><a href="#2-实现计算一个输入的整数n的阶乘" class="headerlink" title="2.实现计算一个输入的整数n的阶乘"></a>2.实现计算一个输入的整数n的阶乘</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	CalFactorial</span></span><br><span class="line"><span class="comment">*	function :  实现计算一个输入的整数n的阶乘            是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@n  :需要计算的值n</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  调用成功返回计算后的结果</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  1*2*3*4*...*(n-2)*(n-1)*n  考查递归思想解决问题</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">CalFactorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//递归函数必须提前写好终止条件,当n==1时可以选择终止函数</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="number">1</span> == n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> CalFactorial(n<span class="number">-1</span>)*n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//递归，将大问题化解成小问题解决；两个重要的点，1.有终止条件。2.数学公式</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -454,6 +464,93 @@
 
 <h3 id="9-实现将一个输入的字符串进行逆序输出"><a href="#9-实现将一个输入的字符串进行逆序输出" class="headerlink" title="9.实现将一个输入的字符串进行逆序输出"></a>9.实现将一个输入的字符串进行逆序输出</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	StrReverse</span></span><br><span class="line"><span class="comment">*	function :  实现将一个输入的字符串进行逆序输出           是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str  :需要逆序输出的字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  None</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  原来是&quot;helloworld&quot; 逆序后应该是&quot;dlrowolleh&quot;</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* ******************************************************************/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">StrReversePrint</span><span class="params">(<span class="type">char</span> *ptr)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//写好终止条件，防止死循环出现，导致函数频繁调用出现栈溢出现象</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="string">&#x27;\0&#x27;</span> == *ptr)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>; </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	StrReversePrint(ptr+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,*ptr);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>杂余知识点</title>
+    <url>/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="杂余知识点"><a href="#杂余知识点" class="headerlink" title="杂余知识点"></a>杂余知识点</h1><span id="more"></span>
+
+<h2 id="1-知识体系"><a href="#1-知识体系" class="headerlink" title="1.知识体系"></a>1.知识体系</h2><img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303161935098.png" class="" title="image-20250303161935098">
+
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303162013657.png" class="" title="image-20250303162013657">
+
+<h2 id="2-keywords"><a href="#2-keywords" class="headerlink" title="2.keywords"></a>2.keywords</h2><img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303162122783.png" class="" title="image-20250303162122783">
+
+<h2 id="3-ASCII码"><a href="#3-ASCII码" class="headerlink" title="3.ASCII码"></a>3.ASCII码</h2><img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303162252974.png" class="" title="image-20250303162252974">
+
+<p><em>中国国家标准总局设计了中文简体字符集，称为GB2312字符集，后面又推出GBK编码（收录了繁体汉字，向下兼容），目前UTF-8字符集收录各个国家的字符。</em></p>
+<h2 id="4-动态随机存储器"><a href="#4-动态随机存储器" class="headerlink" title="4.动态随机存储器"></a>4.动态随机存储器</h2><ul>
+<li>对于计算机中的存储器而言，一般分为两种：****RAM（随机存储器）****和 <em><strong>*ROM（只读存储器）*</strong></em></li>
+</ul>
+<h3 id="只读存储器"><a href="#只读存储器" class="headerlink" title="只读存储器"></a>只读存储器</h3><p>只读存储器的英文全称是Read Only Memory，简称为ROM，属于非易失性存储设备，指的是掉电不丢失数据，可以把数据长时间存储，一般分为很多种，具体的区别可以通过《数电》进行了解，对于计算机的机械硬盘或者固态硬盘而言指的就是ROM。</p>
+<h3 id="随机存储器"><a href="#随机存储器" class="headerlink" title="随机存储器"></a>随机存储器</h3><p>随机存储器的英文全称是Random Access Memory，简称为RAM，属于易失性存储设备，指的是掉电会丢失数据，但是读写速度很快。所以一般CPU都是直接和RAM打交道</p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163106577.png" class="" title="image-20250303163106577">
+
+<h2 id="5-vscode软件安装"><a href="#5-vscode软件安装" class="headerlink" title="5.vscode软件安装"></a>5.vscode软件安装</h2><ul>
+<li>对该软件进行汉化处理，点击拓展 —&gt;输入 chinese —&gt;选择简体中文—&gt;install</li>
+</ul>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163244041.png" class="" title="image-20250303163244041">
+
+<ul>
+<li>为软件安装C&#x2F;C++插件，该插件可以提供命令推理、语法高亮、自动补齐等功能</li>
+</ul>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163300370.png" class="" title="image-20250303163300370">
+
+<ul>
+<li>为软件安装 Code Runner插件，该插件支持一键编译和一键运行等功能，操作如下图</li>
+</ul>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163316116.png" class="" title="image-20250303163316116">
+
+<p><strong>注意：Code Runner插件默认不在终端进行输入输出，为了避免程序在终端中的输入输出问题出现，大家可以配置一下VSCode软件 设置 –&gt;拓展 –&gt;Run Code Config –&gt; Run In Terminal</strong></p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163338148.png" class="" title="image-20250303163338148">
+
+<h2 id="6-代码风格"><a href="#6-代码风格" class="headerlink" title="6.代码风格"></a>6.代码风格</h2><img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163859527.png" class="" title="image-20250303163859527">
+
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163917068.png" class="" title="image-20250303163917068">
+
+<h2 id="7-代码注释"><a href="#7-代码注释" class="headerlink" title="7.代码注释"></a>7.代码注释</h2><img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303163954550.png" class="" title="image-20250303163954550">
+
+<p>当程序中需要对某一行代码进行注释时，可以采用 &#x2F;&#x2F;或者&#x2F;* *&#x2F; 这两种方案进行注释，如：  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\#include  &lt;stdio.h&gt;  </span><br><span class="line"></span><br><span class="line">int main(void)  </span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> printf(“hello world\n”);  //</span><br><span class="line"></span><br><span class="line"> return 0; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">\#include  &lt;stdio.h&gt;  </span><br><span class="line"></span><br><span class="line">int main(void)  </span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> /**/ </span><br><span class="line"></span><br><span class="line"> printf(“hello world\n”); </span><br><span class="line"></span><br><span class="line"> return 0; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-程序入口"><a href="#8-程序入口" class="headerlink" title="8.程序入口"></a>8.程序入口</h2><img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303164228842.png" class="" title="image-20250303164228842">
+
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303164250503.png" class="" title="image-20250303164250503">
+
+<p><em>注意：C语言程序的基本单位是函数，也就是说一个程序是由一个主函数以及若干个子函数组成的，主函数的名字是固定的，叫做main函数，用户不能修改，main这个单词翻译成中文具有主要的，最重要的意思，所以main函数才会作为程序的入口，也就是说程序是按照main函数中语句的先后顺序执行的。</em></p>
+<h2 id="9-程序结束"><a href="#9-程序结束" class="headerlink" title="9.程序结束"></a>9.程序结束</h2><p>另外可以看到标准中规定main函数需要具有一个int型的返回值，int指的是整型数，其实是英文单词integer的缩写，也是C语言中的关键字之一，也是常用的基本数据类型之一。</p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303164626857.png" class="" title="image-20250303164626857">
+
+<p>返回值指的是函数执行完成后的结果，当然，并不是所有的函数都具有返回值，这个要根据实际情况而定</p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303165018855.png" class="" title="image-20250303165018855">
+
+<h2 id="10-函数调用"><a href="#10-函数调用" class="headerlink" title="10.函数调用"></a>10.函数调用</h2><p>刚才提到C语言程序的基本单位是函数，程序是由一个主函数以及若干个子函数组成的，对于主函数而言，名称是固定的不能修改，功能就是作为程序的入口，但是对于子函数而言则不同。</p>
+<p>子函数指的是了程序中除了主函数之外的其他函数，子函数的类型一般有两种：一种是库函数，另一种是用户自定义函数</p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303165142820.png" class="" title="image-20250303165142820">
+
+<p><em><strong>注意：头文件不是必须包含，只有调用了函数库中的函数接口，才需要包含头文件！！！！</strong></em></p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303165322222.png" class="" title="image-20250303165322222">
+
+<blockquote>
+<p>&lt; xxx.h &gt; ：编译器只去系统指定路径中查找该头文件，如果未找到，则编译器进行错误提示。</p>
+</blockquote>
+<blockquote>
+<p>“ xxx.h ” ：先去当前路径中查找头文件，未找到再去系统路径中查找，还未找到则报错提示。</p>
+</blockquote>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303165354754.png" class="" title="image-20250303165354754">
+
+<h2 id="11-常量变量"><a href="#11-常量变量" class="headerlink" title="11.常量变量"></a>11.常量变量</h2><p>C语言标准规定：用户有权利从内存中申请一块存储单元，并且用户可以对存储单元进行命名，要求用户提前说明申请的存储单元（单位以字节来计算）的大小，这样linux内核才会从内存中寻找一块合适的空间，并把这块空间的地址反馈给用户。</p>
+<img src="/2025/03/03/%E6%9D%82%E4%BD%99%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303170542397.png" class="" title="image-20250303170542397">
+
+<p>用户可以对linux内核提供的存储单元进行命名，然后linux内核会把用户的命名和存储单元的地址建立一个映射关系，这样用户就可以通过存储单元的名称来访问存储单元</p>
+<blockquote>
+<p>常量: 是在****程序运行期间值不会发生改变的量****，一般使用的数字，比如3.14用来表示圆周率，一般情况下，用户都是用通过宏定义的方式来实现常量的设计，宏定义其实就是简单的文本替换，在预处理阶段预处理器会把程序中的宏定义进行展开。C语言中规定宏定义使用预处理指令 <em><strong>*#define*</strong></em> 来进行设计。</p>
+</blockquote>
+<blockquote>
+<p>变量:<em><strong>*程序运行期间值可能发生变化的量*</strong></em>，用户可以根据实际需要来向kernel申请一块存储单元，并对这块存储单元进行命名，然后用户可以随时修改存储单元中的数据</p>
+</blockquote>
+<h2 id="12-signed-unsigned"><a href="#12-signed-unsigned" class="headerlink" title="12.signed  &amp;&amp;  unsigned"></a>12.signed  &amp;&amp;  unsigned</h2><p>unsigned表示无符号，signed表示有符号，C语言中的signed修饰符是隐式声明</p>
 ]]></content>
   </entry>
   <entry>
@@ -532,6 +629,91 @@
 <p>当然，一个普通函数如果代码段很多，其实也可以使用关键字inline进行修饰，但是编译器不一定会把这种函数当做内联函数来对待</p>
 <p>注意：在函数定义的时候用inline修饰是有效的，在函数声明的时候用inline来修饰是无效的。</p>
 <p>具有内部链接的函数都可以作为内联函数，但是要和被调用的函数在同一个源文件中，如果两个源文件都打算使用内联函数，此时有两种方案：第一种是在另一个源文件中重新定义一个相同的内联函数，第二种则是把内联函数定义在头文件中，需要使用的源文件就只需要包含头文件即可。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>编译流程</title>
+    <url>/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span>
+
+<p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p>
+<img src="/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/image-20250303151534298.png" class="" title="image-20250303151534298">
+
+<blockquote>
+<p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p>
+</blockquote>
+<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p>
+<p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p>
+<p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p>
+<p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p>
+<h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p>
+<p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p>
+<p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>重要的基础知识点</title>
+    <url>/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="重要的基础知识点"><a href="#重要的基础知识点" class="headerlink" title="重要的基础知识点"></a>重要的基础知识点</h1><span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th align="center">解释</th>
+<th align="center">ASCII(十进制)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">大写字母A</td>
+<td align="center">65</td>
+</tr>
+<tr>
+<td align="center">小写字母a</td>
+<td align="center">97</td>
+</tr>
+<tr>
+<td align="center">字符0</td>
+<td align="center">48</td>
+</tr>
+<tr>
+<td align="center">空字符(NULL)</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>32bit系统 or 64bit系统  指的是计算机的地址总线的位数，指的是计算机的寻址范围是32bit，也就是4GB  存储单元地址：0x0000_0000 ~ 0xFFFF_FFFF<br>内存属于易失性存储设备 键盘输入的数据是先存储到内存（随机存储器）中，存储器中有n个存储单元，每个存储单元的大小都是1字节</p>
+</li>
+<li><p>存储单元大小是1字节 存储单元的地址是4字节的</p>
+</li>
+</ul>
+<p><strong>注意：头文件不是必须包含，只有调用了函数库中的函数接口，才需要包含头文件！！！！</strong></p>
+<ul>
+<li><strong>数组：数组是具有相同类型的数据的集合，数组的地址是连续的，数组中的数据被称为元素，元素类型必须相同</strong></li>
+</ul>
+<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><blockquote>
+<p>变量和常量也被称为****标识符****，对于标识符的命名必须遵循规则：标识符是由字母、数字、下划线以及美元符号$组成，并且标识符的第一个字符只能是字母或者下划线</p>
+</blockquote>
+<p><em><strong>*C语言的标识符是区分大小写，并且作为用户而言，标识符的命名应该是有意义的!!!*</strong></em></p>
+<p><em>注意：为了防止</em>**二义性**<em>出现，C语言标准规定不可以把系统保留字，以及程序中已经存在的函数名称、以及用户已经定义出来的标识符名称作为新的标识符名称（同一个作用域内不能）</em></p>
+<ul>
+<li>字符型</li>
+</ul>
+<img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303170940637.png" class="" title="image-20250303170940637">
+
+<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>C语言标准中关于字符的种类有两种：<em><strong>*普通字符*</strong></em> and <em><strong>*转义字符*</strong></em>，对于ASCII码表中转义字符</p>
+<img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303171048391.png" class="" title="image-20250303171048391">
+
+<p>注意：ASCII码中的转义字符需要使用’\0’  ‘\r’  ‘\n’ 进行表示，代表字符具有特殊的意义。</p>
+<blockquote>
+<p>因为C语言不支持二进制输入，但是C语言支持八进制、十进制、十六进制。</p>
+</blockquote>
+<h2 id="前导符"><a href="#前导符" class="headerlink" title="前导符"></a>前导符</h2><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303171455620.png" class="" title="image-20250303171455620">
+
+<blockquote>
+<p>规定八进制的前缀以0表示，比如064，规定十六进制的前缀以0x&#x2F;0X表示，比如0x64。</p>
+</blockquote>
 ]]></content>
   </entry>
   <entry>
@@ -670,28 +852,6 @@
 <ul>
 <li><strong>注意：如果打算上传或者下载的文件是一个目录，可以使用scp命令的选项[-r]，递归实现！</strong></li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>编译流程</title>
-    <url>/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span>
-
-<p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p>
-<img src="/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/image-20250303151534298.png" class="" title="image-20250303151534298">
-
-<blockquote>
-<p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p>
-</blockquote>
-<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p>
-<p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p>
-<p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p>
-<p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p>
-<h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p>
-<p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p>
-<p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>
 ]]></content>
   </entry>
 </search>
