@@ -370,6 +370,78 @@
 ]]></content>
   </entry>
   <entry>
+    <title>交叉编译器安装</title>
+    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
+
+<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
+<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
+<blockquote>
+<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
+
+<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
+<blockquote>
+<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
+
+<blockquote>
+<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
+
+<blockquote>
+<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
+</blockquote>
+<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
+<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
+<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
+
+<blockquote>
+<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
+
+<blockquote>
+<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
+
+<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
+<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
+<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
+<blockquote>
+<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
+
+<p>执行以下代码即可</p>
+<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
+
+<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
+<ul>
+<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
+</ul>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
+
+<blockquote>
+<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
+
+<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
+]]></content>
+  </entry>
+  <entry>
     <title>基础代码</title>
     <url>/2025/03/03/%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/</url>
     <content><![CDATA[<h1 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h1><span id="more"></span>
@@ -392,6 +464,43 @@
 
 <h3 id="9-实现将一个输入的字符串进行逆序输出"><a href="#9-实现将一个输入的字符串进行逆序输出" class="headerlink" title="9.实现将一个输入的字符串进行逆序输出"></a>9.实现将一个输入的字符串进行逆序输出</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	StrReverse</span></span><br><span class="line"><span class="comment">*	function :  实现将一个输入的字符串进行逆序输出           是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str  :需要逆序输出的字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  None</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  原来是&quot;helloworld&quot; 逆序后应该是&quot;dlrowolleh&quot;</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* ******************************************************************/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">StrReversePrint</span><span class="params">(<span class="type">char</span> *ptr)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//写好终止条件，防止死循环出现，导致函数频繁调用出现栈溢出现象</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="string">&#x27;\0&#x27;</span> == *ptr)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>; </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	StrReversePrint(ptr+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,*ptr);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>数组</title>
+    <url>/2025/03/11/%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="***数组"></a>***数组</h1><span id="more"></span>
+
+<h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><ul>
+<li>数组其实就是用户向<strong>内核</strong>申请的一块空间，只不过内核提供的这块空间的<strong>内存地址是连续的</strong>，目的就是方便用户存储和访问<strong>相同类型的数据</strong>。</li>
+</ul>
+<h3 id="1-1用户访问"><a href="#1-1用户访问" class="headerlink" title="1.1用户访问"></a>1.1用户访问</h3><ul>
+<li>内核申请内存时如果申请成功则操作系统会把<strong>内存的起始地址</strong>提供给用户,用户可以通过存储单元的地址访问,但是程序的可读性以及可维护性变差，所以C语言允许用户像访问变量一样，可以对数组进行命名，这样系统内核就会把数组名和数组的起始地址建立映射关系。</li>
+</ul>
+<h3 id="1-2数组的定义"><a href="#1-2数组的定义" class="headerlink" title="1.2数组的定义"></a>1.2数组的定义</h3><ul>
+<li>何向内核申请空间</li>
+<li>用户需要说明 数据数量 * 数据宽度 ，对于数据宽度而言指的是数据类型 ，数据的类型可以是基本数据类型（字符型、整型、短整型、浮点型） or 复杂数据类型（结构体、联合体） or 指针类型</li>
+</ul>
+<p><code>定义数组的格式： 数据类型 数组名称 [数据个数] ;  // 内存大小：数据类型 * 数据个数</code></p>
+<style>.ixzlxkzwtoyj{zoom:200%;}</style><img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123000826.png" class="ixzlxkzwtoyj" alt="image-20250311123000826">
+
+<img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123027825.png" class="" title="image-20250311123027825">
+
+<h3 id="1-3数组的访问"><a href="#1-3数组的访问" class="headerlink" title="1.3数组的访问*************************"></a>1.3数组的访问*************************</h3><img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123102061.png" class="" title="image-20250311123102061">
+
+<p><em>可以知道C语言标准中想要访问数组中的某个元素，可以使用 E1[E2] 结构，E1是数组对象，其实就是数组名，E2是一个整数，用于作为数组下标，并且E2的值是从0开始。</em></p>
+<p><em>所以数组的下标的范围 E1[0] ~ E1[E2-1]，就可以通过这种方式来表示任意一个数组中的元素！</em></p>
+<img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123345161.png" class="" title="image-20250311123345161">
+
+<img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123406271.png" class="" title="image-20250311123406271">
+
+<p><strong>C语言标准中规定可以通过 下标方式访问数组的元素 E1[E2]  也可以通过 内存地址 方式访问数组中的元素 ( * ( (E1) + (E2) ) ) ，注意：如果E1就是数组名，并且E2就是整型常量，则可以把括号省略，变为 (  * (E1 + E2)  )</strong>  </p>
+<p>为什么C语言中规定*( E1 + E2 )可以访问数组元素地址，是什么原理？*有什么作用？</p>
+<p><em><em>C语言标准中提供多种运算符，</em> 可以作为二元运算符， * 作为乘法运算符，需要。两个操作对象，并且遵循“左结合性”，但是 * 也可以作为一元运算符， * 的含义就是间接运算符。</em>*</p>
+<img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123630800.png" class="" title="image-20250311123630800">
+
+<p><strong>( <em>E1 + E2 )的解释：E1是一个数组对象，E1也就是数组名称，C语言标准中规定数组名可以作为数组中第一个元素的地址，所以相当于E1是数组中第一个元素的地址，而E2是一个整数，所以 E1 + E2 相当于从E1这个地址向后偏移E2个单位（以元素为单位，所以需要考虑元素的类型），所以E1+E2的结果还是一个地址， <em>( E1 + E2) 相当于间接访问该地址，相当于得到了(E1+E2)这个地址下的值。 总结： (E1+E2)  &#x3D;&#x3D;  E1[E2]</em></em></strong>**</p>
+<img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123939426.png" class="" title="image-20250311123939426">
 ]]></content>
   </entry>
   <entry>
@@ -603,75 +712,25 @@
 ]]></content>
   </entry>
   <entry>
-    <title>交叉编译器安装</title>
-    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
+    <title>编译流程</title>
+    <url>/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span>
 
-<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
-<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
-<blockquote>
-<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
-
-<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
-<blockquote>
-<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
+<p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p>
+<img src="/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/image-20250303151534298.png" class="" title="image-20250303151534298">
 
 <blockquote>
-<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
+<p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p>
 </blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
-
-<blockquote>
-<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
-</blockquote>
-<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
-<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
-<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
-
-<blockquote>
-<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
-
-<blockquote>
-<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
-
-<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
-<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
-<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
-<blockquote>
-<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
-
-<p>执行以下代码即可</p>
-<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
-
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
-
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
-
-<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
-<ul>
-<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
-</ul>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
-
-<blockquote>
-<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
-
-<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
+<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p>
+<p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p>
+<p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p>
+<p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p>
+<h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p>
+<p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p>
+<p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>
 ]]></content>
   </entry>
   <entry>
@@ -772,7 +831,7 @@
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303175950947.png" class="" title="image-20250303175950947">
 
 <h2 id="缓存区"><a href="#缓存区" class="headerlink" title="缓存区"></a>缓存区</h2><p>计算机的CPU的性能好，所以CPU的执行效率高，但是计算机的输入设备和输出设备的效率低，所以CPU为了提高工作效率，要降低访问输入输出设备的次数。于是就有了缓存区的诞生。</p>
-<style>.ytfxmpbhxxtx{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103033897.png" class="ytfxmpbhxxtx" alt="image-20250310103033897">
+<style>.wxqitiguujkl{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103033897.png" class="wxqitiguujkl" alt="image-20250310103033897">
 
 <blockquote>
 <p>IO设备的不同，可以把缓冲区分为输入缓冲区和输出缓冲区</p>
@@ -783,7 +842,7 @@
 <p>思考：如果用户不小心在使用printf函数输出字符串的时候忘了添加结束标志’\n’，并且用户没有打算输出太多字符，请问此时要输出的字符串会不会输出？</p>
 <p>回答：可以输出，当程序结束时会自动刷新缓冲区，如果输入缓存区中存在数据则被丢弃，如果输出缓存区存在数据，则会输出。</p>
 <p><strong>用户可以选择手动刷新缓冲区，可以调用标准C库中的fflush()函数接口</strong></p>
-<style>.dxhvkauikkrj{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103505394.png" class="dxhvkauikkrj" alt="image-20250310103505394">
+<style>.ubflfoplxyum{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103505394.png" class="ubflfoplxyum" alt="image-20250310103505394">
 
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103615007.png" class="" title="image-20250310103615007">
 
@@ -797,7 +856,7 @@
 
 <h3 id="匹配字符"><a href="#匹配字符" class="headerlink" title="匹配字符"></a>匹配字符</h3><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310104909814.png" class="" title="image-20250310104909814">
 
-<style>.dkapisphshub{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310104945150.png" class="dkapisphshub" alt="image-20250310104945150">
+<style>.jtbljuggjbzy{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310104945150.png" class="jtbljuggjbzy" alt="image-20250310104945150">
 
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
 <li><p>运算符指明要进行的运算和操作，操作数是指运算符的操作对象，根据运算符操作数的数目不同，C语言标准把运算符分为三种：单目运算符（一元运算符）、双目运算符（二元运算符）、三目运算符（三元运算符）。</p>
@@ -878,9 +937,9 @@
 <p>逗号</p>
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310125720662.png" class="" title="image-20250310125720662">
 
-<style>.dwytstmqcryc{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130444972.png" class="dwytstmqcryc" alt="image-20250310130444972">
+<style>.nyvibrbolije{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130444972.png" class="nyvibrbolije" alt="image-20250310130444972">
 
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><style>.bbvgakgwreal{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130633348.png" class="bbvgakgwreal" alt="image-20250310130633348">
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><style>.yckkminxcpvo{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130633348.png" class="yckkminxcpvo" alt="image-20250310130633348">
 
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130700954.png" class="" title="image-20250310130700954">
 
@@ -906,7 +965,7 @@
 <blockquote>
 <p>if</p>
 </blockquote>
-<style>.dxfzqfurybnj{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311120029560.png" class="dxfzqfurybnj" alt="image-20250311120029560">
+<style>.lorqmmblrrey{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311120029560.png" class="lorqmmblrrey" alt="image-20250311120029560">
 
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311120152088.png" class="" title="image-20250311120152088">
 
@@ -974,7 +1033,7 @@
 <blockquote>
 <p>for</p>
 </blockquote>
-<style>.umuwwcqlonoq{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311121246791.png" class="umuwwcqlonoq" alt="image-20250311121246791">
+<style>.vbtkooxcjueb{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311121246791.png" class="vbtkooxcjueb" alt="image-20250311121246791">
 
 <p><strong>循环语句内部的循环体一般都需要结合break语句、continue语句，都属于跳转语句！！！！！！</strong></p>
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311121355451.png" class="" title="image-20250311121355451">
@@ -1116,28 +1175,6 @@
 <ul>
 <li><strong>注意：如果打算上传或者下载的文件是一个目录，可以使用scp命令的选项[-r]，递归实现！</strong></li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>编译流程</title>
-    <url>/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span>
-
-<p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p>
-<img src="/2025/03/03/%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/image-20250303151534298.png" class="" title="image-20250303151534298">
-
-<blockquote>
-<p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p>
-</blockquote>
-<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p>
-<p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p>
-<p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p>
-<p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p>
-<h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p>
-<p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p>
-<p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>
 ]]></content>
   </entry>
 </search>
