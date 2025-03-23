@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>boke</title>
-    <url>/2025/03/22/boke/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>C语言基础</title>
     <url>/2025/03/22/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础</h1><span id="more"></span>
@@ -114,76 +109,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>交叉编译器安装</title>
-    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
-
-<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
-<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
-<blockquote>
-<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
-
-<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
-<blockquote>
-<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
-
-<blockquote>
-<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
-
-<blockquote>
-<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
-</blockquote>
-<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
-<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
-<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
-
-<blockquote>
-<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
-
-<blockquote>
-<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
-
-<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
-<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
-<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
-<blockquote>
-<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
-
-<p>执行以下代码即可</p>
-<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
-
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
-
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
-
-<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
-<ul>
-<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
-</ul>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
-
-<blockquote>
-<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
-</blockquote>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
-
-<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
-<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
-]]></content>
+    <title>boke</title>
+    <url>/2025/03/22/boke/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>主机，linux系统，开发板互相通信</title>
@@ -458,9 +386,76 @@
 ]]></content>
   </entry>
   <entry>
-    <title>数据结构知识点-杂</title>
-    <url>/2025/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9F%A5%E8%AF%86%E7%82%B9-%E6%9D%82/</url>
-    <content><![CDATA[<h1 id="数据结构知识点-杂"><a href="#数据结构知识点-杂" class="headerlink" title="数据结构知识点-杂"></a>数据结构知识点-杂</h1>]]></content>
+    <title>交叉编译器安装</title>
+    <url>/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
+
+<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
+<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
+<blockquote>
+<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112409370.png" class="" title="image-20250302112409370">
+
+<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
+<blockquote>
+<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112601021.png" class="" title="image-20250302112601021">
+
+<blockquote>
+<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112617046.png" class="" title="image-20250302112617046">
+
+<blockquote>
+<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
+</blockquote>
+<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
+<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
+<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112838928.png" class="" title="image-20250302112838928">
+
+<blockquote>
+<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112909895.png" class="" title="image-20250302112909895">
+
+<blockquote>
+<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302112932513.png" class="" title="image-20250302112932513">
+
+<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
+<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
+<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
+<blockquote>
+<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302120613228.png" class="" title="image-20250302120613228">
+
+<p>执行以下代码即可</p>
+<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113057925.png" class="" title="image-20250302113057925">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113123682.png" class="" title="image-20250302113123682">
+
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113136505.png" class="" title="image-20250302113136505">
+
+<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
+<ul>
+<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
+</ul>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302122258025.png" class="" title="image-20250302122258025">
+
+<blockquote>
+<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
+</blockquote>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113232556.png" class="" title="image-20250302113232556">
+
+<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
+<img src="/2025/03/02/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8%E5%AE%89%E8%A3%85/image-20250302113314766.png" class="" title="image-20250302113314766">
+]]></content>
   </entry>
   <entry>
     <title>基础代码</title>
@@ -488,6 +483,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>数据结构知识点-杂</title>
+    <url>/2025/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9F%A5%E8%AF%86%E7%82%B9-%E6%9D%82/</url>
+    <content><![CDATA[<h1 id="数据结构知识点-杂"><a href="#数据结构知识点-杂" class="headerlink" title="数据结构知识点-杂"></a>数据结构知识点-杂</h1>]]></content>
+  </entry>
+  <entry>
     <title>数组</title>
     <url>/2025/03/11/%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="***数组"></a>***数组</h1><span id="more"></span>
@@ -503,7 +503,7 @@
 <li>用户需要说明 数据数量 * 数据宽度 ，对于数据宽度而言指的是数据类型 ，数据的类型可以是基本数据类型（字符型、整型、短整型、浮点型） or 复杂数据类型（结构体、联合体） or 指针类型</li>
 </ul>
 <p><code>定义数组的格式： 数据类型 数组名称 [数据个数] ;  // 内存大小：数据类型 * 数据个数</code></p>
-<style>.yrdcqlbklugs{zoom:200%;}</style><img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123000826.png" class="yrdcqlbklugs" alt="image-20250311123000826">
+<style>.rjrnexmmurhm{zoom:200%;}</style><img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123000826.png" class="rjrnexmmurhm" alt="image-20250311123000826">
 
 <img src="/2025/03/11/%E6%95%B0%E7%BB%84/image-20250311123027825.png" class="" title="image-20250311123027825">
 
@@ -847,7 +847,7 @@
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250303175950947.png" class="" title="image-20250303175950947">
 
 <h2 id="缓存区"><a href="#缓存区" class="headerlink" title="缓存区"></a>缓存区</h2><p>计算机的CPU的性能好，所以CPU的执行效率高，但是计算机的输入设备和输出设备的效率低，所以CPU为了提高工作效率，要降低访问输入输出设备的次数。于是就有了缓存区的诞生。</p>
-<style>.ochesfjkcmtf{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103033897.png" class="ochesfjkcmtf" alt="image-20250310103033897">
+<style>.hansxkmcsfkg{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103033897.png" class="hansxkmcsfkg" alt="image-20250310103033897">
 
 <blockquote>
 <p>IO设备的不同，可以把缓冲区分为输入缓冲区和输出缓冲区</p>
@@ -858,7 +858,7 @@
 <p>思考：如果用户不小心在使用printf函数输出字符串的时候忘了添加结束标志’\n’，并且用户没有打算输出太多字符，请问此时要输出的字符串会不会输出？</p>
 <p>回答：可以输出，当程序结束时会自动刷新缓冲区，如果输入缓存区中存在数据则被丢弃，如果输出缓存区存在数据，则会输出。</p>
 <p><strong>用户可以选择手动刷新缓冲区，可以调用标准C库中的fflush()函数接口</strong></p>
-<style>.uorotgqmjowo{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103505394.png" class="uorotgqmjowo" alt="image-20250310103505394">
+<style>.rjvfxsbamlof{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103505394.png" class="rjvfxsbamlof" alt="image-20250310103505394">
 
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310103615007.png" class="" title="image-20250310103615007">
 
@@ -872,7 +872,7 @@
 
 <h3 id="匹配字符"><a href="#匹配字符" class="headerlink" title="匹配字符"></a>匹配字符</h3><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310104909814.png" class="" title="image-20250310104909814">
 
-<style>.ythwcwceleqh{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310104945150.png" class="ythwcwceleqh" alt="image-20250310104945150">
+<style>.skwvbjiucikt{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310104945150.png" class="skwvbjiucikt" alt="image-20250310104945150">
 
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
 <li><p>运算符指明要进行的运算和操作，操作数是指运算符的操作对象，根据运算符操作数的数目不同，C语言标准把运算符分为三种：单目运算符（一元运算符）、双目运算符（二元运算符）、三目运算符（三元运算符）。</p>
@@ -953,9 +953,9 @@
 <p>逗号</p>
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310125720662.png" class="" title="image-20250310125720662">
 
-<style>.rdwtlidpmgpt{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130444972.png" class="rdwtlidpmgpt" alt="image-20250310130444972">
+<style>.vuwzwaijtoex{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130444972.png" class="vuwzwaijtoex" alt="image-20250310130444972">
 
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><style>.tnbyzfjxlfpd{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130633348.png" class="tnbyzfjxlfpd" alt="image-20250310130633348">
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><style>.hxwrktijesys{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130633348.png" class="hxwrktijesys" alt="image-20250310130633348">
 
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250310130700954.png" class="" title="image-20250310130700954">
 
@@ -981,7 +981,7 @@
 <blockquote>
 <p>if</p>
 </blockquote>
-<style>.mpwtfxvkcnyf{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311120029560.png" class="mpwtfxvkcnyf" alt="image-20250311120029560">
+<style>.jqxgfqgydubc{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311120029560.png" class="jqxgfqgydubc" alt="image-20250311120029560">
 
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311120152088.png" class="" title="image-20250311120152088">
 
@@ -1049,7 +1049,7 @@
 <blockquote>
 <p>for</p>
 </blockquote>
-<style>.zbigecbmgwen{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311121246791.png" class="zbigecbmgwen" alt="image-20250311121246791">
+<style>.vqqztgghkwps{zoom:200%;}</style><img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311121246791.png" class="vqqztgghkwps" alt="image-20250311121246791">
 
 <p><strong>循环语句内部的循环体一般都需要结合break语句、continue语句，都属于跳转语句！！！！！！</strong></p>
 <img src="/2025/03/03/%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/image-20250311121355451.png" class="" title="image-20250311121355451">
