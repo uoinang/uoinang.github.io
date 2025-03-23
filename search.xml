@@ -1,1201 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>boke</title>
-    <url>/post/48314b32.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/post/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Markdown语法</title>
-    <url>/post/3c50d03d.html</url>
-    <content><![CDATA[<p>整理的一些markdown常用语法</p>
-<span id="more"></span>
-
-<p>[TOC]</p>
-<h2 id="自动生成目录"><a href="#自动生成目录" class="headerlink" title="自动生成目录"></a>自动生成目录</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[TOC]</span><br></pre></td></tr></table></figure>
-
-<p>部分软件不支持，例如obsidian</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 文本</span></span><br><span class="line">关于标题：</span><br><span class="line"><span class="section"># 一级标题，一般是书籍的章标题或课程的章标题</span></span><br><span class="line"><span class="section">## 二级标题, 一般是节内容</span></span><br><span class="line"><span class="section">### 三级标题, 一般是重要知识点内容</span></span><br><span class="line">四级以上的标题基本上不用, 用加粗或分割线代替, 最大支持六级标题</span><br></pre></td></tr></table></figure>
-
-<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**文本**</span>  ctrl + b</span><br></pre></td></tr></table></figure>
-
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*文本*</span> ctrl + i</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 删除线</span><br><span class="line"></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">~~文本~~ 波浪线 alt + shift +5</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>(按tab按键缩进控制)</p>
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">	1.</span> 文本</span><br><span class="line"><span class="bullet">2.</span> 文本  </span><br><span class="line">使用数字并加上.号，再加一个空格  使用tab制表符会变颜色(仅仅限于代码块中)</span><br></pre></td></tr></table></figure>
-
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">	*</span> 文本</span><br><span class="line"><span class="bullet">*</span> 文本</span><br><span class="line">使用 * ，+，-，再加一个空格作为列表的标记</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Enter会进入下个列表，而 shift+enter 不会，则会在原有列表的基础上另起一行，shift + tab 取消列表</p>
-</blockquote>
-<h2 id="引用-支持嵌入"><a href="#引用-支持嵌入" class="headerlink" title="引用(支持嵌入)"></a>引用(支持嵌入)</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 文本</span></span><br><span class="line"><span class="quote">&gt; ~~文本~~</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>两下Enter则下一行退出引用，</li>
-<li>shift+ tab取消本行的引用</li>
-<li><code>&gt;</code>里面嵌入<code>&gt;</code>,则可以嵌入引用</li>
-</ul>
-<blockquote>
-<blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="网页链接"><a href="#网页链接" class="headerlink" title="网页链接"></a>网页链接</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">标题</span>](<span class="link">链接</span>)</span><br><span class="line">例如</span><br><span class="line">[<span class="string">文件引用</span>](<span class="link">./Database/文件.PDF</span>) 其中 ./ 表示当前目录, ../表示上级目录, ../../表示上上级别的目录</span><br><span class="line">[<span class="string">网页</span>](<span class="link">https://www.bilibili.com/</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="图像链接"><a href="#图像链接" class="headerlink" title="图像链接"></a>图像链接</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">	通用：</span></span><br><span class="line"><span class="code">		！[文字信息](图片链接&quot;提示文本信息&quot;)</span></span><br><span class="line"><span class="code">![文字信息](图片链接&quot;提示文本信息&quot;)</span></span><br><span class="line"><span class="code">![湘湖1](https://z3.ax1x.com/2021/08/06/fuNkXq.jpg &quot;湘湖一角&quot;)</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`代码`</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```语言种类</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 文本</span><br><span class="line"><span class="bullet">-</span> [X] 含X表示代表事项已完成</span><br></pre></td></tr></table></figure>
-
-<h2 id="分界线"><a href="#分界线" class="headerlink" title="分界线"></a>分界线</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">--- </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p><strong>Markdown</strong> 的 <strong>注释</strong> 和 <strong>HMTL</strong> 一样，注释的内容在 <strong>渲染界面</strong> <strong>不可见</strong> （部分编辑器可见)</p>
-<blockquote>
-<ul>
-<li><p><strong>注释 的格式：</strong></p>
-</li>
-<li><p><code>&lt;!-- 这里是注释的内容 --&gt;</code></p>
-</li>
-<li><ul>
-<li>注释可以是单行，也可以是多行</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| 标题1 | 标题2 | 标题3 |</span><br><span class="line">| ----- | ----- | ----- |</span><br><span class="line">| 内容1 | 4     | 7     |</span><br><span class="line">| 2     | 5     | 8     |</span><br><span class="line">| 3     | 6     | 9     |</span><br><span class="line"></span><br><span class="line">其中:</span><br><span class="line">| :----- | ----- | ----- | 左对齐</span><br><span class="line">| :-----: | ----- | ----- | 居中</span><br><span class="line">| -----: | ----- | ----- | 右对齐</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><strong>|</strong> 是构成表格的主要 <strong>框架</strong></p>
-</li>
-<li><p><strong>-</strong> 区分 <strong>表头</strong> 和 <strong>表格主体</strong></p>
-</li>
-<li><p><strong>:</strong> 控制 表格内 <strong>文本内容</strong> 的 <strong>对齐方式</strong></p>
-</li>
-<li><p><strong>Typora编辑器中</strong> 输入 <strong><code>Ctrl + T</code></strong> 即可快速插入表格，自由定义样式</p>
-</li>
-<li><p>表格中文本内容的换行, 可以在 <strong>中间</strong> 插入一个 <strong><code>&lt;br&gt;</code></strong> （ 换行标签 )</p>
-</li>
-</ul>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>这是一段加了下划线的文本<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p><u>这是一段加了下划线的文本</u></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>git</title>
-    <url>/post/518e617c.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>交叉编译器安装</title>
-    <url>/post/706f61fa.html</url>
-    <content><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span>
-
-<p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p>
-<p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p>
-<blockquote>
-<p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302112409370.png" class="" title="image-20250302112409370">
-
-<p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p>
-<blockquote>
-<p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302112601021.png" class="" title="image-20250302112601021">
-
-<blockquote>
-<p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302112617046.png" class="" title="image-20250302112617046">
-
-<blockquote>
-<p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p>
-</blockquote>
-<p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p>
-<p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p>
-<p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p>
-<img src="/post/706f61fa/image-20250302112838928.png" class="" title="image-20250302112838928">
-
-<blockquote>
-<p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302112909895.png" class="" title="image-20250302112909895">
-
-<blockquote>
-<p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302112932513.png" class="" title="image-20250302112932513">
-
-<p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p>
-<p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p>
-<p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p>
-<blockquote>
-<p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302120613228.png" class="" title="image-20250302120613228">
-
-<p>执行以下代码即可</p>
-<p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p>
-<img src="/post/706f61fa/image-20250302113057925.png" class="" title="image-20250302113057925">
-
-<img src="/post/706f61fa/image-20250302113123682.png" class="" title="image-20250302113123682">
-
-<img src="/post/706f61fa/image-20250302113136505.png" class="" title="image-20250302113136505">
-
-<p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p>
-<ul>
-<li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li>
-</ul>
-<img src="/post/706f61fa/image-20250302122258025.png" class="" title="image-20250302122258025">
-
-<blockquote>
-<p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p>
-</blockquote>
-<img src="/post/706f61fa/image-20250302113232556.png" class="" title="image-20250302113232556">
-
-<p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p>
-<img src="/post/706f61fa/image-20250302113314766.png" class="" title="image-20250302113314766">
-]]></content>
-  </entry>
-  <entry>
-    <title>数据结构知识点-杂</title>
-    <url>/post/227df6d7.html</url>
-    <content><![CDATA[<h1 id="数据结构知识点-杂"><a href="#数据结构知识点-杂" class="headerlink" title="数据结构知识点-杂"></a>数据结构知识点-杂</h1>]]></content>
-  </entry>
-  <entry>
-    <title>基础代码</title>
-    <url>/post/e5775237.html</url>
-    <content><![CDATA[<h1 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h1><span id="more"></span>
-
-<h3 id="1-判断机器的大小端"><a href="#1-判断机器的大小端" class="headerlink" title="1.判断机器的大小端"></a>1.判断机器的大小端</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	file name:	IsEndian.c</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2025/03/17</span></span><br><span class="line"><span class="comment">*	function :  该案例是掌握进行模块化编程思想，以及封装函数接口流程</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	CopyRight (c)  2023-2024   cecelmx@126.com   All Right Reseverd </span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;IsEndian.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//用户自定义的联合体类型</span></span><br><span class="line"><span class="class"><span class="keyword">union</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">int</span>  a;</span><br><span class="line">	<span class="type">char</span> b;</span><br><span class="line">&#125;Endian;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	IsEndian</span></span><br><span class="line"><span class="comment">*	function :  判断机器的大小端</span></span><br><span class="line"><span class="comment">*	argument :  None</span></span><br><span class="line"><span class="comment">*	retval	 :  None</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2025/03/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">IsEndian</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//对联合体的成员a进行赋值</span></span><br><span class="line">	Endian.a = <span class="number">0x12345678</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (<span class="number">0x12</span> == Endian.b)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Big-Endian\n&quot;</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Little-Endian\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-实现计算一个输入的整数n的阶乘"><a href="#2-实现计算一个输入的整数n的阶乘" class="headerlink" title="2.实现计算一个输入的整数n的阶乘"></a>2.实现计算一个输入的整数n的阶乘</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	CalFactorial</span></span><br><span class="line"><span class="comment">*	function :  实现计算一个输入的整数n的阶乘            是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@n  :需要计算的值n</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  调用成功返回计算后的结果</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  1*2*3*4*...*(n-2)*(n-1)*n  考查递归思想解决问题</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">CalFactorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//递归函数必须提前写好终止条件,当n==1时可以选择终止函数</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="number">1</span> == n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> CalFactorial(n<span class="number">-1</span>)*n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//递归，将大问题化解成小问题解决；两个重要的点，1.有终止条件。2.数学公式</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-计算一个字符串中最大的重复子串的字符的数量"><a href="#3-计算一个字符串中最大的重复子串的字符的数量" class="headerlink" title="3.计算一个字符串中最大的重复子串的字符的数量"></a>3.计算一个字符串中最大的重复子串的字符的数量</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	CalSubStrMaxCnt</span></span><br><span class="line"><span class="comment">*	function :  计算一个字符串中最大的重复子串的字符的数量</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str:需要查找的字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  函数调用成功则返回最大子串的字符数量</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">CalSubStrMaxCnt</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="literal">NULL</span> == str)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;argument is invaild\n&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> cnt = <span class="number">1</span>; <span class="comment">//计数器用于记录相同字符的数量,都不连续则返回值为1</span></span><br><span class="line">	<span class="type">int</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//循环判断字符，当遇到&#x27;\0&#x27;则表达到达字符串末尾，此时可以终止循环</span></span><br><span class="line">	<span class="keyword">while</span>(*str != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//判断当前的字符和下一个字符的ASCII是否相同</span></span><br><span class="line">		<span class="keyword">if</span>(*str == *(str+<span class="number">1</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			cnt++; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			max = (max &lt; cnt) ?  cnt : max;</span><br><span class="line">			cnt = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		str++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//当终止循环时，则把最大值返回</span></span><br><span class="line">	<span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-实现字符串的拷贝（不调用库函数的情况下）"><a href="#4-实现字符串的拷贝（不调用库函数的情况下）" class="headerlink" title="4.实现字符串的拷贝（不调用库函数的情况下）"></a>4.实现字符串的拷贝（不调用库函数的情况下）</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	MyStrcpy</span></span><br><span class="line"><span class="comment">*	function :  实现字符串的拷贝（不调用库函数的情况下），是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str_src :需要拷贝字符串的地址</span></span><br><span class="line"><span class="comment">*				@str_dest:待拷贝的目标空间的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  函数调用成功则返回目标空间的地址</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">char</span> * <span class="title function_">MyStrcpy</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str_src,<span class="type">char</span> *str_dest)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//循环的把str_src字符串的每个字符进行赋值，赋值到str_dest地址下</span></span><br><span class="line">	<span class="keyword">while</span>(*str_src != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//如果没有到达字符串末尾，则把字符串的字符按照顺序依次赋值</span></span><br><span class="line">		*str_dest = *str_src++;</span><br><span class="line">		 </span><br><span class="line">		str_dest++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//包含了&#x27;\0&#x27;</span></span><br><span class="line">	*str_dest = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> str_dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-实现字符串的比较"><a href="#5-实现字符串的比较" class="headerlink" title="5.实现字符串的比较"></a>5.实现字符串的比较</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	MyStrcmp</span></span><br><span class="line"><span class="comment">*	function :  实现字符串的比较（不调用库函数的情况下），是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str1 :需要比较的第一个字符串的地址</span></span><br><span class="line"><span class="comment">*				@str2 :需要比较的第二个字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  两个字符串相同则返回0，如果不相同则返回1</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">MyStrcmp</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str1,<span class="type">const</span> <span class="type">char</span> *str2)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//循环的比较两个字符串的字符ASCII码是否相等</span></span><br><span class="line">	<span class="keyword">while</span>( *str1++ == *str2++ )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (*str1 == <span class="string">&#x27;\0&#x27;</span> &amp;&amp; *str2 == <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-实现把一个char组成的字符串循环右移n个"><a href="#6-实现把一个char组成的字符串循环右移n个" class="headerlink" title="6.实现把一个char组成的字符串循环右移n个"></a>6.实现把一个char组成的字符串循环右移n个</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	StrRightShift</span></span><br><span class="line"><span class="comment">*	function :  实现把一个char组成的字符串循环右移n个。是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str  :需要右移的字符串的地址</span></span><br><span class="line"><span class="comment">*				@n    :需要右移的位数</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  调用成功返回移位的字符串的首地址</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  原来是&quot;abcdefghi&quot; 如果n=2，移位后应该是&quot;hiabcdefg&quot;</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">char</span> * <span class="title function_">StrRightShift</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str,<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//计算字符的实际长度</span></span><br><span class="line">	<span class="type">int</span> cnt = <span class="built_in">strlen</span>(str);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//printf(&quot;string cnt = %d\n&quot;,cnt);</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//给字符串的字符申请内存</span></span><br><span class="line">	<span class="type">char</span> *p = (<span class="type">char</span> *)<span class="built_in">malloc</span>(cnt);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//把输入的字符串中的字符备份到堆内存</span></span><br><span class="line">	<span class="built_in">strcpy</span>(p,str);</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> temp = <span class="number">0</span>; <span class="comment">//存储要移位的字符</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//循环进行字符的移位        									</span></span><br><span class="line"> 	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		temp = *(p + cnt - <span class="number">1</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;temp = %c\n&quot;</span>,temp);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = cnt - <span class="number">2</span>; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">		&#123;</span><br><span class="line">			*(p+j+<span class="number">1</span>)= *(p+j);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		*p = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//输出移位后的字符串</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;string is %s\n&quot;</span>,str);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;string is %s\n&quot;</span>,p);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-实现将一个输入的字符串进行逆序"><a href="#7-实现将一个输入的字符串进行逆序" class="headerlink" title="7.实现将一个输入的字符串进行逆序"></a>7.实现将一个输入的字符串进行逆序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	StrReverse</span></span><br><span class="line"><span class="comment">*	function :  实现将一个输入的字符串进行逆序            是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str  :需要逆序的字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  调用成功返回逆序之后的字符串的首地址</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  原来是&quot;helloworld&quot; 逆序后应该是&quot;dlrowolleh&quot;</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">char</span> *<span class="title function_">StrReverse</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="type">char</span> *p = (<span class="type">char</span> *)<span class="built_in">malloc</span>(<span class="number">128</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> cnt = <span class="built_in">strlen</span>(str);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		*(p+i) = *((str+cnt<span class="number">-1</span>)-i);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-递归思想实现将一个输入的字符串的实际长度"><a href="#8-递归思想实现将一个输入的字符串的实际长度" class="headerlink" title="8.递归思想实现将一个输入的字符串的实际长度"></a>8.递归思想实现将一个输入的字符串的实际长度</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	StrReverse</span></span><br><span class="line"><span class="comment">*	function :  递归思想实现将一个输入的字符串的实际长度     是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str  :需要逆序输出的字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  返回计算的字符数量，不包括&#x27;\0&#x27;</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  None</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* ******************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">MyStrlen</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *ptr)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//写好终止条件，遇到&#x27;\0&#x27;结束递归，&#x27;\0&#x27;不计算在内</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="string">&#x27;\0&#x27;</span> == *ptr)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> MyStrlen(ptr+<span class="number">1</span>)+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="9-实现将一个输入的字符串进行逆序输出"><a href="#9-实现将一个输入的字符串进行逆序输出" class="headerlink" title="9.实现将一个输入的字符串进行逆序输出"></a>9.实现将一个输入的字符串进行逆序输出</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*	name	 :	StrReverse</span></span><br><span class="line"><span class="comment">*	function :  实现将一个输入的字符串进行逆序输出           是笔试题</span></span><br><span class="line"><span class="comment">*	argument :  </span></span><br><span class="line"><span class="comment">*				@str  :需要逆序输出的字符串的地址</span></span><br><span class="line"><span class="comment">*				</span></span><br><span class="line"><span class="comment">*	retval	 :  None</span></span><br><span class="line"><span class="comment">*	author	 :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*	date	 :  2024/04/17</span></span><br><span class="line"><span class="comment">* 	note	 :  原来是&quot;helloworld&quot; 逆序后应该是&quot;dlrowolleh&quot;</span></span><br><span class="line"><span class="comment">* 	</span></span><br><span class="line"><span class="comment">* ******************************************************************/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">StrReversePrint</span><span class="params">(<span class="type">char</span> *ptr)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//写好终止条件，防止死循环出现，导致函数频繁调用出现栈溢出现象</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="string">&#x27;\0&#x27;</span> == *ptr)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>; </span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	StrReversePrint(ptr+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,*ptr);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>数组</title>
-    <url>/post/340249a9.html</url>
-    <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="***数组"></a>***数组</h1><span id="more"></span>
-
-<h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><ul>
-<li>数组其实就是用户向<strong>内核</strong>申请的一块空间，只不过内核提供的这块空间的<strong>内存地址是连续的</strong>，目的就是方便用户存储和访问<strong>相同类型的数据</strong>。</li>
-</ul>
-<h3 id="1-1用户访问"><a href="#1-1用户访问" class="headerlink" title="1.1用户访问"></a>1.1用户访问</h3><ul>
-<li>内核申请内存时如果申请成功则操作系统会把<strong>内存的起始地址</strong>提供给用户,用户可以通过存储单元的地址访问,但是程序的可读性以及可维护性变差，所以C语言允许用户像访问变量一样，可以对数组进行命名，这样系统内核就会把数组名和数组的起始地址建立映射关系。</li>
-</ul>
-<h3 id="1-2数组的定义"><a href="#1-2数组的定义" class="headerlink" title="1.2数组的定义"></a>1.2数组的定义</h3><ul>
-<li>何向内核申请空间</li>
-<li>用户需要说明 数据数量 * 数据宽度 ，对于数据宽度而言指的是数据类型 ，数据的类型可以是基本数据类型（字符型、整型、短整型、浮点型） or 复杂数据类型（结构体、联合体） or 指针类型</li>
-</ul>
-<p><code>定义数组的格式： 数据类型 数组名称 [数据个数] ;  // 内存大小：数据类型 * 数据个数</code></p>
-<style>.vkmkpefykknq{zoom:200%;}</style><img src="/post/340249a9/image-20250311123000826.png" class="vkmkpefykknq" alt="image-20250311123000826">
-
-<img src="/post/340249a9/image-20250311123027825.png" class="" title="image-20250311123027825">
-
-<h3 id="1-3数组的访问"><a href="#1-3数组的访问" class="headerlink" title="1.3数组的访问*************************"></a>1.3数组的访问*************************</h3><img src="/post/340249a9/image-20250311123102061.png" class="" title="image-20250311123102061">
-
-<p><em>可以知道C语言标准中想要访问数组中的某个元素，可以使用 E1[E2] 结构，E1是数组对象，其实就是数组名，E2是一个整数，用于作为数组下标，并且E2的值是从0开始。</em></p>
-<p><em>所以数组的下标的范围 E1[0] ~ E1[E2-1]，就可以通过这种方式来表示任意一个数组中的元素！</em></p>
-<img src="/post/340249a9/image-20250311123345161.png" class="" title="image-20250311123345161">
-
-<img src="/post/340249a9/image-20250311123406271.png" class="" title="image-20250311123406271">
-
-<p><strong>C语言标准中规定可以通过 下标方式访问数组的元素 E1[E2]  也可以通过 内存地址 方式访问数组中的元素 ( * ( (E1) + (E2) ) ) ，注意：如果E1就是数组名，并且E2就是整型常量，则可以把括号省略，变为 (  * (E1 + E2)  )</strong>  </p>
-<p>为什么C语言中规定*( E1 + E2 )可以访问数组元素地址，是什么原理？*有什么作用？</p>
-<p><em><em>C语言标准中提供多种运算符，</em> 可以作为二元运算符， * 作为乘法运算符，需要。两个操作对象，并且遵循“左结合性”，但是 * 也可以作为一元运算符， * 的含义就是间接运算符。</em>*</p>
-<img src="/post/340249a9/image-20250311123630800.png" class="" title="image-20250311123630800">
-
-<p><strong>( <em>E1 + E2 )的解释：E1是一个数组对象，E1也就是数组名称，C语言标准中规定数组名可以作为数组中第一个元素的地址，所以相当于E1是数组中第一个元素的地址，而E2是一个整数，所以 E1 + E2 相当于从E1这个地址向后偏移E2个单位（以元素为单位，所以需要考虑元素的类型），所以E1+E2的结果还是一个地址， <em>( E1 + E2) 相当于间接访问该地址，相当于得到了(E1+E2)这个地址下的值。 总结： (E1+E2)  &#x3D;&#x3D;  E1[E2]</em></em></strong>**</p>
-<img src="/post/340249a9/image-20250311123939426.png" class="" title="image-20250311123939426">
-]]></content>
-  </entry>
-  <entry>
-    <title>主机，linux系统，开发板互相通信</title>
-    <url>/post/601bc42c.html</url>
-    <content><![CDATA[<h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><span id="more"></span>
-
-<h2 id="1-系统之间文件共享-linux系统和windows系统"><a href="#1-系统之间文件共享-linux系统和windows系统" class="headerlink" title="1.系统之间文件共享(linux系统和windows系统)"></a>1.系统之间文件共享(linux系统和windows系统)</h2><blockquote>
-<p>1.点击VMware菜单栏的“虚拟机”，然后点击“设置”，点  击“选项”，点击“共享文件夹”</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250227162840228.png" class="" title="image-20250227162840228">
-
-<p>![共享文件夹1](主机，linux系统，开发板互相通信&#x2F;共享文件夹1.png</p>
-<blockquote>
-<p>2.设置主机路径（windows系统的路径，），设置名称（linux系统的文件夹的名称，英文）</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250227162758815.png" class="" title="image-20250227162758815">
-
-<blockquote>
-<p>3.然后打开Terminal终端，输入命令cd  <em><strong>*&#x2F;mnt&#x2F;hgfs&#x2F;*</strong></em> 然后按下回车，输入ls命令查看</p>
-</blockquote>
-<img src="/post/601bc42c/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B93.png" class="" title="共享文件夹3">
-
-<blockquote>
-<p>4.可以看到share文件夹就是设置好的共享文件夹的名称，切换到该目录即可实现共享。</p>
-</blockquote>
-<img src="/post/601bc42c/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B94.png" class="" title="共享文件夹4">
-
-<h2 id="2-ARM开发板"><a href="#2-ARM开发板" class="headerlink" title="2.ARM开发板"></a>2.ARM开发板</h2><blockquote>
-<p>1.进行硬件接线，安装USB转串口线的CH340驱动，检查驱动是否安装成功</p>
-</blockquote>
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF1.png" class="" title="开发板1">
-
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF2.png" class="" title="开发板2">
-
-<blockquote>
-<p>2.打开secureCRT软件之后，点击“快速连接”，并选择“serial”协议，进行配置，如下：</p>
-</blockquote>
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF3.png" class="" title="开发板3">
-
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF4.png" class="" title="开发板4">
-
-<ul>
-<li><strong>配置完成后，点击“连接”，如果软件左上角出现绿色对勾，说明端口选择正确，如下：</strong></li>
-</ul>
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF5.png" class="" title="开发板5">
-
-<ul>
-<li><strong>如果端口正确，则打开开发板的电源开关（往上拨），等待系统启动，此时不要按键盘！</strong></li>
-</ul>
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF6.png" class="" title="开发板6">
-
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF7.png" class="" title="开发板7">
-
-<ul>
-<li><p><em>注意：如果启动的过程中卡在某一行不动，原因是开发板启动后会自动运行一个应用程序，该应用程序占用了shell终端，此时只需要按</em>**快捷键Ctrl+C**<em>就可以强制结束进程，此时可以顺利使用shell终端。</em></p>
-</li>
-<li><p><strong>由于开发板板载的是Linux系统，所以可以通过secureCRT调试工具发送shell命令</strong></p>
-</li>
-<li><p><strong>点击secureCRT菜单栏“选项”-&gt;“会话选项”-&gt;“外观”，修改字体大小和字符编码：</strong></p>
-</li>
-</ul>
-<img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF8.png" class="" title="开发板8">
-
-<h1 id="3-传输文件-从主机-windows-到开发板-Linux"><a href="#3-传输文件-从主机-windows-到开发板-Linux" class="headerlink" title="3.传输文件 (从主机(windows)到开发板(Linux))"></a>3.传输文件 (从主机(windows)到开发板(Linux))</h1><pre><code>### 3.1检查开发板内存
-</code></pre>
-<blockquote>
-<p>1.示意图。windows写代码，虚拟机编译，开发板执行</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%931.png" class="" title="传输1">
-
-<ul>
-<li><strong>在开发板中创建一个新目录，来存储文件，防止误操作</strong></li>
-</ul>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%932.png" class="" title="传输2">
-
-<blockquote>
-<p>2.挂载内存 :把硬盘剩余的空间挂在到根文件系统中进行使用。</p>
-<p>[root@GEC6818 &#x2F;]# df  -h #查看根目录磁盘分布情况</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%933.png" class="" title="传输3">
-
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# cat  &#x2F;proc&#x2F;partitions #查看分区使用情况</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%934.png" class="" title="传输4">
-
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# mkfs.vfat  &#x2F;dev&#x2F;mmcblk0p7  #格式化暂未被使用的硬盘分区mmcblk0p7</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%935.png" class="" title="传输5">
-
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# mount  -t  vfat  &#x2F;dev&#x2F;mmcblk0p7   &#x2F;workspace   #把该分区挂载到指定目录下</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%936.png" class="" title="传输6">
-
-<ul>
-<li>[root@GEC6818 &#x2F;]# df  -h   #(1) 检测是否挂载成功，分区挂载指令是单次有效的，所以需要把挂载指令写入自启脚本中</li>
-</ul>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%937.png" class="" title="传输7">
-
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile  #打开开发板配置文件，该文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%938.png" class="" title="传输8">
-
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# reboot  #重启开发板使配置文件生效</p>
-</blockquote>
-<h3 id="3-2指令传输（单个文件传输）-线传输"><a href="#3-2指令传输（单个文件传输）-线传输" class="headerlink" title="3.2指令传输（单个文件传输）(线传输)"></a>3.2指令传输（单个文件传输）(线传输)</h3><blockquote>
-<p>1.切换到开发板的个人工作路径，然后在secureCRT的shell终端中输入命令：rx 文件名</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%939.png" class="" title="传输9">
-
-<blockquote>
-<p>2.点击软件菜单栏的“传输”，然后点击“发送Xmodem”，选择windows系统中的文件：</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9310.png" class="" title="传输10">
-
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9311.png" class="" title="传输11">
-
-<ul>
-<li><strong>等待文件发送完成即可，可以通过进度条来检查文件是否发送完成，具体操作如下所示：</strong></li>
-</ul>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9312.png" class="" title="传输12">
-
-<h3 id="3-2指令传输（多个文件传输）（线传输）"><a href="#3-2指令传输（多个文件传输）（线传输）" class="headerlink" title="3.2指令传输（多个文件传输）（线传输）"></a>3.2指令传输（多个文件传输）（线传输）</h3><p><em>注意：并且rx命令也无法一次传输多个文件，并且rx命令的传输速度较慢，为了解决该问题，可以把rz命令传输到开发板的 &#x2F;bin 目录下，这样可以使用rz命令一次传输多个文件，如下：</em></p>
-<blockquote>
-<p>1.在secureCRT的shell终端中输入命令：rx  rz，按下回车，然后找到rz命令所在文件夹</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9313.png" class="" title="传输13">
-
-<blockquote>
-<p>2.等待文件传输完成，由于该文件是一个shell命令，所以需要修改权限： chmod 777 rz</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9314.png" class="" title="传输14">
-
-<blockquote>
-<p>3.由于系统shell命令的环境变量设置在&#x2F;bin目录下，所以需要把rz命令移动到 &#x2F;bin目录</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9315.png" class="" title="传输15">
-
-<blockquote>
-<p>4.测试rz命令是否正常，在secureCRT的shell终端中输入命令：rz  然后按下回车，如：</p>
-</blockquote>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9316.png" class="" title="传输16">
-
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9317.png" class="" title="传输17">
-
-<p><em>注意：可修改secureCRT软件下载文件的路径，固定每次弹出窗口的路径位置，快速定位下载文件，如下所示</em></p>
-<img src="/post/601bc42c/%E4%BC%A0%E8%BE%9318.png" class="" title="传输18">
-
-<h3 id="3-3网络传输"><a href="#3-3网络传输" class="headerlink" title="3.3网络传输"></a>3.3网络传输</h3><p><strong>在开发板和计算机处于同一个局域网的情况下，采用网口的方式来传输文件是最高效的一种方式（即通过网线把主机的文件传输到开发板上），此时可以利用tftp工具实现，tftp的全称是 tiny FTP，此工具专用于文件传输，其所为tiny意指匿名传输，是一种轻量级的FTP工具。</strong></p>
-<blockquote>
-<p>在windows中通过C:\Users\G&gt;ipconfig -all  #获得以太网的ip地址，子网掩码，网关和DNS，只要将以上等设置和静态的一样，就可以既可以连接到网络，也可以实现主机，linux，开发板之间的传送</p>
-</blockquote>
-<h4 id="3-3-1简单的介绍"><a href="#3-3-1简单的介绍" class="headerlink" title="3.3.1简单的介绍"></a>3.3.1简单的介绍</h4><h4 id="3-3-2linux网络环境配置"><a href="#3-3-2linux网络环境配置" class="headerlink" title="3.3.2linux网络环境配置"></a>3.3.2linux网络环境配置</h4><p><strong>虚拟机的网络适配器的模式有两种，分别是桥接模式和NAT模式，两者具体区别如下所示：</strong></p>
-<blockquote>
-<p>1.桥接模式：虚拟机跟物理机各自拥有独立的IP地址</p>
-<p>2.NAT模式：虚拟机直接共享物理机的IP，虚拟机本身没有独立的IP地址</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250227221223975.png" class="" title="image-20250227221223975">
-
-<p><em>对于桥接模式需要注意，必须要仔细选择桥接的物理网卡，否则会出现无法联网的情形。</em></p>
-<img src="/post/601bc42c/image-20250228001050209.png" class="" title="image-20250228001050209">
-
-<ul>
-<li><strong>桥接是指虚拟网卡通过物理机的某一个网络接口，直接连接到路由器去获取 IP 地址。假设物理机有WiFi、以太网等多个网口，其中无线WiFi网口连接到了互联网，而有线以太网口连接到了嵌入式板卡，那么桥接时就要注意需要桥接到哪个网口</strong></li>
-</ul>
-<img src="/post/601bc42c/image-20250228171954371.png" class="" title="image-20250228171954371">
-
-<ul>
-<li>注意：如果网络参数经过多次配置导致无法再正确联网，可以通过点击上图中的“还原默认设置”<em>按钮来重置虚拟机的网络</em>。</li>
-</ul>
-<h4 id="3-3-3修改主机的ip"><a href="#3-3-3修改主机的ip" class="headerlink" title="3.3.3修改主机的ip"></a>3.3.3修改主机的ip</h4><blockquote>
-<p>1.比如电脑通过网线连接到教室的网络，也就是物理机通过有线连接到网络</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228172305369.png" class="" title="image-20250228172305369">
-
-<blockquote>
-<p>2.通过查看以太网的网络配置可以知道物理机的IP地址</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228172339676.png" class="" title="image-20250228172339676">
-
-<blockquote>
-<p>3.此时把vmware软件的网络适配器设置为桥接模式，然后修改虚拟机桥接到有线网卡</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228172415935.png" class="" title="image-20250228172415935">
-
-<h4 id="3-3-3修改虚拟机的ip"><a href="#3-3-3修改虚拟机的ip" class="headerlink" title="3.3.3修改虚拟机的ip"></a>3.3.3修改虚拟机的ip</h4><blockquote>
-<p>1.打开ubuntu系统，并通过图形界面来设置ubuntu的网络为静态IP即可</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228172604586.png" class="" title="image-20250228172604586">
-
-<img src="/post/601bc42c/image-20250228172614636.png" class="" title="image-20250228172614636">
-
-<blockquote>
-<p>2.终端输入命令ifconfig查看ubuntu的IP地址，可以看到虚拟机和物理机各自有独立IP</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228172705059.png" class="" title="image-20250228172705059">
-
-<blockquote>
-<p>3.通过ping命令测试虚拟机是否网络正常，比如输入命令 ping <a href="http://www.baidu.com/">www.baidu.com</a></p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228172803029.png" class="" title="image-20250228172803029">
-
-<p><em>注意：如果准备设置网络时，发现没有ubuntu没有网络图标，则可以选择重置网络管理器</em></p>
-<p><code>gec@ubuntu:$ sudo  service  NetworkManager  stop     //停止网络服务</code></p>
-<p><code>gec@ubuntu:$ sudo  rm  /var/lib/NetworkManager/NetworkManager.state //删除配置文件</code></p>
-<p><code>gec@ubuntu:$ sudo  service  NetworkManager  start          //开启网络服务</code></p>
-<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p><strong>在NAT模式下Ubuntu主机与物理网络之间的通信使用网络地址转换技术。这种模式下虚拟机共享主机的IP地址，可以访问外部网络，但外部网络无法直接访问虚拟机内部</strong></p>
-<h5 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h5><p><strong>在ubuntu17.10之后的发行版中，网络参数配置可以统一通过 Netplan 来管理。具体的操作就是通过统一对 &#x2F;etc&#x2F;netplan&#x2F; 下的 yaml 文件的配置，Netplan 将读取该 yaml 描述文件来配置网络接口，然后，通过这些描述为任何给定的呈现工具生成必要的配置选项。</strong></p>
-<blockquote>
-<p>gec@ubuntu:~$ sudo cat &#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml    #查看 NetworkManager 配置自动获取IP的信息</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228173853417.png" class="" title="image-20250228173853417">
-
-<hr>
-<p>renderer：指定yaml文件针对配置的网络工具</p>
-<p>ethernets：配置以太网</p>
-<p>ens33：以太网口名称  注意：需要使用ifconfig来查看，不是所有电脑都是一样的</p>
-<p>dhcp4：自动获取IPv4的网络地址</p>
-<p>dhcp6：自动获取IPv6的网络地址</p>
-<p>注意：</p>
-<p>冒号后面必须有空格</p>
-<p>缩进的空格数必须一致</p>
-<p>图片中的IP地址等参数只是例子，大家需要根据实际情况进行修改，否则会导致无法联网。 </p>
-<p>注意：</p>
-<p>想要设置自动获取IP，在终端中可以使用gedit编辑器打开该文件进行编写，但是必须使用sudo获取超级用户权限，否则无法修改该文件。</p>
-<hr>
-<blockquote>
-<p>gec@ubuntu:~$ sudo gedit &#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml   #使用 netplan 来给 NetworkManager 配置自动获取IP</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250228174254298.png" class="" title="image-20250228174254298">
-
-<hr>
-<p>[192.168.100.100&#x2F;24] 中的24代表设定的IP地址的前24比特位为子网掩码，也就是255.255.255.0</p>
-<p>nameservers 代表 DNS 服务器</p>
-<hr>
-<blockquote>
-<p>gec@ubuntu:$ sudo  netplan  apply  #配置好 yaml 文件之后，需要执行如下命令来使之生效</p>
-</blockquote>
-<h4 id="3-3-3修改开发板的ip"><a href="#3-3-3修改开发板的ip" class="headerlink" title="3.3.3修改开发板的ip"></a>3.3.3修改开发板的ip</h4><blockquote>
-<p>1.开发板的网口用网线路由器，电脑用网线连路由器，还得在同一个网段，否则配置IP地址</p>
-</blockquote>
-<blockquote>
-<p>在终端输入shell命令: ifconfig  eth0  192.168.xxx.xxx，xxx指的是用户拥有的IP地址！</p>
-</blockquote>
-<img src="/post/601bc42c/%E7%BD%91%E4%BC%A01.png" class="" title="网传1">
-
-<p><em>注意：配置的开发板的IP地址是单次有效的，所以需要把该指令写入到开发板的开机自启动的脚本文件，开发板linux系统中开机自启动的脚本文件的路径是 &#x2F;etc&#x2F;profile，可以使用vi编辑器打开该脚本，并在脚本文件的末尾写入该指令。</em></p>
-<img src="/post/601bc42c/%E7%BD%91%E4%BC%A02-1740644621234-3.png" class="" title="网传2">
-
-<blockquote>
-<p>2.重启开发板</p>
-</blockquote>
-<blockquote>
-<p>3.检查ip，测试开发板和计算机是否网络处于连通状态，指令:  ping 计算机IP地址</p>
-</blockquote>
-<img src="/post/601bc42c/%E7%BD%91%E4%BC%A03.png" class="" title="网传3">
-
-<h4 id="3-3-4tftp网络传输"><a href="#3-3-4tftp网络传输" class="headerlink" title="3.3.4tftp网络传输"></a>3.3.4tftp网络传输</h4><blockquote>
-<p>1.如果开发板和计算机的网络连通，则打开tftpd32.exe应用程序，然后进行配置</p>
-</blockquote>
-<img src="/post/601bc42c/image-20250302110429050.png" class="" title="image-20250302110429050">
-
-<p><em>注意：tftp工具不要关闭，只需要最小化即可，另外，如果文件的路径更改，则需要修改tftp的文件路径</em></p>
-<blockquote>
-<p>[root@root:~]# tftp -g 192.168.xxx.xxx -r xxx   xxx指的是文件名     #把计算机的文件下载到开发板上（IP地址为服务器IP 也就是计算机的IP地址）</p>
-<p>[root@root:~]# tftp -p 192.168.zzz.zzz -r zzz    zzz指的是文件名     #把开发板的文件上传到计算机中（IP地址为服务器IP 也就是计算机的IP地址）</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title>模块化编程</title>
-    <url>/post/a5f7ca11.html</url>
-    <content><![CDATA[<h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><span id="more"></span>
-
-<h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><ul>
-<li><strong>降低程序耦合，增加内聚</strong></li>
-<li><strong>用户会把封装好的函数接口按照不同的功能放在不同的源文件中，这样一个项目工程中就可能会存在多个源文件，但是一个项目中只能有一个程序入口，所以只能有一个源文件中有main函数。</strong></li>
-</ul>
-<h2 id="2-封装流程"><a href="#2-封装流程" class="headerlink" title="2.封装流程"></a>2.封装流程</h2><img src="/post/a5f7ca11/image-20250303144445715.png" class="" title="image-20250303144445715">
-
-<img src="/post/a5f7ca11/image-20250303144450989.png" class="" title="image-20250303144450989">
-
-<p><em>注意：如果在一个源文件中调用另一个源文件中的函数接口，则可以选择把函数的声明都单独的写入在头文件中，然后在源文件中利用预处理指令#include进行包含即可。</em></p>
-<blockquote>
-<p>创建.h头文件，引用的时候要加””,因为是本地引用，系统引用加&lt; &gt;</p>
-</blockquote>
-<img src="/post/a5f7ca11/image-20250303144902687.png" class="" title="image-20250303144902687">
-
-<blockquote>
-<p>.c文件里面包含本文件的.h文件</p>
-</blockquote>
-<img src="/post/a5f7ca11/image-20250303145008954.png" class="" title="image-20250303145008954">
-
-<blockquote>
-<p>.h文件里面包含需要用到的系统头文件和.c文件中函数的声明</p>
-</blockquote>
-<img src="/post/a5f7ca11/image-20250303145404200.png" class="" title="image-20250303145404200">
-
-<blockquote>
-<p>在main函数的源文件中，引用另一个源文件中的函数，包含头文件即可</p>
-</blockquote>
-<img src="/post/a5f7ca11/image-20250303145239526.png" class="" title="image-20250303145239526">
-
-<blockquote>
-<p>将用到的.c文件都要gcc编译成一个文件</p>
-</blockquote>
-<img src="/post/a5f7ca11/image-20250303145527576.png" class="" title="image-20250303145527576">
-
-<p>如果在一个源文件中使用另一个源文件的全局变量，这种是不允许的，是不能直接使用的！全局变量的作用域是针对整个文件有效，并不针对整个工程有效，所以可以使用C语言中提供的extern关键字来声明全局变量。</p>
-<img src="/post/a5f7ca11/image-20250303145801687.png" class="" title="image-20250303145801687">
-
-<p><code>思考：为什么函数没有声明是外部的，但是却可以正常调用，而对于全局变量就不可以呢？</code></p>
-<p>回答：因为C语言标准中规定函数定义的时候默认是可以被外部链接的，也就是函数声明的时候默认是有extern的，因为函数定义时有函数体，函数声明时没有函数体，所以编译器可以区分函数声明和函数定义。</p>
-<p>但是变量则不同，变量遵循“先定义，后使用”的原则。变量在定义的时候内核就会分配内存空间，所以编译器没办法区分用户是打算声明一个变量还是定义一个变量，所以为了避免二义性，C语言就规定如果打算声明一个变量可以被外部链接，就必须使用extern关键字进行声明。</p>
-<p><code>思考：在设计程序时使用extern来声明函数或者变量非常麻烦，请问有没有更简单的一种方案实现相同的效果，如果有，应该如何设计？</code></p>
-<p>回答：是有的，可以设计一个头文件，这样就可以把函数的声明、全局变量、宏定义等都放在头文件中，源文件只需要包含头文件就可以使用。C语言中头文件以xxx.h结尾</p>
-<p><em>注意：在实际开发中，可能会出现头文件的嵌套包含，这样就会导致如果多个源文件都引入相同的头文件，就会出现重复定义的现象，为了避免这种问题出现，所以用户在设计头文件的时候需要使用条件编译指令来防止头文件的重复包含。头文件的标准写法如下所示：</em></p>
-<p><code>#ifndef   _XXX_H    //XXX是头文件的名称的大写，作为宏</code></p>
-<p><code>#define  _XXX_H</code></p>
-<p><code>//头文件的内容</code></p>
-<p><code>#endif  注意：头文件的有效内容应该写在 #endif 预处理指令之前</code></p>
-<p><code>思考：用户在某些情况下并不想让源文件中的所有函数被可以被其他文件调用，但是函数定时默认的属性都是extern的，请问如何解决这种问题？</code></p>
-<p><em>回答：可以在定义函数的时候使用关键字static进行修饰，static关键字表示静态的，也属于C语言中的存储类说明符，如果用来修饰函数，则表达该函数的作用域只对本文件有效。</em></p>
-<p><em>使用static关键字修饰的函数也被称为静态函数，静态函数只能在函数定义的源文件中使用。由于静态函数的作用域只在当前文件有效，所以静态函数的名称可以和其他源文件中的函数重复。</em></p>
-<p><em>注意：如果静态函数被定义在头文件中，则包含该头文件的源文件都可以使用该静态函数，因为预处理阶段头文件中所有内容会被预处理器拷贝到源文件中。</em></p>
-<blockquote>
-<p>auto是C语言关键字之一，中文具有自动的含义，属于存储类说明符之一，只能用来修饰局部变量，所以只能在函数中使用，auto关键字具有隐式说明，在局部变量创建的时候默认存在，一般用auto修饰的变量也被称为自动变量，指的是变量由系统自动管理，变量创建时系统自动分配内存单元，变量的作用域结束时系统自动释放。</p>
-</blockquote>
-<blockquote>
-<p>register是C语言关键字之一，中文具有寄存器的含义，属于存储类说明符之一。使用register关键字修饰的变量也被称为寄存器变量，只能用来修饰存储在寄存器中的局部变量，目的是提高程序的运行效率，实际开发中基本不用，了解即可。</p>
-<p>注意：register修饰定义并不意味着变量将被存储在寄存器中，它意味着变量可能存储在寄存器中，这取决于硬件和实现的限制。</p>
-</blockquote>
-<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><blockquote>
-<p>C语言标准中提供了一个关键字叫做inline，被inline关键字修饰的函数被称为内联函数，一般在定义函数接口的时候才可以使用inline进行修饰。</p>
-</blockquote>
-<img src="/post/a5f7ca11/image-20250303150908364.png" class="" title="image-20250303150908364">
-
-<img src="/post/a5f7ca11/image-20250303150925612.png" class="" title="image-20250303150925612">
-
-<img src="/post/a5f7ca11/image-20250303150933615.png" class="" title="image-20250303150933615">
-
-<p>可以知道，内联函数和普通函数的区别只是在函数调用的时候不需要进行函数跳转，也不需要保存函数上下文，因为编译器会把内联函数的代码段拷贝一份到被调用的位置，所以内联函数中不应该使用递归或者循环等代码，要求内联函数一定要精简，越短越好</p>
-<p>当然，一个普通函数如果代码段很多，其实也可以使用关键字inline进行修饰，但是编译器不一定会把这种函数当做内联函数来对待</p>
-<p>注意：在函数定义的时候用inline修饰是有效的，在函数声明的时候用inline来修饰是无效的。</p>
-<p>具有内部链接的函数都可以作为内联函数，但是要和被调用的函数在同一个源文件中，如果两个源文件都打算使用内联函数，此时有两种方案：第一种是在另一个源文件中重新定义一个相同的内联函数，第二种则是把内联函数定义在头文件中，需要使用的源文件就只需要包含头文件即可。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>杂余知识点</title>
-    <url>/post/e33c00c9.html</url>
-    <content><![CDATA[<h1 id="杂余知识点"><a href="#杂余知识点" class="headerlink" title="杂余知识点"></a>杂余知识点</h1><span id="more"></span>
-
-<h2 id="1-知识体系"><a href="#1-知识体系" class="headerlink" title="1.知识体系"></a>1.知识体系</h2><img src="/post/e33c00c9/image-20250303161935098.png" class="" title="image-20250303161935098">
-
-<img src="/post/e33c00c9/image-20250303162013657.png" class="" title="image-20250303162013657">
-
-<h2 id="2-keywords"><a href="#2-keywords" class="headerlink" title="2.keywords"></a>2.keywords</h2><img src="/post/e33c00c9/image-20250303162122783.png" class="" title="image-20250303162122783">
-
-<h2 id="3-ASCII码"><a href="#3-ASCII码" class="headerlink" title="3.ASCII码"></a>3.ASCII码</h2><img src="/post/e33c00c9/image-20250303162252974.png" class="" title="image-20250303162252974">
-
-<p><em>中国国家标准总局设计了中文简体字符集，称为GB2312字符集，后面又推出GBK编码（收录了繁体汉字，向下兼容），目前UTF-8字符集收录各个国家的字符。</em></p>
-<h2 id="4-动态随机存储器"><a href="#4-动态随机存储器" class="headerlink" title="4.动态随机存储器"></a>4.动态随机存储器</h2><ul>
-<li>对于计算机中的存储器而言，一般分为两种：****RAM（随机存储器）****和 <em><strong>*ROM（只读存储器）*</strong></em></li>
-</ul>
-<h3 id="只读存储器"><a href="#只读存储器" class="headerlink" title="只读存储器"></a>只读存储器</h3><p>只读存储器的英文全称是Read Only Memory，简称为ROM，属于非易失性存储设备，指的是掉电不丢失数据，可以把数据长时间存储，一般分为很多种，具体的区别可以通过《数电》进行了解，对于计算机的机械硬盘或者固态硬盘而言指的就是ROM。</p>
-<h3 id="随机存储器"><a href="#随机存储器" class="headerlink" title="随机存储器"></a>随机存储器</h3><p>随机存储器的英文全称是Random Access Memory，简称为RAM，属于易失性存储设备，指的是掉电会丢失数据，但是读写速度很快。所以一般CPU都是直接和RAM打交道</p>
-<img src="/post/e33c00c9/image-20250303163106577.png" class="" title="image-20250303163106577">
-
-<h2 id="5-vscode软件安装"><a href="#5-vscode软件安装" class="headerlink" title="5.vscode软件安装"></a>5.vscode软件安装</h2><ul>
-<li>对该软件进行汉化处理，点击拓展 —&gt;输入 chinese —&gt;选择简体中文—&gt;install</li>
-</ul>
-<img src="/post/e33c00c9/image-20250303163244041.png" class="" title="image-20250303163244041">
-
-<ul>
-<li>为软件安装C&#x2F;C++插件，该插件可以提供命令推理、语法高亮、自动补齐等功能</li>
-</ul>
-<img src="/post/e33c00c9/image-20250303163300370.png" class="" title="image-20250303163300370">
-
-<ul>
-<li>为软件安装 Code Runner插件，该插件支持一键编译和一键运行等功能，操作如下图</li>
-</ul>
-<img src="/post/e33c00c9/image-20250303163316116.png" class="" title="image-20250303163316116">
-
-<p><strong>注意：Code Runner插件默认不在终端进行输入输出，为了避免程序在终端中的输入输出问题出现，大家可以配置一下VSCode软件 设置 –&gt;拓展 –&gt;Run Code Config –&gt; Run In Terminal</strong></p>
-<img src="/post/e33c00c9/image-20250303163338148.png" class="" title="image-20250303163338148">
-
-<h2 id="6-代码风格"><a href="#6-代码风格" class="headerlink" title="6.代码风格"></a>6.代码风格</h2><img src="/post/e33c00c9/image-20250303163859527.png" class="" title="image-20250303163859527">
-
-<img src="/post/e33c00c9/image-20250303163917068.png" class="" title="image-20250303163917068">
-
-<h2 id="7-代码注释"><a href="#7-代码注释" class="headerlink" title="7.代码注释"></a>7.代码注释</h2><img src="/post/e33c00c9/image-20250303163954550.png" class="" title="image-20250303163954550">
-
-<p>当程序中需要对某一行代码进行注释时，可以采用 &#x2F;&#x2F;或者&#x2F;* *&#x2F; 这两种方案进行注释，如：  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\#include  &lt;stdio.h&gt;  </span><br><span class="line"></span><br><span class="line">int main(void)  </span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> printf(“hello world\n”);  //</span><br><span class="line"></span><br><span class="line"> return 0; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">\#include  &lt;stdio.h&gt;  </span><br><span class="line"></span><br><span class="line">int main(void)  </span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> /**/ </span><br><span class="line"></span><br><span class="line"> printf(“hello world\n”); </span><br><span class="line"></span><br><span class="line"> return 0; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="8-程序入口"><a href="#8-程序入口" class="headerlink" title="8.程序入口"></a>8.程序入口</h2><img src="/post/e33c00c9/image-20250303164228842.png" class="" title="image-20250303164228842">
-
-<img src="/post/e33c00c9/image-20250303164250503.png" class="" title="image-20250303164250503">
-
-<p><em>注意：C语言程序的基本单位是函数，也就是说一个程序是由一个主函数以及若干个子函数组成的，主函数的名字是固定的，叫做main函数，用户不能修改，main这个单词翻译成中文具有主要的，最重要的意思，所以main函数才会作为程序的入口，也就是说程序是按照main函数中语句的先后顺序执行的。</em></p>
-<h2 id="9-程序结束"><a href="#9-程序结束" class="headerlink" title="9.程序结束"></a>9.程序结束</h2><p>另外可以看到标准中规定main函数需要具有一个int型的返回值，int指的是整型数，其实是英文单词integer的缩写，也是C语言中的关键字之一，也是常用的基本数据类型之一。</p>
-<img src="/post/e33c00c9/image-20250303164626857.png" class="" title="image-20250303164626857">
-
-<p>返回值指的是函数执行完成后的结果，当然，并不是所有的函数都具有返回值，这个要根据实际情况而定</p>
-<img src="/post/e33c00c9/image-20250303165018855.png" class="" title="image-20250303165018855">
-
-<h2 id="10-函数调用"><a href="#10-函数调用" class="headerlink" title="10.函数调用"></a>10.函数调用</h2><p>刚才提到C语言程序的基本单位是函数，程序是由一个主函数以及若干个子函数组成的，对于主函数而言，名称是固定的不能修改，功能就是作为程序的入口，但是对于子函数而言则不同。</p>
-<p>子函数指的是了程序中除了主函数之外的其他函数，子函数的类型一般有两种：一种是库函数，另一种是用户自定义函数</p>
-<img src="/post/e33c00c9/image-20250303165142820.png" class="" title="image-20250303165142820">
-
-<p><em><strong>注意：头文件不是必须包含，只有调用了函数库中的函数接口，才需要包含头文件！！！！</strong></em></p>
-<img src="/post/e33c00c9/image-20250303165322222.png" class="" title="image-20250303165322222">
-
-<blockquote>
-<p>&lt; xxx.h &gt; ：编译器只去系统指定路径中查找该头文件，如果未找到，则编译器进行错误提示。</p>
-</blockquote>
-<blockquote>
-<p>“ xxx.h ” ：先去当前路径中查找头文件，未找到再去系统路径中查找，还未找到则报错提示。</p>
-</blockquote>
-<img src="/post/e33c00c9/image-20250303165354754.png" class="" title="image-20250303165354754">
-
-<h2 id="11-常量变量"><a href="#11-常量变量" class="headerlink" title="11.常量变量"></a>11.常量变量</h2><p>C语言标准规定：用户有权利从内存中申请一块存储单元，并且用户可以对存储单元进行命名，要求用户提前说明申请的存储单元（单位以字节来计算）的大小，这样linux内核才会从内存中寻找一块合适的空间，并把这块空间的地址反馈给用户。</p>
-<img src="/post/e33c00c9/image-20250303170542397.png" class="" title="image-20250303170542397">
-
-<p>用户可以对linux内核提供的存储单元进行命名，然后linux内核会把用户的命名和存储单元的地址建立一个映射关系，这样用户就可以通过存储单元的名称来访问存储单元</p>
-<blockquote>
-<p>常量: 是在****程序运行期间值不会发生改变的量****，一般使用的数字，比如3.14用来表示圆周率，一般情况下，用户都是用通过宏定义的方式来实现常量的设计，宏定义其实就是简单的文本替换，在预处理阶段预处理器会把程序中的宏定义进行展开。C语言中规定宏定义使用预处理指令 <em><strong>*#define*</strong></em> 来进行设计。</p>
-</blockquote>
-<blockquote>
-<p>变量:<em><strong>*程序运行期间值可能发生变化的量*</strong></em>，用户可以根据实际需要来向kernel申请一块存储单元，并对这块存储单元进行命名，然后用户可以随时修改存储单元中的数据</p>
-</blockquote>
-<h2 id="12-signed-unsigned"><a href="#12-signed-unsigned" class="headerlink" title="12.signed  &amp;&amp;  unsigned"></a>12.signed  &amp;&amp;  unsigned</h2><p>unsigned表示无符号，signed表示有符号，C语言中的signed修饰符是隐式声明</p>
-<h2 id="13-布尔型"><a href="#13-布尔型" class="headerlink" title="13.布尔型"></a>13.布尔型</h2><p>在C99标准可以使用布尔型来表示真假两种情况，头文件stdbool.h有相关描述，在头文件中定义了三个宏，分别是bool、true以及false</p>
-<img src="/post/e33c00c9/image-20250303174648263.png" class="" title="image-20250303174648263">
-
-<h2 id="14-man手册"><a href="#14-man手册" class="headerlink" title="14.man手册"></a>14.man手册</h2><p>一般标准C库中提供了很多关于输出的函数接口，其中最常用的就是printf()函数，关于printf函数的使用规则可以通过linux系统的man手册进行查阅。</p>
-<img src="/post/e33c00c9/image-20250303175106513.png" class="" title="image-20250303175106513">
-
-<blockquote>
-<p>用户一般都是使用linux系统，在linux系统中是提供了一个帮助文档，叫做man手册，man手册一共有9个章节，只需要打开linux系统的终端（Ctrl+Alt+T）输入命令：man  man</p>
-</blockquote>
-<img src="/post/e33c00c9/image-20250303175125499.png" class="" title="image-20250303175125499">
-
-<blockquote>
-<p>如果想要针对性查找某些接口，可以指定man手册章节，终端输入命令: man  n(1-9)  xxx</p>
-</blockquote>
-<img src="/post/e33c00c9/image-20250303175202267.png" class="" title="image-20250303175202267">
-
-<img src="/post/e33c00c9/image-20250303175213419.png" class="" title="image-20250303175213419">
-
-<img src="/post/e33c00c9/image-20250303175227467.png" class="" title="image-20250303175227467">
-
-<h3 id="标志说明"><a href="#标志说明" class="headerlink" title="标志说明"></a>标志说明</h3><img src="/post/e33c00c9/image-20250303175336406.png" class="" title="image-20250303175336406">
-
-<h3 id="字段宽度"><a href="#字段宽度" class="headerlink" title="字段宽度"></a>字段宽度</h3><img src="/post/e33c00c9/image-20250303175427922.png" class="" title="image-20250303175427922">
-
-<h3 id="转换精度"><a href="#转换精度" class="headerlink" title="转换精度"></a>转换精度</h3><img src="/post/e33c00c9/image-20250303175449154.png" class="" title="image-20250303175449154">
-
-<img src="/post/e33c00c9/image-20250303175455554.png" class="" title="image-20250303175455554">
-
-<h3 id="长度修饰"><a href="#长度修饰" class="headerlink" title="长度修饰"></a>长度修饰</h3><img src="/post/e33c00c9/image-20250303175832165.png" class="" title="image-20250303175832165">
-
-<h2 id="转换说明"><a href="#转换说明" class="headerlink" title="转换说明"></a>转换说明</h2><img src="/post/e33c00c9/image-20250303180143037.png" class="" title="image-20250303180143037">
-
-<img src="/post/e33c00c9/image-20250303180149077.png" class="" title="image-20250303180149077">
-
-<img src="/post/e33c00c9/image-20250303180215947.png" class="" title="image-20250303180215947">
-
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>在利用printf函数输出字符串时，用户可能需要输出一些转义字符 ‘\n’以及’\t’是比较常用的。</p>
-<p>注意有的时候是需要把一些特殊字符当做普通字符输出，比较 “” ，可以把 \” 和 \” 输出</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>编译流程</title>
-    <url>/post/98069770.html</url>
-    <content><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span>
-
-<p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p>
-<img src="/post/98069770/image-20250303151534298.png" class="" title="image-20250303151534298">
-
-<blockquote>
-<p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p>
-</blockquote>
-<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p>
-<p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p>
-<p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p>
-<p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p>
-<h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p>
-<p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p>
-<p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>集成开发</title>
-    <url>/post/73230c70.html</url>
-    <content><![CDATA[<h1 id="集成开发"><a href="#集成开发" class="headerlink" title="集成开发"></a>集成开发</h1><span id="more"></span>
-
-<p><em>比如可以把vmware虚拟机、secureCRT软件、tftp工具进行合并，也就是用一个软件来代替这三款软件，所以可以选择使用MobaXterm工具。</em></p>
-<h2 id="1-从windows系统中传入到linux中"><a href="#1-从windows系统中传入到linux中" class="headerlink" title="1.从windows系统中传入到linux中"></a>1.从windows系统中传入到linux中</h2><blockquote>
-<p>1.利用该软件连接到开发板的linux系统，注意：端口号不要选错</p>
-</blockquote>
-<img src="/post/73230c70/image-20250302220121940.png" class="" title="image-20250302220121940">
-
-<blockquote>
-<p>2.为了提高文件的传输效率，所以可以利用该软件的tftp协议来实现文件的传输</p>
-</blockquote>
-<img src="/post/73230c70/image-20250302220151338.png" class="" title="image-20250302220151338">
-
-<ul>
-<li>从电脑的TFTP主目录传送文件（比如a.txt）到开发板   参数 -g 获取  -r 指定文件名</li>
-</ul>
-<p><code>[root@GEC6818 ~]# tftp -g  192.168.10.xxx -r  a.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
-<ul>
-<li><p>将开发板的文件（比如b.txt）发送到电脑的TFTP主目录  参数 -p 上传  -r 指定文件名</p>
-<p><code>[root@GEC6818 ~]# tftp  -p  192.168.10.xxx -r  b.txt  192.168.xxx.xxx指的是计算机的IP</code></p>
-</li>
-</ul>
-<blockquote>
-<p>3.打开vmware虚拟机的linux系统，在终端安装SSH工具，方便使用SSH工具远程登录基本使用格式</p>
-</blockquote>
-<p><code>gec@ubuntu:~$ sudo  apt  install  openssh-server ssh</code></p>
-<p><code>gec@ubuntu:~$ sudo  systemctl  start   ssh   //启动SSH服务</code></p>
-<p><code>gec@ubuntu:~$ sudo systemctl  enable  ssh      //SSH服务开机自启</code></p>
-<img src="/post/73230c70/image-20250302220614728.png" class="" title="image-20250302220614728">
-
-<p><strong>SSH被称为安全外壳协议（Secure Shell，简称SSH），是一种在不安全网络上用于安全远程登录和其他安全网络服务的协议。</strong></p>
-<blockquote>
-<p>4.利用MobaXterm软件的SSH工具连接到虚拟机的linux系统</p>
-</blockquote>
-<img src="/post/73230c70/image-20250302220701951.png" class="" title="image-20250302220701951">
-
-<img src="/post/73230c70/image-20250302220709311.png" class="" title="image-20250302220709311">
-
-<blockquote>
-<p>5.另外6818开发板也是支持ssh远程登录，只不过需要在6818开发板中安装ssh工具</p>
-</blockquote>
-<img src="/post/73230c70/image-20250302220751989.png" class="" title="image-20250302220751989">
-
-<blockquote>
-<p>6.利用tftp服务器把openssh.tar.bz压缩包传输到开发板的工作路径下，并完成解压动作</p>
-</blockquote>
-<p><code>[root@GEC6818 /workspace]# tar  -zxvf  openssh.tar.bz</code></p>
-<img src="/post/73230c70/image-20250302220825568.png" class="" title="image-20250302220825568">
-
-<img src="/post/73230c70/image-20250302220834311.png" class="" title="image-20250302220834311">
-
-<blockquote>
-<p>7.切换到解压之后的openssh文件夹内，然后执行一个名字叫做auto的可执行文件</p>
-</blockquote>
-<p><code>[root@GEC6818 /workspace]# ./auto</code></p>
-<img src="/post/73230c70/image-20250302220909577.png" class="" title="image-20250302220909577">
-
-<blockquote>
-<p>8.可执行文件完成后，需要设置开发板的SSH服务的密码，此时输入指令:  passwd  root</p>
-</blockquote>
-<img src="/post/73230c70/image-20250302220939169.png" class="" title="image-20250302220939169">
-
-<blockquote>
-<p>9.根据下图的配置，利用MobaXterm软件的SSH工具连接到开发板的Linux系统</p>
-</blockquote>
-<img src="/post/73230c70/image-20250302220958822.png" class="" title="image-20250302220958822">
-
-<img src="/post/73230c70/image-20250302221005461.png" class="" title="image-20250302221005461">
-
-<p><strong>安装的脚本要重启才能生效</strong></p>
-<blockquote>
-<p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile   #配置文件 文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303001415142.png" class="" title="image-20250303001415142">
-
-<blockquote>
-<p>tftp用于在windows系统和开发板之间的传递，共享文件夹用于在windows系统和虚拟机之间的传递</p>
-<p>scp三方都可以互传(三方都联网，用ssh连接，处于同一区域网下)，可以传文件和文件夹</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303002010993.png" class="" title="image-20250303002010993">
-
-<p><code>[root@GEC6818 /]# scp gec@192.168.5.2:/home/gec/demo_arm .  #scp + 用户名@ip：文件位置 存储位置  下载文件</code></p>
-<img src="/post/73230c70/image-20250303003416779.png" class="" title="image-20250303003416779">
-
-<p><code>[root@GEC6818 /]# scp 14.c gec@192.168.5.2:/home/ged #scp + 文件名 + 用户名@ip：放文件的位置   上传文件</code></p>
-<img src="/post/73230c70/image-20250303003753997.png" class="" title="image-20250303003753997">
-
-<p><code>[root@GEC6818 /]# scp -r llwork/ gec@192.168.5.2:/home/gec #上传文件夹   -r代表递进</code></p>
-<h2 id="集写代码，编译，执行为一体-VScode"><a href="#集写代码，编译，执行为一体-VScode" class="headerlink" title="集写代码，编译，执行为一体(VScode)"></a>集写代码，编译，执行为一体(VScode)</h2><blockquote>
-<p> 1.VScode拓展中有一款叫做Remote-SSH的插件，该插件支持在Vscode中远程登录主机</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303114556324.png" class="" title="image-20250303114556324">
-
-<blockquote>
-<p>2.点击Vscode左下角的远程连接选项，然后选择“连接到主机”—&gt;点击“增加新的主机”</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303114627539.png" class="" title="image-20250303114627539">
-
-<img src="/post/73230c70/image-20250303114651099.png" class="" title="image-20250303114651099">
-
-<img src="/post/73230c70/image-20250303114658315.png" class="" title="image-20250303114658315">
-
-<blockquote>
-<p>3.选择默认的配置文件，并输入要远程登录的主机信息，格式为：主机名@主机IP</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303114724874.png" class="" title="image-20250303114724874">
-
-<img src="/post/73230c70/image-20250303114732891.png" class="" title="image-20250303114732891">
-
-<blockquote>
-<p>4.配置成功后点击“连接”，并输入远程主机的密码，连接成功后再次输入主机的密码！</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303114817220.png" class="" title="image-20250303114817220">
-
-<img src="/post/73230c70/image-20250303114837158.png" class="" title="image-20250303114837158">
-
-<img src="/post/73230c70/image-20250303114920995.png" class="" title="image-20250303114920995">
-
-<img src="/post/73230c70/image-20250303114931794.png" class="" title="image-20250303114931794">
-
-<blockquote>
-<p>5.如果打算在Vscode中同时连接虚拟机以及开发板的linux系统，则需要开启两个终端</p>
-</blockquote>
-<img src="/post/73230c70/image-20250303115004336.png" class="" title="image-20250303115004336">
-
-<blockquote>
-<p>7.另外如果打算在Vscode中完成虚拟机和开发板的文件互传，则可以使用scp命令实现</p>
-</blockquote>
-<p><code>[root@GEC6818 /workspace]# scp  &lt;file&gt;  &lt;host&gt;@&lt;ip&gt;:&lt;path&gt;   //上传文件给远程主机</code></p>
-<p><code>[root@GEC6818 /workspace]# scp  &lt;host&gt;@&lt;ip&gt;:&lt;file&gt;  &lt;path&gt;   //从远程主机下载文件</code></p>
-<ul>
-<li><strong>注意：如果打算上传或者下载的文件是一个目录，可以使用scp命令的选项[-r]，递归实现！</strong></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>重要的基础知识点</title>
-    <url>/post/4719c4b7.html</url>
-    <content><![CDATA[<h1 id="重要的基础知识点"><a href="#重要的基础知识点" class="headerlink" title="重要的基础知识点"></a>重要的基础知识点</h1><span id="more"></span>
-
-<table>
-<thead>
-<tr>
-<th align="center">解释</th>
-<th align="center">ASCII(十进制)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">大写字母A</td>
-<td align="center">65</td>
-</tr>
-<tr>
-<td align="center">小写字母a</td>
-<td align="center">97</td>
-</tr>
-<tr>
-<td align="center">字符0</td>
-<td align="center">48</td>
-</tr>
-<tr>
-<td align="center">空字符(NULL)</td>
-<td align="center">0</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>32bit系统 or 64bit系统  指的是计算机的地址总线的位数，指的是计算机的寻址范围是32bit，也就是4GB  存储单元地址：0x0000_0000 ~ 0xFFFF_FFFF<br>内存属于易失性存储设备 键盘输入的数据是先存储到内存（随机存储器）中，存储器中有n个存储单元，每个存储单元的大小都是1字节</p>
-</li>
-<li><p>存储单元大小是1字节 存储单元的地址是4字节的</p>
-</li>
-</ul>
-<p><strong>注意：头文件不是必须包含，只有调用了函数库中的函数接口，才需要包含头文件！！！！</strong></p>
-<ul>
-<li><strong>数组：数组是具有相同类型的数据的集合，数组的地址是连续的，数组中的数据被称为元素，元素类型必须相同</strong></li>
-</ul>
-<h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><blockquote>
-<p>变量和常量也被称为****标识符****，对于标识符的命名必须遵循规则：标识符是由字母、数字、下划线以及美元符号$组成，并且标识符的第一个字符只能是字母或者下划线</p>
-</blockquote>
-<p><em><strong>*C语言的标识符是区分大小写，并且作为用户而言，标识符的命名应该是有意义的!!!*</strong></em></p>
-<p><em>注意：为了防止</em>**二义性**<em>出现，C语言标准规定不可以把系统保留字，以及程序中已经存在的函数名称、以及用户已经定义出来的标识符名称作为新的标识符名称（同一个作用域内不能）</em></p>
-<ul>
-<li>字符型</li>
-</ul>
-<img src="/post/4719c4b7/image-20250303170940637.png" class="" title="image-20250303170940637">
-
-<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>C语言标准中关于字符的种类有两种：<em><strong>*普通字符*</strong></em> and <em><strong>*转义字符*</strong></em>，对于ASCII码表中转义字符</p>
-<img src="/post/4719c4b7/image-20250303171048391.png" class="" title="image-20250303171048391">
-
-<p>注意：ASCII码中的转义字符需要使用’\0’  ‘\r’  ‘\n’ 进行表示，代表字符具有特殊的意义。</p>
-<blockquote>
-<p>因为C语言不支持二进制输入，但是C语言支持八进制、十进制、十六进制。</p>
-</blockquote>
-<h2 id="前导符"><a href="#前导符" class="headerlink" title="前导符"></a>前导符</h2><img src="/post/4719c4b7/image-20250303171455620.png" class="" title="image-20250303171455620">
-
-<blockquote>
-<p>规定八进制的前缀以0表示，比如064，规定十六进制的前缀以0x&#x2F;0X表示，比如0x64。</p>
-</blockquote>
-<h2 id="反码-补码"><a href="#反码-补码" class="headerlink" title="反码 补码"></a>反码 补码</h2><ul>
-<li>二进制可以分正负，在二进制数的前面添加1bit，作为符号位，并且bit&#x3D;0，用于表示二进制数为正数，bit&#x3D;1，用于表示二进制数为负数。</li>
-</ul>
-<img src="/post/4719c4b7/image-20250303173403612.png" class="" title="image-20250303173403612">
-
-<img src="/post/4719c4b7/image-20250303173425646.png" class="" title="image-20250303173425646">
-
-<p><em><strong>计算机内部是以二进制的补码方式来存储数据的，所以需要把二进制数的原码转换为补码形式。</strong></em></p>
-<img src="/post/4719c4b7/image-20250303173457562.png" class="" title="image-20250303173457562">
-
-<img src="/post/4719c4b7/image-20250303173552558.png" class="" title="image-20250303173552558">
-
-<p>反码：二进制数除了符号位（二进制数中的最高位），把数据位取反即可（0变1,1变0）。</p>
-<p><code>-1  --- 1 000 0001 原码 -- 计算反码 -- 1 111 1110 反码</code></p>
-<p>补码：二进制数的反码 + 1 </p>
-<p><code>-1 -- 1 000 0001 原码 --计算反码 -- 1 111 1110 反码--计算补码 -- 1111 1110 +1 -- 1111 1111</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">练习：用户打算定义一个字符型变量，命名叫做data，准备把一个正整数存储到变量data中，并设计了一段程序，请问这段程序输出的结果是多少？ </span><br><span class="line"></span><br><span class="line">char data;    data = 128;    printf(“%d\n”,data);  --&gt; 请问输出的结果是多少??  答案：-128</span><br></pre></td></tr></table></figure>
-
-<p><em>128–0000 0000 0000 0000 0000 0000 1000 0000原码–正数的原码和补码是相同的 1000 0000</em></p>
-<p> <em>1000 0000补码 – 属于数据类型中非常特殊的存在，可以计算是 -0，但是0不分正负，所以 把-0的位置用-128进行替换。</em></p>
-<p><em><strong>计算机存储是以补码的方式存进去，展示出来再以原码的方式展出，遇到变量范围不一致的情况，先转换成补码然后再存进去</strong></em></p>
-<p><em><strong>*注意：设计程序时，定义的变量如果是有符号的，则尽量避免写入超过变量范围的数值!!!!!!*</strong></em></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">字符型： char  1字节 -- 有符号 -- 数值范围 -128 ~ 127  --  无符号 -- 数值范围 0 ~ 255</span><br><span class="line">短整型：short  2字节 -- 有符号 -- 数值范围 -32768 ~ 32767 无符号 --数值范围 0 ~ 6553</span><br></pre></td></tr></table></figure>
-
-<h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>用关键字float来表示单精度浮点数，单精度浮点型占4字节，另外C语言标准中也提供了另一个关键字double用来表示双精度浮点数，double占8字节，其实C语言也提供了一种类型long double，该类型占16字节</p>
-<h2 id="指数型"><a href="#指数型" class="headerlink" title="指数型"></a>指数型</h2><p>指数形式指的是采用以10为底的形式表示浮点数，比如 3.14 * 102 ,但是在编写程序的时候采用英文半角输入法进行设计，这种输入法是不支持输入上标或者下标，所以C语言规定采用字符e或者E来表示以10为底的指数，比如3.14E2 </p>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是表示某种含义的一个字符序列，字符串在内存是需要一块连续的内存空间进行存储，C语言中规定字符串使用<strong>双引号</strong>“”表示，并且规定字符串的结束标志是’\0’，但’\0’不需要用户手动添加，系统会自动在一个字符串的末尾添加’\0’。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">既然在内存中字符串需要一块连续的空间来存储，内核肯定会返回字符串的开始地址，请问内核如何判断字符串何时结束？  回答：遇到’\0’自动结束</span><br></pre></td></tr></table></figure>
-
-<img src="/post/4719c4b7/image-20250303174446260.png" class="" title="image-20250303174446260">
-
-<h2 id="sizeof"><a href="#sizeof" class="headerlink" title="sizeof"></a>sizeof</h2><img src="/post/4719c4b7/image-20250303174733873.png" class="" title="image-20250303174733873">
-
-<h2 id="大端小端"><a href="#大端小端" class="headerlink" title="大端小端"></a>大端小端</h2><p>注意：计算机内部存储多字节的数据时会涉及到大端小端，不同的处理器架构采用的模式是不同的，一般X86架构采用小端模式，ARM架构一般采用大端模式（但是并不绝对）！！！！！！</p>
-<img src="/post/4719c4b7/image-20250303175950947.png" class="" title="image-20250303175950947">
-
-<h2 id="缓存区"><a href="#缓存区" class="headerlink" title="缓存区"></a>缓存区</h2><p>计算机的CPU的性能好，所以CPU的执行效率高，但是计算机的输入设备和输出设备的效率低，所以CPU为了提高工作效率，要降低访问输入输出设备的次数。于是就有了缓存区的诞生。</p>
-<style>.rstssxnnwjcw{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310103033897.png" class="rstssxnnwjcw" alt="image-20250310103033897">
-
-<blockquote>
-<p>IO设备的不同，可以把缓冲区分为输入缓冲区和输出缓冲区</p>
-<p>根据刷新形式的不同，可以把缓冲区分为三种：全缓冲、行缓冲、无缓冲</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">全缓冲：指的是当缓冲区被填满就立即把数据冲刷到文件、或者在关闭文件、读取文件内		容以及修改缓冲区类型时也会立即把数据冲刷到文件，一般读写文件的时候会采用</span><br><span class="line"></span><br><span class="line">无缓冲：指的是没有缓冲区，直接输出，一般linux系统的标准出错stderr就是采用无缓冲，		这样可以把错误信息直接输出。</span><br><span class="line"></span><br><span class="line">行缓冲：指的是当缓冲区被填满（一般缓冲区为4KB，就是4096字节）或者缓冲区中遇到		换行符’\n’时，或者在关闭文件、读取文件内容以及修改缓冲区类型时也会立即把		数据冲刷到文件中，一般操作IO设备时会采用，比如printf函数就是采用行缓冲</span><br></pre></td></tr></table></figure>
-
-<p>思考：如果用户不小心在使用printf函数输出字符串的时候忘了添加结束标志’\n’，并且用户没有打算输出太多字符，请问此时要输出的字符串会不会输出？</p>
-<p>回答：可以输出，当程序结束时会自动刷新缓冲区，如果输入缓存区中存在数据则被丢弃，如果输出缓存区存在数据，则会输出。</p>
-<p><strong>用户可以选择手动刷新缓冲区，可以调用标准C库中的fflush()函数接口</strong></p>
-<style>.ypksieufhjej{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310103505394.png" class="ypksieufhjej" alt="image-20250310103505394">
-
-<img src="/post/4719c4b7/image-20250310103615007.png" class="" title="image-20250310103615007">
-
-<p><strong>注意：不要利用fflush函数区刷新输入缓冲区(stdin) ，因为一般编译器是不支持该操作！！！</strong></p>
-<h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf()"></a>scanf()</h2><p>标准C库提供了一个输入函数scanf()</p>
-<img src="/post/4719c4b7/image-20250310104640233.png" class="" title="image-20250310104640233">
-
-<img src="/post/4719c4b7/image-20250310104727637.png" class="" title="image-20250310104727637">
-
-<img src="/post/4719c4b7/image-20250310104733349.png" class="" title="image-20250310104733349">
-
-<h3 id="匹配字符"><a href="#匹配字符" class="headerlink" title="匹配字符"></a>匹配字符</h3><img src="/post/4719c4b7/image-20250310104909814.png" class="" title="image-20250310104909814">
-
-<style>.jimjelhngdjs{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310104945150.png" class="jimjelhngdjs" alt="image-20250310104945150">
-
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
-<li><p>运算符指明要进行的运算和操作，操作数是指运算符的操作对象，根据运算符操作数的数目不同，C语言标准把运算符分为三种：单目运算符（一元运算符）、双目运算符（二元运算符）、三目运算符（三元运算符）。</p>
-</li>
-<li><p>当除法运算符两端的操作数都是整数的时候，得到的结果也是整数，当两个操作数无法被整数，会舍弃小数，只保留整数。</p>
-</li>
-<li><p>当除法运算符两端的操作数不全是整数，比如其中一个操作数是浮点数，则得到的结果也是浮点数，如果不指定精度，则默认是6位精度。</p>
-</li>
-<li><p>C语言中提供%作为求余运算符，也可以称为取模运算符，C语言标准中规定%符号两端的操作数必须是整数。</p>
-</li>
-</ul>
-<blockquote>
-<p>一种是左结合性，遵循先左后右原则，比如 a + b - c，相当于(a+b)-c，另一种是右结合性，遵循先右后左原则，比如双目运算符中的赋值运算符 &#x3D; ，比如表达式a&#x3D;b&#x3D;c，相当于a&#x3D;(b&#x3D;c)。</p>
-</blockquote>
-<p><em><strong>*注意：C语言中的单目运算符和三目运算符都是遵循右结合性，当然也包含双目运算符中的赋值运算符&#x3D;，其他的运算符都遵循左结合性。*</strong></em></p>
-<p>a++ ：在表达式中则表示先让变量a参与表达式运算，运算之后才会让变量a的值自加</p>
-<p>++a ：在表达式中则表示先让变量a的值自加，自加之后再参与表达式运算</p>
-<p><strong>注意sizeof在C语言中是一个操作符，作用是计算数据类型的大小，结果以字节为单位，sizeof括号中的表达式是不会实现运算和处理的。</strong></p>
-<img src="/post/4719c4b7/image-20250310110405984.png" class="" title="image-20250310110405984">
-
-<h3 id="位操作运算符"><a href="#位操作运算符" class="headerlink" title="位操作运算符"></a>位操作运算符</h3><p>C语言中提供了6种位操作运算符，分别是  ~  &amp;  ^  |   &lt;&lt;   &gt;&gt;，其中~属于单目运算符，其他五种都属于双目运算符。</p>
-<blockquote>
-<p>~：按位取反，对于二进制数而言，0变为1，1变为0  ~ 1101_1110 &#x3D; 0010_0001</p>
-<p>&amp;：按位与，对于二进制而言，当两个bit同时为1，则结果为1，如果bit存在0，结果为0</p>
-<p>|：按位或，对于二进制而言，当两个bit同时为0，则结果为0，如果bit存在1，结果为1</p>
-<p>^：按位异或，对于二进制而言，当两个bit相同，则结果为0，两个bit不同，则结果为1</p>
-<p>&lt;&lt;：左移运算符，对于二进制而言原则：高位舍弃、低位补0  0111_1010 &lt;&lt; 3 – 1101 0000</p>
-<p>&gt;&gt;：右移运算符，对于二进制而言原则：低位舍弃、高位补0  0111_1010 &gt;&gt; 3 – 0000 1111</p>
-</blockquote>
-<ul>
-<li>运算符顺序</li>
-</ul>
-<p>后缀</p>
-<img src="/post/4719c4b7/image-20250310124656939.png" class="" title="image-20250310124656939">
-
-<p>一元</p>
-<img src="/post/4719c4b7/image-20250310124730119.png" class="" title="image-20250310124730119">
-
-<p>强制</p>
-<img src="/post/4719c4b7/image-20250310124832736.png" class="" title="image-20250310124832736">
-
-<p>乘除法</p>
-<img src="/post/4719c4b7/image-20250310124924862.png" class="" title="image-20250310124924862">
-
-<p>加减法</p>
-<img src="/post/4719c4b7/image-20250310124946622.png" class="" title="image-20250310124946622">
-
-<p>移位</p>
-<img src="/post/4719c4b7/image-20250310125011366.png" class="" title="image-20250310125011366">
-
-<p>关系</p>
-<img src="/post/4719c4b7/image-20250310125030071.png" class="" title="image-20250310125030071">
-
-<p>相等不等</p>
-<img src="/post/4719c4b7/image-20250310125052829.png" class="" title="image-20250310125052829">
-
-<p>按位与</p>
-<img src="/post/4719c4b7/image-20250310125138133.png" class="" title="image-20250310125138133">
-
-<p>按位异或</p>
-<img src="/post/4719c4b7/image-20250310125226208.png" class="" title="image-20250310125226208">
-
-<p>按位或</p>
-<img src="/post/4719c4b7/image-20250310125155063.png" class="" title="image-20250310125155063">
-
-<p>逻辑与</p>
-<img src="/post/4719c4b7/image-20250310125259390.png" class="" title="image-20250310125259390">
-
-<p>逻辑或</p>
-<img src="/post/4719c4b7/image-20250310125419085.png" class="" title="image-20250310125419085">
-
-<p>三元</p>
-<img src="/post/4719c4b7/image-20250310125354398.png" class="" title="image-20250310125354398">
-
-<p>赋值</p>
-<img src="/post/4719c4b7/image-20250310125705926.png" class="" title="image-20250310125705926">
-
-<p>逗号</p>
-<img src="/post/4719c4b7/image-20250310125720662.png" class="" title="image-20250310125720662">
-
-<style>.rkdqzsmodcdg{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310130444972.png" class="rkdqzsmodcdg" alt="image-20250310130444972">
-
-<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><style>.iifeoujstbtm{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310130633348.png" class="iifeoujstbtm" alt="image-20250310130633348">
-
-<img src="/post/4719c4b7/image-20250310130700954.png" class="" title="image-20250310130700954">
-
-<img src="/post/4719c4b7/image-20250310130753594.png" class="" title="image-20250310130753594">
-
-<h3 id="C语言标准中的6种语句"><a href="#C语言标准中的6种语句" class="headerlink" title="C语言标准中的6种语句"></a>C语言标准中的6种语句</h3><img src="/post/4719c4b7/image-20250311115606436.png" class="" title="image-20250311115606436">
-
-<ul>
-<li>复合语句</li>
-</ul>
-<img src="/post/4719c4b7/image-20250311115854641.png" class="" title="image-20250311115854641">
-
-<ul>
-<li>表达式语句</li>
-</ul>
-<img src="/post/4719c4b7/image-20250311115949349.png" class="" title="image-20250311115949349">
-
-<img src="/post/4719c4b7/image-20250311120010105.png" class="" title="image-20250311120010105">
-
-<ul>
-<li>选择语句</li>
-</ul>
-<blockquote>
-<p>if</p>
-</blockquote>
-<style>.nbvjbogtlxus{zoom:200%;}</style><img src="/post/4719c4b7/image-20250311120029560.png" class="nbvjbogtlxus" alt="image-20250311120029560">
-
-<img src="/post/4719c4b7/image-20250311120152088.png" class="" title="image-20250311120152088">
-
-<img src="/post/4719c4b7/image-20250311120218294.png" class="" title="image-20250311120218294">
-
-<blockquote>
-<p>if ..else..</p>
-</blockquote>
-<img src="/post/4719c4b7/image-20250311120257287.png" class="" title="image-20250311120257287">
-
-<blockquote>
-<p>switch</p>
-</blockquote>
-<p>C语言标准提供了switch语句，switch也是C语言关键字之一，用于表示多分支选择，需要配合标签语句一起用</p>
-<img src="/post/4719c4b7/image-20250311120400739.png" class="" title="image-20250311120400739">
-
-<ul>
-<li>标签语句</li>
-</ul>
-<p>C语言标准中提供了3种标签语句，其中使用频率较高是case标签和default标签，case和default都是C语言的关键字之一，case具有匹配的含义，default具有默认的含义</p>
-<img src="/post/4719c4b7/image-20250311120447511.png" class="" title="image-20250311120447511">
-
-<p><strong>注意：case标签的常量表达式的结果必须是整型常量，并且case标签必须是互斥的（不能出现重复的情况，会导致二义性）。</strong></p>
-<p><strong>注意：case标签语句和default标签语句只能在switch语句中使用，对于普通的标签语句是可以在跳转语句中使用的。</strong></p>
-<p><strong>注意：switch语句应该结合break语句，目的是利用break语句终止switch语句，避免多个标签都被执行。</strong></p>
-<img src="/post/4719c4b7/image-20250311120636631.png" class="" title="image-20250311120636631">
-
-<img src="/post/4719c4b7/image-20250311120642672.png" class="" title="image-20250311120642672">
-
-<ul>
-<li>跳转语句</li>
-</ul>
-<blockquote>
-<p>C语言标准中提供了四种跳转语句：goto语句、continue语句、break语句、return语句。</p>
-</blockquote>
-<img src="/post/4719c4b7/image-20250311120738982.png" class="" title="image-20250311120738982">
-
-<img src="/post/4719c4b7/image-20250311120744982.png" class="" title="image-20250311120744982">
-
-<img src="/post/4719c4b7/image-20250311120751838.png" class="" title="image-20250311120751838">
-
-<img src="/post/4719c4b7/image-20250311120844908.png" class="" title="image-20250311120844908">
-
-<img src="/post/4719c4b7/image-20250311120929609.png" class="" title="image-20250311120929609">
-
-<ul>
-<li>迭代语句</li>
-</ul>
-<img src="/post/4719c4b7/image-20250311121011819.png" class="" title="image-20250311121011819">
-
-<blockquote>
-<p>while()语句</p>
-</blockquote>
-<img src="/post/4719c4b7/image-20250311121056733.png" class="" title="image-20250311121056733">
-
-<img src="/post/4719c4b7/image-20250311121125071.png" class="" title="image-20250311121125071">
-
-<blockquote>
-<p>do..while</p>
-</blockquote>
-<img src="/post/4719c4b7/image-20250311121150245.png" class="" title="image-20250311121150245">
-
-<img src="/post/4719c4b7/image-20250311121230074.png" class="" title="image-20250311121230074">
-
-<blockquote>
-<p>for</p>
-</blockquote>
-<style>.okagkfumcref{zoom:200%;}</style><img src="/post/4719c4b7/image-20250311121246791.png" class="okagkfumcref" alt="image-20250311121246791">
-
-<p><strong>循环语句内部的循环体一般都需要结合break语句、continue语句，都属于跳转语句！！！！！！</strong></p>
-<img src="/post/4719c4b7/image-20250311121355451.png" class="" title="image-20250311121355451">
-]]></content>
-  </entry>
-  <entry>
-    <title>项目准备</title>
-    <url>/post/4c33a4aa.html</url>
-    <content><![CDATA[<h1 id="项目目录划分"><a href="#项目目录划分" class="headerlink" title="项目目录划分"></a>项目目录划分</h1><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>git</title>
+      <link href="/post/518e617c.html"/>
+      <url>/post/518e617c.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>项目准备</title>
+      <link href="/post/4c33a4aa.html"/>
+      <url>/post/4c33a4aa.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="项目目录划分"><a href="#项目目录划分" class="headerlink" title="项目目录划分"></a>项目目录划分</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>boke</title>
+      <link href="/post/48314b32.html"/>
+      <url>/post/48314b32.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数组</title>
+      <link href="/post/340249a9.html"/>
+      <url>/post/340249a9.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="***数组"></a>***数组</h1><span id="more"></span><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><ul><li>数组其实就是用户向<strong>内核</strong>申请的一块空间，只不过内核提供的这块空间的<strong>内存地址是连续的</strong>，目的就是方便用户存储和访问<strong>相同类型的数据</strong>。</li></ul><h3 id="1-1用户访问"><a href="#1-1用户访问" class="headerlink" title="1.1用户访问"></a>1.1用户访问</h3><ul><li>内核申请内存时如果申请成功则操作系统会把<strong>内存的起始地址</strong>提供给用户,用户可以通过存储单元的地址访问,但是程序的可读性以及可维护性变差，所以C语言允许用户像访问变量一样，可以对数组进行命名，这样系统内核就会把数组名和数组的起始地址建立映射关系。</li></ul><h3 id="1-2数组的定义"><a href="#1-2数组的定义" class="headerlink" title="1.2数组的定义"></a>1.2数组的定义</h3><ul><li>何向内核申请空间</li><li>用户需要说明 数据数量 * 数据宽度 ，对于数据宽度而言指的是数据类型 ，数据的类型可以是基本数据类型（字符型、整型、短整型、浮点型） or 复杂数据类型（结构体、联合体） or 指针类型</li></ul><p><code>定义数组的格式： 数据类型 数组名称 [数据个数] ;  // 内存大小：数据类型 * 数据个数</code></p><style>.xmfjdyeeoddf{zoom:200%;}</style><img src="/post/340249a9/image-20250311123000826.png" class="xmfjdyeeoddf" alt="image-20250311123000826"><img src="/post/340249a9/image-20250311123027825.png" class="" title="image-20250311123027825"><h3 id="1-3数组的访问"><a href="#1-3数组的访问" class="headerlink" title="1.3数组的访问*************************"></a>1.3数组的访问*************************</h3><img src="/post/340249a9/image-20250311123102061.png" class="" title="image-20250311123102061"><p><em>可以知道C语言标准中想要访问数组中的某个元素，可以使用 E1[E2] 结构，E1是数组对象，其实就是数组名，E2是一个整数，用于作为数组下标，并且E2的值是从0开始。</em></p><p><em>所以数组的下标的范围 E1[0] ~ E1[E2-1]，就可以通过这种方式来表示任意一个数组中的元素！</em></p><img src="/post/340249a9/image-20250311123345161.png" class="" title="image-20250311123345161"><img src="/post/340249a9/image-20250311123406271.png" class="" title="image-20250311123406271"><p><strong>C语言标准中规定可以通过 下标方式访问数组的元素 E1[E2]  也可以通过 内存地址 方式访问数组中的元素 ( * ( (E1) + (E2) ) ) ，注意：如果E1就是数组名，并且E2就是整型常量，则可以把括号省略，变为 (  * (E1 + E2)  )</strong>  </p><p>为什么C语言中规定*( E1 + E2 )可以访问数组元素地址，是什么原理？*有什么作用？</p><p><em><em>C语言标准中提供多种运算符，</em> 可以作为二元运算符， * 作为乘法运算符，需要。两个操作对象，并且遵循“左结合性”，但是 * 也可以作为一元运算符， * 的含义就是间接运算符。</em>*</p><img src="/post/340249a9/image-20250311123630800.png" class="" title="image-20250311123630800"><p><strong>( <em>E1 + E2 )的解释：E1是一个数组对象，E1也就是数组名称，C语言标准中规定数组名可以作为数组中第一个元素的地址，所以相当于E1是数组中第一个元素的地址，而E2是一个整数，所以 E1 + E2 相当于从E1这个地址向后偏移E2个单位（以元素为单位，所以需要考虑元素的类型），所以E1+E2的结果还是一个地址， <em>( E1 + E2) 相当于间接访问该地址，相当于得到了(E1+E2)这个地址下的值。 总结： (E1+E2)  &#x3D;&#x3D;  E1[E2]</em></em></strong>**</p><img src="/post/340249a9/image-20250311123939426.png" class="" title="image-20250311123939426">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构知识点-杂</title>
+      <link href="/post/227df6d7.html"/>
+      <url>/post/227df6d7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构知识点-杂"><a href="#数据结构知识点-杂" class="headerlink" title="数据结构知识点-杂"></a>数据结构知识点-杂</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>重要的基础知识点</title>
+      <link href="/post/4719c4b7.html"/>
+      <url>/post/4719c4b7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="重要的基础知识点"><a href="#重要的基础知识点" class="headerlink" title="重要的基础知识点"></a>重要的基础知识点</h1><span id="more"></span><table><thead><tr><th align="center">解释</th><th align="center">ASCII(十进制)</th></tr></thead><tbody><tr><td align="center">大写字母A</td><td align="center">65</td></tr><tr><td align="center">小写字母a</td><td align="center">97</td></tr><tr><td align="center">字符0</td><td align="center">48</td></tr><tr><td align="center">空字符(NULL)</td><td align="center">0</td></tr></tbody></table><ul><li><p>32bit系统 or 64bit系统  指的是计算机的地址总线的位数，指的是计算机的寻址范围是32bit，也就是4GB  存储单元地址：0x0000_0000 ~ 0xFFFF_FFFF<br>内存属于易失性存储设备 键盘输入的数据是先存储到内存（随机存储器）中，存储器中有n个存储单元，每个存储单元的大小都是1字节</p></li><li><p>存储单元大小是1字节 存储单元的地址是4字节的</p></li></ul><p><strong>注意：头文件不是必须包含，只有调用了函数库中的函数接口，才需要包含头文件！！！！</strong></p><ul><li><strong>数组：数组是具有相同类型的数据的集合，数组的地址是连续的，数组中的数据被称为元素，元素类型必须相同</strong></li></ul><h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><blockquote><p>变量和常量也被称为****标识符****，对于标识符的命名必须遵循规则：标识符是由字母、数字、下划线以及美元符号$组成，并且标识符的第一个字符只能是字母或者下划线</p></blockquote><p><em><strong>*C语言的标识符是区分大小写，并且作为用户而言，标识符的命名应该是有意义的!!!*</strong></em></p><p><em>注意：为了防止</em>**二义性**<em>出现，C语言标准规定不可以把系统保留字，以及程序中已经存在的函数名称、以及用户已经定义出来的标识符名称作为新的标识符名称（同一个作用域内不能）</em></p><ul><li>字符型</li></ul><img src="/post/4719c4b7/image-20250303170940637.png" class="" title="image-20250303170940637"><h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>C语言标准中关于字符的种类有两种：<em><strong>*普通字符*</strong></em> and <em><strong>*转义字符*</strong></em>，对于ASCII码表中转义字符</p><img src="/post/4719c4b7/image-20250303171048391.png" class="" title="image-20250303171048391"><p>注意：ASCII码中的转义字符需要使用’\0’  ‘\r’  ‘\n’ 进行表示，代表字符具有特殊的意义。</p><blockquote><p>因为C语言不支持二进制输入，但是C语言支持八进制、十进制、十六进制。</p></blockquote><h2 id="前导符"><a href="#前导符" class="headerlink" title="前导符"></a>前导符</h2><img src="/post/4719c4b7/image-20250303171455620.png" class="" title="image-20250303171455620"><blockquote><p>规定八进制的前缀以0表示，比如064，规定十六进制的前缀以0x&#x2F;0X表示，比如0x64。</p></blockquote><h2 id="反码-补码"><a href="#反码-补码" class="headerlink" title="反码 补码"></a>反码 补码</h2><ul><li>二进制可以分正负，在二进制数的前面添加1bit，作为符号位，并且bit&#x3D;0，用于表示二进制数为正数，bit&#x3D;1，用于表示二进制数为负数。</li></ul><img src="/post/4719c4b7/image-20250303173403612.png" class="" title="image-20250303173403612"><img src="/post/4719c4b7/image-20250303173425646.png" class="" title="image-20250303173425646"><p><em><strong>计算机内部是以二进制的补码方式来存储数据的，所以需要把二进制数的原码转换为补码形式。</strong></em></p><img src="/post/4719c4b7/image-20250303173457562.png" class="" title="image-20250303173457562"><img src="/post/4719c4b7/image-20250303173552558.png" class="" title="image-20250303173552558"><p>反码：二进制数除了符号位（二进制数中的最高位），把数据位取反即可（0变1,1变0）。</p><p><code>-1  --- 1 000 0001 原码 -- 计算反码 -- 1 111 1110 反码</code></p><p>补码：二进制数的反码 + 1 </p><p><code>-1 -- 1 000 0001 原码 --计算反码 -- 1 111 1110 反码--计算补码 -- 1111 1110 +1 -- 1111 1111</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">练习：用户打算定义一个字符型变量，命名叫做data，准备把一个正整数存储到变量data中，并设计了一段程序，请问这段程序输出的结果是多少？ </span><br><span class="line"></span><br><span class="line">char data;    data = 128;    printf(“%d\n”,data);  --&gt; 请问输出的结果是多少??  答案：-128</span><br></pre></td></tr></table></figure><p><em>128–0000 0000 0000 0000 0000 0000 1000 0000原码–正数的原码和补码是相同的 1000 0000</em></p><p> <em>1000 0000补码 – 属于数据类型中非常特殊的存在，可以计算是 -0，但是0不分正负，所以 把-0的位置用-128进行替换。</em></p><p><em><strong>计算机存储是以补码的方式存进去，展示出来再以原码的方式展出，遇到变量范围不一致的情况，先转换成补码然后再存进去</strong></em></p><p><em><strong>*注意：设计程序时，定义的变量如果是有符号的，则尽量避免写入超过变量范围的数值!!!!!!*</strong></em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">字符型： char  1字节 -- 有符号 -- 数值范围 -128 ~ 127  --  无符号 -- 数值范围 0 ~ 255</span><br><span class="line">短整型：short  2字节 -- 有符号 -- 数值范围 -32768 ~ 32767 无符号 --数值范围 0 ~ 6553</span><br></pre></td></tr></table></figure><h2 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h2><p>用关键字float来表示单精度浮点数，单精度浮点型占4字节，另外C语言标准中也提供了另一个关键字double用来表示双精度浮点数，double占8字节，其实C语言也提供了一种类型long double，该类型占16字节</p><h2 id="指数型"><a href="#指数型" class="headerlink" title="指数型"></a>指数型</h2><p>指数形式指的是采用以10为底的形式表示浮点数，比如 3.14 * 102 ,但是在编写程序的时候采用英文半角输入法进行设计，这种输入法是不支持输入上标或者下标，所以C语言规定采用字符e或者E来表示以10为底的指数，比如3.14E2 </p><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是表示某种含义的一个字符序列，字符串在内存是需要一块连续的内存空间进行存储，C语言中规定字符串使用<strong>双引号</strong>“”表示，并且规定字符串的结束标志是’\0’，但’\0’不需要用户手动添加，系统会自动在一个字符串的末尾添加’\0’。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">既然在内存中字符串需要一块连续的空间来存储，内核肯定会返回字符串的开始地址，请问内核如何判断字符串何时结束？  回答：遇到’\0’自动结束</span><br></pre></td></tr></table></figure><img src="/post/4719c4b7/image-20250303174446260.png" class="" title="image-20250303174446260"><h2 id="sizeof"><a href="#sizeof" class="headerlink" title="sizeof"></a>sizeof</h2><img src="/post/4719c4b7/image-20250303174733873.png" class="" title="image-20250303174733873"><h2 id="大端小端"><a href="#大端小端" class="headerlink" title="大端小端"></a>大端小端</h2><p>注意：计算机内部存储多字节的数据时会涉及到大端小端，不同的处理器架构采用的模式是不同的，一般X86架构采用小端模式，ARM架构一般采用大端模式（但是并不绝对）！！！！！！</p><img src="/post/4719c4b7/image-20250303175950947.png" class="" title="image-20250303175950947"><h2 id="缓存区"><a href="#缓存区" class="headerlink" title="缓存区"></a>缓存区</h2><p>计算机的CPU的性能好，所以CPU的执行效率高，但是计算机的输入设备和输出设备的效率低，所以CPU为了提高工作效率，要降低访问输入输出设备的次数。于是就有了缓存区的诞生。</p><style>.slbpoxtscivu{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310103033897.png" class="slbpoxtscivu" alt="image-20250310103033897"><blockquote><p>IO设备的不同，可以把缓冲区分为输入缓冲区和输出缓冲区</p><p>根据刷新形式的不同，可以把缓冲区分为三种：全缓冲、行缓冲、无缓冲</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">全缓冲：指的是当缓冲区被填满就立即把数据冲刷到文件、或者在关闭文件、读取文件内容以及修改缓冲区类型时也会立即把数据冲刷到文件，一般读写文件的时候会采用</span><br><span class="line"></span><br><span class="line">无缓冲：指的是没有缓冲区，直接输出，一般linux系统的标准出错stderr就是采用无缓冲，这样可以把错误信息直接输出。</span><br><span class="line"></span><br><span class="line">行缓冲：指的是当缓冲区被填满（一般缓冲区为4KB，就是4096字节）或者缓冲区中遇到换行符’\n’时，或者在关闭文件、读取文件内容以及修改缓冲区类型时也会立即把数据冲刷到文件中，一般操作IO设备时会采用，比如printf函数就是采用行缓冲</span><br></pre></td></tr></table></figure><p>思考：如果用户不小心在使用printf函数输出字符串的时候忘了添加结束标志’\n’，并且用户没有打算输出太多字符，请问此时要输出的字符串会不会输出？</p><p>回答：可以输出，当程序结束时会自动刷新缓冲区，如果输入缓存区中存在数据则被丢弃，如果输出缓存区存在数据，则会输出。</p><p><strong>用户可以选择手动刷新缓冲区，可以调用标准C库中的fflush()函数接口</strong></p><style>.jrunzbeomoew{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310103505394.png" class="jrunzbeomoew" alt="image-20250310103505394"><img src="/post/4719c4b7/image-20250310103615007.png" class="" title="image-20250310103615007"><p><strong>注意：不要利用fflush函数区刷新输入缓冲区(stdin) ，因为一般编译器是不支持该操作！！！</strong></p><h2 id="scanf"><a href="#scanf" class="headerlink" title="scanf()"></a>scanf()</h2><p>标准C库提供了一个输入函数scanf()</p><img src="/post/4719c4b7/image-20250310104640233.png" class="" title="image-20250310104640233"><img src="/post/4719c4b7/image-20250310104727637.png" class="" title="image-20250310104727637"><img src="/post/4719c4b7/image-20250310104733349.png" class="" title="image-20250310104733349"><h3 id="匹配字符"><a href="#匹配字符" class="headerlink" title="匹配字符"></a>匹配字符</h3><img src="/post/4719c4b7/image-20250310104909814.png" class="" title="image-20250310104909814"><style>.iszmikqwqwbn{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310104945150.png" class="iszmikqwqwbn" alt="image-20250310104945150"><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul><li><p>运算符指明要进行的运算和操作，操作数是指运算符的操作对象，根据运算符操作数的数目不同，C语言标准把运算符分为三种：单目运算符（一元运算符）、双目运算符（二元运算符）、三目运算符（三元运算符）。</p></li><li><p>当除法运算符两端的操作数都是整数的时候，得到的结果也是整数，当两个操作数无法被整数，会舍弃小数，只保留整数。</p></li><li><p>当除法运算符两端的操作数不全是整数，比如其中一个操作数是浮点数，则得到的结果也是浮点数，如果不指定精度，则默认是6位精度。</p></li><li><p>C语言中提供%作为求余运算符，也可以称为取模运算符，C语言标准中规定%符号两端的操作数必须是整数。</p></li></ul><blockquote><p>一种是左结合性，遵循先左后右原则，比如 a + b - c，相当于(a+b)-c，另一种是右结合性，遵循先右后左原则，比如双目运算符中的赋值运算符 &#x3D; ，比如表达式a&#x3D;b&#x3D;c，相当于a&#x3D;(b&#x3D;c)。</p></blockquote><p><em><strong>*注意：C语言中的单目运算符和三目运算符都是遵循右结合性，当然也包含双目运算符中的赋值运算符&#x3D;，其他的运算符都遵循左结合性。*</strong></em></p><p>a++ ：在表达式中则表示先让变量a参与表达式运算，运算之后才会让变量a的值自加</p><p>++a ：在表达式中则表示先让变量a的值自加，自加之后再参与表达式运算</p><p><strong>注意sizeof在C语言中是一个操作符，作用是计算数据类型的大小，结果以字节为单位，sizeof括号中的表达式是不会实现运算和处理的。</strong></p><img src="/post/4719c4b7/image-20250310110405984.png" class="" title="image-20250310110405984"><h3 id="位操作运算符"><a href="#位操作运算符" class="headerlink" title="位操作运算符"></a>位操作运算符</h3><p>C语言中提供了6种位操作运算符，分别是  ~  &amp;  ^  |   &lt;&lt;   &gt;&gt;，其中~属于单目运算符，其他五种都属于双目运算符。</p><blockquote><p>~：按位取反，对于二进制数而言，0变为1，1变为0  ~ 1101_1110 &#x3D; 0010_0001</p><p>&amp;：按位与，对于二进制而言，当两个bit同时为1，则结果为1，如果bit存在0，结果为0</p><p>|：按位或，对于二进制而言，当两个bit同时为0，则结果为0，如果bit存在1，结果为1</p><p>^：按位异或，对于二进制而言，当两个bit相同，则结果为0，两个bit不同，则结果为1</p><p>&lt;&lt;：左移运算符，对于二进制而言原则：高位舍弃、低位补0  0111_1010 &lt;&lt; 3 – 1101 0000</p><p>&gt;&gt;：右移运算符，对于二进制而言原则：低位舍弃、高位补0  0111_1010 &gt;&gt; 3 – 0000 1111</p></blockquote><ul><li>运算符顺序</li></ul><p>后缀</p><img src="/post/4719c4b7/image-20250310124656939.png" class="" title="image-20250310124656939"><p>一元</p><img src="/post/4719c4b7/image-20250310124730119.png" class="" title="image-20250310124730119"><p>强制</p><img src="/post/4719c4b7/image-20250310124832736.png" class="" title="image-20250310124832736"><p>乘除法</p><img src="/post/4719c4b7/image-20250310124924862.png" class="" title="image-20250310124924862"><p>加减法</p><img src="/post/4719c4b7/image-20250310124946622.png" class="" title="image-20250310124946622"><p>移位</p><img src="/post/4719c4b7/image-20250310125011366.png" class="" title="image-20250310125011366"><p>关系</p><img src="/post/4719c4b7/image-20250310125030071.png" class="" title="image-20250310125030071"><p>相等不等</p><img src="/post/4719c4b7/image-20250310125052829.png" class="" title="image-20250310125052829"><p>按位与</p><img src="/post/4719c4b7/image-20250310125138133.png" class="" title="image-20250310125138133"><p>按位异或</p><img src="/post/4719c4b7/image-20250310125226208.png" class="" title="image-20250310125226208"><p>按位或</p><img src="/post/4719c4b7/image-20250310125155063.png" class="" title="image-20250310125155063"><p>逻辑与</p><img src="/post/4719c4b7/image-20250310125259390.png" class="" title="image-20250310125259390"><p>逻辑或</p><img src="/post/4719c4b7/image-20250310125419085.png" class="" title="image-20250310125419085"><p>三元</p><img src="/post/4719c4b7/image-20250310125354398.png" class="" title="image-20250310125354398"><p>赋值</p><img src="/post/4719c4b7/image-20250310125705926.png" class="" title="image-20250310125705926"><p>逗号</p><img src="/post/4719c4b7/image-20250310125720662.png" class="" title="image-20250310125720662"><style>.jpvsgdgizsyu{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310130444972.png" class="jpvsgdgizsyu" alt="image-20250310130444972"><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><style>.ulvakyigtgft{zoom:200%;}</style><img src="/post/4719c4b7/image-20250310130633348.png" class="ulvakyigtgft" alt="image-20250310130633348"><img src="/post/4719c4b7/image-20250310130700954.png" class="" title="image-20250310130700954"><img src="/post/4719c4b7/image-20250310130753594.png" class="" title="image-20250310130753594"><h3 id="C语言标准中的6种语句"><a href="#C语言标准中的6种语句" class="headerlink" title="C语言标准中的6种语句"></a>C语言标准中的6种语句</h3><img src="/post/4719c4b7/image-20250311115606436.png" class="" title="image-20250311115606436"><ul><li>复合语句</li></ul><img src="/post/4719c4b7/image-20250311115854641.png" class="" title="image-20250311115854641"><ul><li>表达式语句</li></ul><img src="/post/4719c4b7/image-20250311115949349.png" class="" title="image-20250311115949349"><img src="/post/4719c4b7/image-20250311120010105.png" class="" title="image-20250311120010105"><ul><li>选择语句</li></ul><blockquote><p>if</p></blockquote><style>.lxqwnjumrjtw{zoom:200%;}</style><img src="/post/4719c4b7/image-20250311120029560.png" class="lxqwnjumrjtw" alt="image-20250311120029560"><img src="/post/4719c4b7/image-20250311120152088.png" class="" title="image-20250311120152088"><img src="/post/4719c4b7/image-20250311120218294.png" class="" title="image-20250311120218294"><blockquote><p>if ..else..</p></blockquote><img src="/post/4719c4b7/image-20250311120257287.png" class="" title="image-20250311120257287"><blockquote><p>switch</p></blockquote><p>C语言标准提供了switch语句，switch也是C语言关键字之一，用于表示多分支选择，需要配合标签语句一起用</p><img src="/post/4719c4b7/image-20250311120400739.png" class="" title="image-20250311120400739"><ul><li>标签语句</li></ul><p>C语言标准中提供了3种标签语句，其中使用频率较高是case标签和default标签，case和default都是C语言的关键字之一，case具有匹配的含义，default具有默认的含义</p><img src="/post/4719c4b7/image-20250311120447511.png" class="" title="image-20250311120447511"><p><strong>注意：case标签的常量表达式的结果必须是整型常量，并且case标签必须是互斥的（不能出现重复的情况，会导致二义性）。</strong></p><p><strong>注意：case标签语句和default标签语句只能在switch语句中使用，对于普通的标签语句是可以在跳转语句中使用的。</strong></p><p><strong>注意：switch语句应该结合break语句，目的是利用break语句终止switch语句，避免多个标签都被执行。</strong></p><img src="/post/4719c4b7/image-20250311120636631.png" class="" title="image-20250311120636631"><img src="/post/4719c4b7/image-20250311120642672.png" class="" title="image-20250311120642672"><ul><li>跳转语句</li></ul><blockquote><p>C语言标准中提供了四种跳转语句：goto语句、continue语句、break语句、return语句。</p></blockquote><img src="/post/4719c4b7/image-20250311120738982.png" class="" title="image-20250311120738982"><img src="/post/4719c4b7/image-20250311120744982.png" class="" title="image-20250311120744982"><img src="/post/4719c4b7/image-20250311120751838.png" class="" title="image-20250311120751838"><img src="/post/4719c4b7/image-20250311120844908.png" class="" title="image-20250311120844908"><img src="/post/4719c4b7/image-20250311120929609.png" class="" title="image-20250311120929609"><ul><li>迭代语句</li></ul><img src="/post/4719c4b7/image-20250311121011819.png" class="" title="image-20250311121011819"><blockquote><p>while()语句</p></blockquote><img src="/post/4719c4b7/image-20250311121056733.png" class="" title="image-20250311121056733"><img src="/post/4719c4b7/image-20250311121125071.png" class="" title="image-20250311121125071"><blockquote><p>do..while</p></blockquote><img src="/post/4719c4b7/image-20250311121150245.png" class="" title="image-20250311121150245"><img src="/post/4719c4b7/image-20250311121230074.png" class="" title="image-20250311121230074"><blockquote><p>for</p></blockquote><style>.clfwybykddyp{zoom:200%;}</style><img src="/post/4719c4b7/image-20250311121246791.png" class="clfwybykddyp" alt="image-20250311121246791"><p><strong>循环语句内部的循环体一般都需要结合break语句、continue语句，都属于跳转语句！！！！！！</strong></p><img src="/post/4719c4b7/image-20250311121355451.png" class="" title="image-20250311121355451">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杂余知识点</title>
+      <link href="/post/e33c00c9.html"/>
+      <url>/post/e33c00c9.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="杂余知识点"><a href="#杂余知识点" class="headerlink" title="杂余知识点"></a>杂余知识点</h1><span id="more"></span><h2 id="1-知识体系"><a href="#1-知识体系" class="headerlink" title="1.知识体系"></a>1.知识体系</h2><img src="/post/e33c00c9/image-20250303161935098.png" class="" title="image-20250303161935098"><img src="/post/e33c00c9/image-20250303162013657.png" class="" title="image-20250303162013657"><h2 id="2-keywords"><a href="#2-keywords" class="headerlink" title="2.keywords"></a>2.keywords</h2><img src="/post/e33c00c9/image-20250303162122783.png" class="" title="image-20250303162122783"><h2 id="3-ASCII码"><a href="#3-ASCII码" class="headerlink" title="3.ASCII码"></a>3.ASCII码</h2><img src="/post/e33c00c9/image-20250303162252974.png" class="" title="image-20250303162252974"><p><em>中国国家标准总局设计了中文简体字符集，称为GB2312字符集，后面又推出GBK编码（收录了繁体汉字，向下兼容），目前UTF-8字符集收录各个国家的字符。</em></p><h2 id="4-动态随机存储器"><a href="#4-动态随机存储器" class="headerlink" title="4.动态随机存储器"></a>4.动态随机存储器</h2><ul><li>对于计算机中的存储器而言，一般分为两种：****RAM（随机存储器）****和 <em><strong>*ROM（只读存储器）*</strong></em></li></ul><h3 id="只读存储器"><a href="#只读存储器" class="headerlink" title="只读存储器"></a>只读存储器</h3><p>只读存储器的英文全称是Read Only Memory，简称为ROM，属于非易失性存储设备，指的是掉电不丢失数据，可以把数据长时间存储，一般分为很多种，具体的区别可以通过《数电》进行了解，对于计算机的机械硬盘或者固态硬盘而言指的就是ROM。</p><h3 id="随机存储器"><a href="#随机存储器" class="headerlink" title="随机存储器"></a>随机存储器</h3><p>随机存储器的英文全称是Random Access Memory，简称为RAM，属于易失性存储设备，指的是掉电会丢失数据，但是读写速度很快。所以一般CPU都是直接和RAM打交道</p><img src="/post/e33c00c9/image-20250303163106577.png" class="" title="image-20250303163106577"><h2 id="5-vscode软件安装"><a href="#5-vscode软件安装" class="headerlink" title="5.vscode软件安装"></a>5.vscode软件安装</h2><ul><li>对该软件进行汉化处理，点击拓展 —&gt;输入 chinese —&gt;选择简体中文—&gt;install</li></ul><img src="/post/e33c00c9/image-20250303163244041.png" class="" title="image-20250303163244041"><ul><li>为软件安装C&#x2F;C++插件，该插件可以提供命令推理、语法高亮、自动补齐等功能</li></ul><img src="/post/e33c00c9/image-20250303163300370.png" class="" title="image-20250303163300370"><ul><li>为软件安装 Code Runner插件，该插件支持一键编译和一键运行等功能，操作如下图</li></ul><img src="/post/e33c00c9/image-20250303163316116.png" class="" title="image-20250303163316116"><p><strong>注意：Code Runner插件默认不在终端进行输入输出，为了避免程序在终端中的输入输出问题出现，大家可以配置一下VSCode软件 设置 –&gt;拓展 –&gt;Run Code Config –&gt; Run In Terminal</strong></p><img src="/post/e33c00c9/image-20250303163338148.png" class="" title="image-20250303163338148"><h2 id="6-代码风格"><a href="#6-代码风格" class="headerlink" title="6.代码风格"></a>6.代码风格</h2><img src="/post/e33c00c9/image-20250303163859527.png" class="" title="image-20250303163859527"><img src="/post/e33c00c9/image-20250303163917068.png" class="" title="image-20250303163917068"><h2 id="7-代码注释"><a href="#7-代码注释" class="headerlink" title="7.代码注释"></a>7.代码注释</h2><img src="/post/e33c00c9/image-20250303163954550.png" class="" title="image-20250303163954550"><p>当程序中需要对某一行代码进行注释时，可以采用 &#x2F;&#x2F;或者&#x2F;* *&#x2F; 这两种方案进行注释，如：  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">\#include  &lt;stdio.h&gt;  </span><br><span class="line"></span><br><span class="line">int main(void)  </span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> printf(“hello world\n”);  //</span><br><span class="line"></span><br><span class="line"> return 0; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">\#include  &lt;stdio.h&gt;  </span><br><span class="line"></span><br><span class="line">int main(void)  </span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"> /**/ </span><br><span class="line"></span><br><span class="line"> printf(“hello world\n”); </span><br><span class="line"></span><br><span class="line"> return 0; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="8-程序入口"><a href="#8-程序入口" class="headerlink" title="8.程序入口"></a>8.程序入口</h2><img src="/post/e33c00c9/image-20250303164228842.png" class="" title="image-20250303164228842"><img src="/post/e33c00c9/image-20250303164250503.png" class="" title="image-20250303164250503"><p><em>注意：C语言程序的基本单位是函数，也就是说一个程序是由一个主函数以及若干个子函数组成的，主函数的名字是固定的，叫做main函数，用户不能修改，main这个单词翻译成中文具有主要的，最重要的意思，所以main函数才会作为程序的入口，也就是说程序是按照main函数中语句的先后顺序执行的。</em></p><h2 id="9-程序结束"><a href="#9-程序结束" class="headerlink" title="9.程序结束"></a>9.程序结束</h2><p>另外可以看到标准中规定main函数需要具有一个int型的返回值，int指的是整型数，其实是英文单词integer的缩写，也是C语言中的关键字之一，也是常用的基本数据类型之一。</p><img src="/post/e33c00c9/image-20250303164626857.png" class="" title="image-20250303164626857"><p>返回值指的是函数执行完成后的结果，当然，并不是所有的函数都具有返回值，这个要根据实际情况而定</p><img src="/post/e33c00c9/image-20250303165018855.png" class="" title="image-20250303165018855"><h2 id="10-函数调用"><a href="#10-函数调用" class="headerlink" title="10.函数调用"></a>10.函数调用</h2><p>刚才提到C语言程序的基本单位是函数，程序是由一个主函数以及若干个子函数组成的，对于主函数而言，名称是固定的不能修改，功能就是作为程序的入口，但是对于子函数而言则不同。</p><p>子函数指的是了程序中除了主函数之外的其他函数，子函数的类型一般有两种：一种是库函数，另一种是用户自定义函数</p><img src="/post/e33c00c9/image-20250303165142820.png" class="" title="image-20250303165142820"><p><em><strong>注意：头文件不是必须包含，只有调用了函数库中的函数接口，才需要包含头文件！！！！</strong></em></p><img src="/post/e33c00c9/image-20250303165322222.png" class="" title="image-20250303165322222"><blockquote><p>&lt; xxx.h &gt; ：编译器只去系统指定路径中查找该头文件，如果未找到，则编译器进行错误提示。</p></blockquote><blockquote><p>“ xxx.h ” ：先去当前路径中查找头文件，未找到再去系统路径中查找，还未找到则报错提示。</p></blockquote><img src="/post/e33c00c9/image-20250303165354754.png" class="" title="image-20250303165354754"><h2 id="11-常量变量"><a href="#11-常量变量" class="headerlink" title="11.常量变量"></a>11.常量变量</h2><p>C语言标准规定：用户有权利从内存中申请一块存储单元，并且用户可以对存储单元进行命名，要求用户提前说明申请的存储单元（单位以字节来计算）的大小，这样linux内核才会从内存中寻找一块合适的空间，并把这块空间的地址反馈给用户。</p><img src="/post/e33c00c9/image-20250303170542397.png" class="" title="image-20250303170542397"><p>用户可以对linux内核提供的存储单元进行命名，然后linux内核会把用户的命名和存储单元的地址建立一个映射关系，这样用户就可以通过存储单元的名称来访问存储单元</p><blockquote><p>常量: 是在****程序运行期间值不会发生改变的量****，一般使用的数字，比如3.14用来表示圆周率，一般情况下，用户都是用通过宏定义的方式来实现常量的设计，宏定义其实就是简单的文本替换，在预处理阶段预处理器会把程序中的宏定义进行展开。C语言中规定宏定义使用预处理指令 <em><strong>*#define*</strong></em> 来进行设计。</p></blockquote><blockquote><p>变量:<em><strong>*程序运行期间值可能发生变化的量*</strong></em>，用户可以根据实际需要来向kernel申请一块存储单元，并对这块存储单元进行命名，然后用户可以随时修改存储单元中的数据</p></blockquote><h2 id="12-signed-unsigned"><a href="#12-signed-unsigned" class="headerlink" title="12.signed  &amp;&amp;  unsigned"></a>12.signed  &amp;&amp;  unsigned</h2><p>unsigned表示无符号，signed表示有符号，C语言中的signed修饰符是隐式声明</p><h2 id="13-布尔型"><a href="#13-布尔型" class="headerlink" title="13.布尔型"></a>13.布尔型</h2><p>在C99标准可以使用布尔型来表示真假两种情况，头文件stdbool.h有相关描述，在头文件中定义了三个宏，分别是bool、true以及false</p><img src="/post/e33c00c9/image-20250303174648263.png" class="" title="image-20250303174648263"><h2 id="14-man手册"><a href="#14-man手册" class="headerlink" title="14.man手册"></a>14.man手册</h2><p>一般标准C库中提供了很多关于输出的函数接口，其中最常用的就是printf()函数，关于printf函数的使用规则可以通过linux系统的man手册进行查阅。</p><img src="/post/e33c00c9/image-20250303175106513.png" class="" title="image-20250303175106513"><blockquote><p>用户一般都是使用linux系统，在linux系统中是提供了一个帮助文档，叫做man手册，man手册一共有9个章节，只需要打开linux系统的终端（Ctrl+Alt+T）输入命令：man  man</p></blockquote><img src="/post/e33c00c9/image-20250303175125499.png" class="" title="image-20250303175125499"><blockquote><p>如果想要针对性查找某些接口，可以指定man手册章节，终端输入命令: man  n(1-9)  xxx</p></blockquote><img src="/post/e33c00c9/image-20250303175202267.png" class="" title="image-20250303175202267"><img src="/post/e33c00c9/image-20250303175213419.png" class="" title="image-20250303175213419"><img src="/post/e33c00c9/image-20250303175227467.png" class="" title="image-20250303175227467"><h3 id="标志说明"><a href="#标志说明" class="headerlink" title="标志说明"></a>标志说明</h3><img src="/post/e33c00c9/image-20250303175336406.png" class="" title="image-20250303175336406"><h3 id="字段宽度"><a href="#字段宽度" class="headerlink" title="字段宽度"></a>字段宽度</h3><img src="/post/e33c00c9/image-20250303175427922.png" class="" title="image-20250303175427922"><h3 id="转换精度"><a href="#转换精度" class="headerlink" title="转换精度"></a>转换精度</h3><img src="/post/e33c00c9/image-20250303175449154.png" class="" title="image-20250303175449154"><img src="/post/e33c00c9/image-20250303175455554.png" class="" title="image-20250303175455554"><h3 id="长度修饰"><a href="#长度修饰" class="headerlink" title="长度修饰"></a>长度修饰</h3><img src="/post/e33c00c9/image-20250303175832165.png" class="" title="image-20250303175832165"><h2 id="转换说明"><a href="#转换说明" class="headerlink" title="转换说明"></a>转换说明</h2><img src="/post/e33c00c9/image-20250303180143037.png" class="" title="image-20250303180143037"><img src="/post/e33c00c9/image-20250303180149077.png" class="" title="image-20250303180149077"><img src="/post/e33c00c9/image-20250303180215947.png" class="" title="image-20250303180215947"><h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>在利用printf函数输出字符串时，用户可能需要输出一些转义字符 ‘\n’以及’\t’是比较常用的。</p><p>注意有的时候是需要把一些特殊字符当做普通字符输出，比较 “” ，可以把 \” 和 \” 输出</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基础代码</title>
+      <link href="/post/e5775237.html"/>
+      <url>/post/e5775237.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h1><span id="more"></span><h3 id="1-判断机器的大小端"><a href="#1-判断机器的大小端" class="headerlink" title="1.判断机器的大小端"></a>1.判断机器的大小端</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*file name:IsEndian.c</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2025/03/17</span></span><br><span class="line"><span class="comment">*function :  该案例是掌握进行模块化编程思想，以及封装函数接口流程</span></span><br><span class="line"><span class="comment">* note :  None</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*CopyRight (c)  2023-2024   cecelmx@126.com   All Right Reseverd </span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;IsEndian.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//用户自定义的联合体类型</span></span><br><span class="line"><span class="class"><span class="keyword">union</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="type">int</span>  a;</span><br><span class="line"><span class="type">char</span> b;</span><br><span class="line">&#125;Endian;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :IsEndian</span></span><br><span class="line"><span class="comment">*function :  判断机器的大小端</span></span><br><span class="line"><span class="comment">*argument :  None</span></span><br><span class="line"><span class="comment">*retval :  None</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2025/03/17</span></span><br><span class="line"><span class="comment">* note :  None</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">IsEndian</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对联合体的成员a进行赋值</span></span><br><span class="line">Endian.a = <span class="number">0x12345678</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="number">0x12</span> == Endian.b)</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Big-Endian\n&quot;</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Little-Endian\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-实现计算一个输入的整数n的阶乘"><a href="#2-实现计算一个输入的整数n的阶乘" class="headerlink" title="2.实现计算一个输入的整数n的阶乘"></a>2.实现计算一个输入的整数n的阶乘</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :CalFactorial</span></span><br><span class="line"><span class="comment">*function :  实现计算一个输入的整数n的阶乘            是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@n  :需要计算的值n</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  调用成功返回计算后的结果</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  1*2*3*4*...*(n-2)*(n-1)*n  考查递归思想解决问题</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">CalFactorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//递归函数必须提前写好终止条件,当n==1时可以选择终止函数</span></span><br><span class="line"><span class="keyword">if</span> (<span class="number">1</span> == n)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> CalFactorial(n<span class="number">-1</span>)*n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//递归，将大问题化解成小问题解决；两个重要的点，1.有终止条件。2.数学公式</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="3-计算一个字符串中最大的重复子串的字符的数量"><a href="#3-计算一个字符串中最大的重复子串的字符的数量" class="headerlink" title="3.计算一个字符串中最大的重复子串的字符的数量"></a>3.计算一个字符串中最大的重复子串的字符的数量</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :CalSubStrMaxCnt</span></span><br><span class="line"><span class="comment">*function :  计算一个字符串中最大的重复子串的字符的数量</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str:需要查找的字符串的地址</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  函数调用成功则返回最大子串的字符数量</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  None</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">CalSubStrMaxCnt</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">NULL</span> == str)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;argument is invaild\n&quot;</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> cnt = <span class="number">1</span>; <span class="comment">//计数器用于记录相同字符的数量,都不连续则返回值为1</span></span><br><span class="line"><span class="type">int</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//循环判断字符，当遇到&#x27;\0&#x27;则表达到达字符串末尾，此时可以终止循环</span></span><br><span class="line"><span class="keyword">while</span>(*str != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断当前的字符和下一个字符的ASCII是否相同</span></span><br><span class="line"><span class="keyword">if</span>(*str == *(str+<span class="number">1</span>))</span><br><span class="line">&#123;</span><br><span class="line">cnt++; </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">max = (max &lt; cnt) ?  cnt : max;</span><br><span class="line">cnt = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">str++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//当终止循环时，则把最大值返回</span></span><br><span class="line"><span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="4-实现字符串的拷贝（不调用库函数的情况下）"><a href="#4-实现字符串的拷贝（不调用库函数的情况下）" class="headerlink" title="4.实现字符串的拷贝（不调用库函数的情况下）"></a>4.实现字符串的拷贝（不调用库函数的情况下）</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :MyStrcpy</span></span><br><span class="line"><span class="comment">*function :  实现字符串的拷贝（不调用库函数的情况下），是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str_src :需要拷贝字符串的地址</span></span><br><span class="line"><span class="comment">*@str_dest:待拷贝的目标空间的地址</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  函数调用成功则返回目标空间的地址</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  None</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">char</span> * <span class="title function_">MyStrcpy</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str_src,<span class="type">char</span> *str_dest)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//循环的把str_src字符串的每个字符进行赋值，赋值到str_dest地址下</span></span><br><span class="line"><span class="keyword">while</span>(*str_src != <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//如果没有到达字符串末尾，则把字符串的字符按照顺序依次赋值</span></span><br><span class="line">*str_dest = *str_src++;</span><br><span class="line"> </span><br><span class="line">str_dest++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//包含了&#x27;\0&#x27;</span></span><br><span class="line">*str_dest = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> str_dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="5-实现字符串的比较"><a href="#5-实现字符串的比较" class="headerlink" title="5.实现字符串的比较"></a>5.实现字符串的比较</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :MyStrcmp</span></span><br><span class="line"><span class="comment">*function :  实现字符串的比较（不调用库函数的情况下），是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str1 :需要比较的第一个字符串的地址</span></span><br><span class="line"><span class="comment">*@str2 :需要比较的第二个字符串的地址</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  两个字符串相同则返回0，如果不相同则返回1</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  None</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">MyStrcmp</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str1,<span class="type">const</span> <span class="type">char</span> *str2)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//循环的比较两个字符串的字符ASCII码是否相等</span></span><br><span class="line"><span class="keyword">while</span>( *str1++ == *str2++ )</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (*str1 == <span class="string">&#x27;\0&#x27;</span> &amp;&amp; *str2 == <span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="6-实现把一个char组成的字符串循环右移n个"><a href="#6-实现把一个char组成的字符串循环右移n个" class="headerlink" title="6.实现把一个char组成的字符串循环右移n个"></a>6.实现把一个char组成的字符串循环右移n个</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*******************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :StrRightShift</span></span><br><span class="line"><span class="comment">*function :  实现把一个char组成的字符串循环右移n个。是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str  :需要右移的字符串的地址</span></span><br><span class="line"><span class="comment">*@n    :需要右移的位数</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  调用成功返回移位的字符串的首地址</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  原来是&quot;abcdefghi&quot; 如果n=2，移位后应该是&quot;hiabcdefg&quot;</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">char</span> * <span class="title function_">StrRightShift</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str,<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//计算字符的实际长度</span></span><br><span class="line"><span class="type">int</span> cnt = <span class="built_in">strlen</span>(str);</span><br><span class="line"></span><br><span class="line"><span class="comment">//printf(&quot;string cnt = %d\n&quot;,cnt);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//给字符串的字符申请内存</span></span><br><span class="line"><span class="type">char</span> *p = (<span class="type">char</span> *)<span class="built_in">malloc</span>(cnt);</span><br><span class="line"></span><br><span class="line"><span class="comment">//把输入的字符串中的字符备份到堆内存</span></span><br><span class="line"><span class="built_in">strcpy</span>(p,str);</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> temp = <span class="number">0</span>; <span class="comment">//存储要移位的字符</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//循环进行字符的移位        </span></span><br><span class="line"> <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">&#123;</span><br><span class="line">temp = *(p + cnt - <span class="number">1</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;temp = %c\n&quot;</span>,temp);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> j = cnt - <span class="number">2</span>; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">&#123;</span><br><span class="line">*(p+j+<span class="number">1</span>)= *(p+j);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*p = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出移位后的字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;string is %s\n&quot;</span>,str);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;string is %s\n&quot;</span>,p);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="7-实现将一个输入的字符串进行逆序"><a href="#7-实现将一个输入的字符串进行逆序" class="headerlink" title="7.实现将一个输入的字符串进行逆序"></a>7.实现将一个输入的字符串进行逆序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :StrReverse</span></span><br><span class="line"><span class="comment">*function :  实现将一个输入的字符串进行逆序            是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str  :需要逆序的字符串的地址</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  调用成功返回逆序之后的字符串的首地址</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  原来是&quot;helloworld&quot; 逆序后应该是&quot;dlrowolleh&quot;</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* *****************************************************************/</span></span><br><span class="line"><span class="type">char</span> *<span class="title function_">StrReverse</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> *p = (<span class="type">char</span> *)<span class="built_in">malloc</span>(<span class="number">128</span>);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> cnt = <span class="built_in">strlen</span>(str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; cnt; ++i)</span><br><span class="line">&#123;</span><br><span class="line">*(p+i) = *((str+cnt<span class="number">-1</span>)-i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="8-递归思想实现将一个输入的字符串的实际长度"><a href="#8-递归思想实现将一个输入的字符串的实际长度" class="headerlink" title="8.递归思想实现将一个输入的字符串的实际长度"></a>8.递归思想实现将一个输入的字符串的实际长度</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :StrReverse</span></span><br><span class="line"><span class="comment">*function :  递归思想实现将一个输入的字符串的实际长度     是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str  :需要逆序输出的字符串的地址</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  返回计算的字符数量，不包括&#x27;\0&#x27;</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  None</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* ******************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">MyStrlen</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *ptr)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//写好终止条件，遇到&#x27;\0&#x27;结束递归，&#x27;\0&#x27;不计算在内</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">&#x27;\0&#x27;</span> == *ptr)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> MyStrlen(ptr+<span class="number">1</span>)+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="9-实现将一个输入的字符串进行逆序输出"><a href="#9-实现将一个输入的字符串进行逆序输出" class="headerlink" title="9.实现将一个输入的字符串进行逆序输出"></a>9.实现将一个输入的字符串进行逆序输出</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/********************************************************************</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*name :StrReverse</span></span><br><span class="line"><span class="comment">*function :  实现将一个输入的字符串进行逆序输出           是笔试题</span></span><br><span class="line"><span class="comment">*argument :  </span></span><br><span class="line"><span class="comment">*@str  :需要逆序输出的字符串的地址</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*retval :  None</span></span><br><span class="line"><span class="comment">*author :  cecelmx@126.com</span></span><br><span class="line"><span class="comment">*date :  2024/04/17</span></span><br><span class="line"><span class="comment">* note :  原来是&quot;helloworld&quot; 逆序后应该是&quot;dlrowolleh&quot;</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* ******************************************************************/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">StrReversePrint</span><span class="params">(<span class="type">char</span> *ptr)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//写好终止条件，防止死循环出现，导致函数频繁调用出现栈溢出现象</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">&#x27;\0&#x27;</span> == *ptr)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">StrReversePrint(ptr+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,*ptr);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>编译流程</title>
+      <link href="/post/98069770.html"/>
+      <url>/post/98069770.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h1><span id="more"></span><p>如果用户设计了多个源文件，并且在main.c中调用了其他源文件中的函数，则在编译程序的时候需要把所有的源文件一起编译，输入命令  gcc  xxx.c  xxx.c … -o 可执行文件</p><img src="/post/98069770/image-20250303151534298.png" class="" title="image-20250303151534298"><blockquote><p> <strong>C语言程序编译过程：源程序  —-  预处理  — 编译 — 汇编 —  链接 —  可执行文件</strong></p></blockquote><h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>对源码进行简单的加工，GCC编译器会调用预处理器cpp对程序进行预处理，其实就是解释源程序中所有的预处理指令，如#include（文件包含）、#define（宏定义）、#if（条件编译）等以#号开头的预处理语句。</p><p>这些预处理指令将会在预处理阶段被解释掉，如会把被包含的文件拷贝进来，覆盖掉原来的#include语句，把所有的宏定义展开，所有的条件编译语句被执行，GCC还会把所有的注释删掉，添加必要的调试信息。</p><p><code>预处理指令： gcc  -E  xxx.c  -o  xxx.i   会生成预处理文件  xxx.i</code></p><h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>就是对经过预处理之后的.i文件进行进一步翻译，也就是对语法、词法的分析，最终生成对应硬件平台的汇编文件，具体生成什么平台的汇编文件取决于编译器，比如X86平台使用gcc编译器，而ARM平台使用交叉编译工具arm-linux-gcc。</p><p><code>编译指令  ： gcc  -S  xxx.i  -o  xxx.s   会生成汇编文件  xxx.s</code></p><h2 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h2><p>GCC编译器会调用汇编器as将汇编文件翻译成可重定位文件，其实就是把.s文件的汇编代码翻译为相应的指令。</p><p><code>编译指令  ： gcc  -c  xxx.s  -o  xxx.o   会生成目标文件  xxx.o</code></p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>经过汇编步骤后生成的.o文件其实是ELF格式的可重定位文件，虽然已经生成了指令流，但是需要重定位函数地址等，所以需要链接系统提供的标准C库和其他的gcc基本库文件等，并且还要把其他的.o文件一起进行链接。-lc  -lgcc  是默认的，可以省略</p><p><code>编译指令：gcc  xxx.o...  -o  xxx  -lc  -lgcc  会得到可执行文件  xxx  // l是lib的缩写</code></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>模块化编程</title>
+      <link href="/post/a5f7ca11.html"/>
+      <url>/post/a5f7ca11.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h1><span id="more"></span><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><ul><li><strong>降低程序耦合，增加内聚</strong></li><li><strong>用户会把封装好的函数接口按照不同的功能放在不同的源文件中，这样一个项目工程中就可能会存在多个源文件，但是一个项目中只能有一个程序入口，所以只能有一个源文件中有main函数。</strong></li></ul><h2 id="2-封装流程"><a href="#2-封装流程" class="headerlink" title="2.封装流程"></a>2.封装流程</h2><img src="/post/a5f7ca11/image-20250303144445715.png" class="" title="image-20250303144445715"><img src="/post/a5f7ca11/image-20250303144450989.png" class="" title="image-20250303144450989"><p><em>注意：如果在一个源文件中调用另一个源文件中的函数接口，则可以选择把函数的声明都单独的写入在头文件中，然后在源文件中利用预处理指令#include进行包含即可。</em></p><blockquote><p>创建.h头文件，引用的时候要加””,因为是本地引用，系统引用加&lt; &gt;</p></blockquote><img src="/post/a5f7ca11/image-20250303144902687.png" class="" title="image-20250303144902687"><blockquote><p>.c文件里面包含本文件的.h文件</p></blockquote><img src="/post/a5f7ca11/image-20250303145008954.png" class="" title="image-20250303145008954"><blockquote><p>.h文件里面包含需要用到的系统头文件和.c文件中函数的声明</p></blockquote><img src="/post/a5f7ca11/image-20250303145404200.png" class="" title="image-20250303145404200"><blockquote><p>在main函数的源文件中，引用另一个源文件中的函数，包含头文件即可</p></blockquote><img src="/post/a5f7ca11/image-20250303145239526.png" class="" title="image-20250303145239526"><blockquote><p>将用到的.c文件都要gcc编译成一个文件</p></blockquote><img src="/post/a5f7ca11/image-20250303145527576.png" class="" title="image-20250303145527576"><p>如果在一个源文件中使用另一个源文件的全局变量，这种是不允许的，是不能直接使用的！全局变量的作用域是针对整个文件有效，并不针对整个工程有效，所以可以使用C语言中提供的extern关键字来声明全局变量。</p><img src="/post/a5f7ca11/image-20250303145801687.png" class="" title="image-20250303145801687"><p><code>思考：为什么函数没有声明是外部的，但是却可以正常调用，而对于全局变量就不可以呢？</code></p><p>回答：因为C语言标准中规定函数定义的时候默认是可以被外部链接的，也就是函数声明的时候默认是有extern的，因为函数定义时有函数体，函数声明时没有函数体，所以编译器可以区分函数声明和函数定义。</p><p>但是变量则不同，变量遵循“先定义，后使用”的原则。变量在定义的时候内核就会分配内存空间，所以编译器没办法区分用户是打算声明一个变量还是定义一个变量，所以为了避免二义性，C语言就规定如果打算声明一个变量可以被外部链接，就必须使用extern关键字进行声明。</p><p><code>思考：在设计程序时使用extern来声明函数或者变量非常麻烦，请问有没有更简单的一种方案实现相同的效果，如果有，应该如何设计？</code></p><p>回答：是有的，可以设计一个头文件，这样就可以把函数的声明、全局变量、宏定义等都放在头文件中，源文件只需要包含头文件就可以使用。C语言中头文件以xxx.h结尾</p><p><em>注意：在实际开发中，可能会出现头文件的嵌套包含，这样就会导致如果多个源文件都引入相同的头文件，就会出现重复定义的现象，为了避免这种问题出现，所以用户在设计头文件的时候需要使用条件编译指令来防止头文件的重复包含。头文件的标准写法如下所示：</em></p><p><code>#ifndef   _XXX_H    //XXX是头文件的名称的大写，作为宏</code></p><p><code>#define  _XXX_H</code></p><p><code>//头文件的内容</code></p><p><code>#endif  注意：头文件的有效内容应该写在 #endif 预处理指令之前</code></p><p><code>思考：用户在某些情况下并不想让源文件中的所有函数被可以被其他文件调用，但是函数定时默认的属性都是extern的，请问如何解决这种问题？</code></p><p><em>回答：可以在定义函数的时候使用关键字static进行修饰，static关键字表示静态的，也属于C语言中的存储类说明符，如果用来修饰函数，则表达该函数的作用域只对本文件有效。</em></p><p><em>使用static关键字修饰的函数也被称为静态函数，静态函数只能在函数定义的源文件中使用。由于静态函数的作用域只在当前文件有效，所以静态函数的名称可以和其他源文件中的函数重复。</em></p><p><em>注意：如果静态函数被定义在头文件中，则包含该头文件的源文件都可以使用该静态函数，因为预处理阶段头文件中所有内容会被预处理器拷贝到源文件中。</em></p><blockquote><p>auto是C语言关键字之一，中文具有自动的含义，属于存储类说明符之一，只能用来修饰局部变量，所以只能在函数中使用，auto关键字具有隐式说明，在局部变量创建的时候默认存在，一般用auto修饰的变量也被称为自动变量，指的是变量由系统自动管理，变量创建时系统自动分配内存单元，变量的作用域结束时系统自动释放。</p></blockquote><blockquote><p>register是C语言关键字之一，中文具有寄存器的含义，属于存储类说明符之一。使用register关键字修饰的变量也被称为寄存器变量，只能用来修饰存储在寄存器中的局部变量，目的是提高程序的运行效率，实际开发中基本不用，了解即可。</p><p>注意：register修饰定义并不意味着变量将被存储在寄存器中，它意味着变量可能存储在寄存器中，这取决于硬件和实现的限制。</p></blockquote><h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><blockquote><p>C语言标准中提供了一个关键字叫做inline，被inline关键字修饰的函数被称为内联函数，一般在定义函数接口的时候才可以使用inline进行修饰。</p></blockquote><img src="/post/a5f7ca11/image-20250303150908364.png" class="" title="image-20250303150908364"><img src="/post/a5f7ca11/image-20250303150925612.png" class="" title="image-20250303150925612"><img src="/post/a5f7ca11/image-20250303150933615.png" class="" title="image-20250303150933615"><p>可以知道，内联函数和普通函数的区别只是在函数调用的时候不需要进行函数跳转，也不需要保存函数上下文，因为编译器会把内联函数的代码段拷贝一份到被调用的位置，所以内联函数中不应该使用递归或者循环等代码，要求内联函数一定要精简，越短越好</p><p>当然，一个普通函数如果代码段很多，其实也可以使用关键字inline进行修饰，但是编译器不一定会把这种函数当做内联函数来对待</p><p>注意：在函数定义的时候用inline修饰是有效的，在函数声明的时候用inline来修饰是无效的。</p><p>具有内部链接的函数都可以作为内联函数，但是要和被调用的函数在同一个源文件中，如果两个源文件都打算使用内联函数，此时有两种方案：第一种是在另一个源文件中重新定义一个相同的内联函数，第二种则是把内联函数定义在头文件中，需要使用的源文件就只需要包含头文件即可。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集成开发</title>
+      <link href="/post/73230c70.html"/>
+      <url>/post/73230c70.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="集成开发"><a href="#集成开发" class="headerlink" title="集成开发"></a>集成开发</h1><span id="more"></span><p><em>比如可以把vmware虚拟机、secureCRT软件、tftp工具进行合并，也就是用一个软件来代替这三款软件，所以可以选择使用MobaXterm工具。</em></p><h2 id="1-从windows系统中传入到linux中"><a href="#1-从windows系统中传入到linux中" class="headerlink" title="1.从windows系统中传入到linux中"></a>1.从windows系统中传入到linux中</h2><blockquote><p>1.利用该软件连接到开发板的linux系统，注意：端口号不要选错</p></blockquote><img src="/post/73230c70/image-20250302220121940.png" class="" title="image-20250302220121940"><blockquote><p>2.为了提高文件的传输效率，所以可以利用该软件的tftp协议来实现文件的传输</p></blockquote><img src="/post/73230c70/image-20250302220151338.png" class="" title="image-20250302220151338"><ul><li>从电脑的TFTP主目录传送文件（比如a.txt）到开发板   参数 -g 获取  -r 指定文件名</li></ul><p><code>[root@GEC6818 ~]# tftp -g  192.168.10.xxx -r  a.txt  192.168.xxx.xxx指的是计算机的IP</code></p><ul><li><p>将开发板的文件（比如b.txt）发送到电脑的TFTP主目录  参数 -p 上传  -r 指定文件名</p><p><code>[root@GEC6818 ~]# tftp  -p  192.168.10.xxx -r  b.txt  192.168.xxx.xxx指的是计算机的IP</code></p></li></ul><blockquote><p>3.打开vmware虚拟机的linux系统，在终端安装SSH工具，方便使用SSH工具远程登录基本使用格式</p></blockquote><p><code>gec@ubuntu:~$ sudo  apt  install  openssh-server ssh</code></p><p><code>gec@ubuntu:~$ sudo  systemctl  start   ssh   //启动SSH服务</code></p><p><code>gec@ubuntu:~$ sudo systemctl  enable  ssh      //SSH服务开机自启</code></p><img src="/post/73230c70/image-20250302220614728.png" class="" title="image-20250302220614728"><p><strong>SSH被称为安全外壳协议（Secure Shell，简称SSH），是一种在不安全网络上用于安全远程登录和其他安全网络服务的协议。</strong></p><blockquote><p>4.利用MobaXterm软件的SSH工具连接到虚拟机的linux系统</p></blockquote><img src="/post/73230c70/image-20250302220701951.png" class="" title="image-20250302220701951"><img src="/post/73230c70/image-20250302220709311.png" class="" title="image-20250302220709311"><blockquote><p>5.另外6818开发板也是支持ssh远程登录，只不过需要在6818开发板中安装ssh工具</p></blockquote><img src="/post/73230c70/image-20250302220751989.png" class="" title="image-20250302220751989"><blockquote><p>6.利用tftp服务器把openssh.tar.bz压缩包传输到开发板的工作路径下，并完成解压动作</p></blockquote><p><code>[root@GEC6818 /workspace]# tar  -zxvf  openssh.tar.bz</code></p><img src="/post/73230c70/image-20250302220825568.png" class="" title="image-20250302220825568"><img src="/post/73230c70/image-20250302220834311.png" class="" title="image-20250302220834311"><blockquote><p>7.切换到解压之后的openssh文件夹内，然后执行一个名字叫做auto的可执行文件</p></blockquote><p><code>[root@GEC6818 /workspace]# ./auto</code></p><img src="/post/73230c70/image-20250302220909577.png" class="" title="image-20250302220909577"><blockquote><p>8.可执行文件完成后，需要设置开发板的SSH服务的密码，此时输入指令:  passwd  root</p></blockquote><img src="/post/73230c70/image-20250302220939169.png" class="" title="image-20250302220939169"><blockquote><p>9.根据下图的配置，利用MobaXterm软件的SSH工具连接到开发板的Linux系统</p></blockquote><img src="/post/73230c70/image-20250302220958822.png" class="" title="image-20250302220958822"><img src="/post/73230c70/image-20250302221005461.png" class="" title="image-20250302221005461"><p><strong>安装的脚本要重启才能生效</strong></p><blockquote><p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile   #配置文件 文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p></blockquote><img src="/post/73230c70/image-20250303001415142.png" class="" title="image-20250303001415142"><blockquote><p>tftp用于在windows系统和开发板之间的传递，共享文件夹用于在windows系统和虚拟机之间的传递</p><p>scp三方都可以互传(三方都联网，用ssh连接，处于同一区域网下)，可以传文件和文件夹</p></blockquote><img src="/post/73230c70/image-20250303002010993.png" class="" title="image-20250303002010993"><p><code>[root@GEC6818 /]# scp gec@192.168.5.2:/home/gec/demo_arm .  #scp + 用户名@ip：文件位置 存储位置  下载文件</code></p><img src="/post/73230c70/image-20250303003416779.png" class="" title="image-20250303003416779"><p><code>[root@GEC6818 /]# scp 14.c gec@192.168.5.2:/home/ged #scp + 文件名 + 用户名@ip：放文件的位置   上传文件</code></p><img src="/post/73230c70/image-20250303003753997.png" class="" title="image-20250303003753997"><p><code>[root@GEC6818 /]# scp -r llwork/ gec@192.168.5.2:/home/gec #上传文件夹   -r代表递进</code></p><h2 id="集写代码，编译，执行为一体-VScode"><a href="#集写代码，编译，执行为一体-VScode" class="headerlink" title="集写代码，编译，执行为一体(VScode)"></a>集写代码，编译，执行为一体(VScode)</h2><blockquote><p> 1.VScode拓展中有一款叫做Remote-SSH的插件，该插件支持在Vscode中远程登录主机</p></blockquote><img src="/post/73230c70/image-20250303114556324.png" class="" title="image-20250303114556324"><blockquote><p>2.点击Vscode左下角的远程连接选项，然后选择“连接到主机”—&gt;点击“增加新的主机”</p></blockquote><img src="/post/73230c70/image-20250303114627539.png" class="" title="image-20250303114627539"><img src="/post/73230c70/image-20250303114651099.png" class="" title="image-20250303114651099"><img src="/post/73230c70/image-20250303114658315.png" class="" title="image-20250303114658315"><blockquote><p>3.选择默认的配置文件，并输入要远程登录的主机信息，格式为：主机名@主机IP</p></blockquote><img src="/post/73230c70/image-20250303114724874.png" class="" title="image-20250303114724874"><img src="/post/73230c70/image-20250303114732891.png" class="" title="image-20250303114732891"><blockquote><p>4.配置成功后点击“连接”，并输入远程主机的密码，连接成功后再次输入主机的密码！</p></blockquote><img src="/post/73230c70/image-20250303114817220.png" class="" title="image-20250303114817220"><img src="/post/73230c70/image-20250303114837158.png" class="" title="image-20250303114837158"><img src="/post/73230c70/image-20250303114920995.png" class="" title="image-20250303114920995"><img src="/post/73230c70/image-20250303114931794.png" class="" title="image-20250303114931794"><blockquote><p>5.如果打算在Vscode中同时连接虚拟机以及开发板的linux系统，则需要开启两个终端</p></blockquote><img src="/post/73230c70/image-20250303115004336.png" class="" title="image-20250303115004336"><blockquote><p>7.另外如果打算在Vscode中完成虚拟机和开发板的文件互传，则可以使用scp命令实现</p></blockquote><p><code>[root@GEC6818 /workspace]# scp  &lt;file&gt;  &lt;host&gt;@&lt;ip&gt;:&lt;path&gt;   //上传文件给远程主机</code></p><p><code>[root@GEC6818 /workspace]# scp  &lt;host&gt;@&lt;ip&gt;:&lt;file&gt;  &lt;path&gt;   //从远程主机下载文件</code></p><ul><li><strong>注意：如果打算上传或者下载的文件是一个目录，可以使用scp命令的选项[-r]，递归实现！</strong></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>交叉编译器安装</title>
+      <link href="/post/706f61fa.html"/>
+      <url>/post/706f61fa.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="交叉编译器安装"><a href="#交叉编译器安装" class="headerlink" title="交叉编译器安装"></a>交叉编译器安装</h1><span id="more"></span><p><strong>交叉编译器就是在一种计算机环境中运行的编译程序，能编译出在另外一种环境下运行的代码。由于开发板的硬件平台是ARM，但是开发板并不具备编译程序的能力，所以需要在计算机中的linux系统对程序进行编译。但是计算机的硬件平台是X86_64，所以并不能使用gcc编译器生成在ARM平台运行的可执行程序，所以就需要在计算机的linux系统中安装交叉编译工具，这样就可以在计算机的linux系统中交叉编译源程序并生成可以在ARM平台运行的可执行文件。</strong></p><p>(编译C语言都是一样的，但是不同平台的机器可识别的语言是不一样的)</p><blockquote><p>1.把交叉编译工具的压缩包拷贝到设置好的共享文件夹，并从共享文件夹拷贝到虚拟机的家目录</p></blockquote><img src="/post/706f61fa/image-20250302112409370.png" class="" title="image-20250302112409370"><p><em>注意不可以在共享文件夹中对该压缩包进行解压，因为共享文件夹是挂载到linux系统，不属于linux系统</em></p><blockquote><p>2.对压缩包进行解压，输入命令：xz  –decompress  arm-linux-gnueabi-5.4.0.tar.xz</p></blockquote><img src="/post/706f61fa/image-20250302112601021.png" class="" title="image-20250302112601021"><blockquote><p>3.利用超级用户的权限对归档文件进行释放，并且直接释放到家目录下，</p></blockquote><img src="/post/706f61fa/image-20250302112617046.png" class="" title="image-20250302112617046"><blockquote><p>4.解压成功后可以看到在&#x2F;home&#x2F;xxx目录下就多了一个usr文件夹，此时要配置环境变量</p></blockquote><p><code>gec@ubuntu:~$ cd /home/gec/usr/local/arm/5.4.0/usr/bin    //gec是用户名，需要修改！</code></p><p><code>gec@ubuntu:~$ echo &quot;export PATH=/home/gec/usr/local/arm/5.4.0/usr/bin:$PATH&quot;  &gt;&gt;  ~/.bashrc</code>   # &gt;&gt; 这里是追加</p><p><code>gec@ubuntu:~$ source ~/.bashrc     //让配置文件立即生效</code></p><img src="/post/706f61fa/image-20250302112838928.png" class="" title="image-20250302112838928"><blockquote><p>5.配置好环境变量之后，测试交叉编译工具是否正常，可以输入命令arm-linux-gcc -v查看</p></blockquote><img src="/post/706f61fa/image-20250302112909895.png" class="" title="image-20250302112909895"><blockquote><p>6.如果可以查看交叉编译工具的版本，则编写一个源文件，利用交叉编译工具进行编译：</p></blockquote><img src="/post/706f61fa/image-20250302112932513.png" class="" title="image-20250302112932513"><p><em>注意如果利用交叉编译命令arm-linux-gcc对源文件进行编译时遇到以下错误情况</em></p><p><em>&#x2F;usr&#x2F;local&#x2F;arm&#x2F;5.4.0&#x2F;usr&#x2F;bin&#x2F;..&#x2F;libexec&#x2F;gcc&#x2F;arm-none-linux-gnueabi&#x2F;5.4.0&#x2F;cc1: error while loading shared libraries: libmpfr.so.4: cannot open shared object file: No such file or directory</em></p><p><em>原因是加载共享库时出错：libmpfr.so.4:无法打开共享对象文件：没有这样的文件或目录</em></p><blockquote><p>jin@jin-virtual-machine:~$ sudo find &#x2F; -name libmpfr.so*    #找到这个文件的文件夹</p></blockquote><img src="/post/706f61fa/image-20250302120613228.png" class="" title="image-20250302120613228"><p>执行以下代码即可</p><p><strong>sudo ln -s  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.6  &#x2F;usr&#x2F;lib&#x2F;x86_64-linux-gnu&#x2F;libmpfr.so.4</strong></p><img src="/post/706f61fa/image-20250302113057925.png" class="" title="image-20250302113057925"><img src="/post/706f61fa/image-20250302113123682.png" class="" title="image-20250302113123682"><img src="/post/706f61fa/image-20250302113136505.png" class="" title="image-20250302113136505"><p><em>可以看到，使用不同的编译器可以对同一个源文件进行编译，只不过生成的可执行文件的执行平台不同，可执行文件hello_arm只能在ARM平台运行（开发板），可执行文件hello_x86只能在X86平台运行（计算机）。</em></p><ul><li>gec@gec-virtual-machine:~$ file demo_arm   #查看文件类型</li></ul><img src="/post/706f61fa/image-20250302122258025.png" class="" title="image-20250302122258025"><blockquote><p>7.把生成的在ARM平台运行的可执行文件发送到开发板的个人路径，输入：rx  demo_arm</p></blockquote><img src="/post/706f61fa/image-20250302113232556.png" class="" title="image-20250302113232556"><p><em>发送到开发板的可执行文件默认没有权限执行，原因是因为虚拟机的linux系统使用的是普通用户，而开发板中的linux系统是超级用户，所以文件权限不一致，导致可执行文件无法运行，此时只需要修改开发板中的可执行文件的权限为777即可，777是最高权限。</em></p><img src="/post/706f61fa/image-20250302113314766.png" class="" title="image-20250302113314766">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>主机，linux系统，开发板互相通信</title>
+      <link href="/post/601bc42c.html"/>
+      <url>/post/601bc42c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="主机，linux系统，开发板互相通信"><a href="#主机，linux系统，开发板互相通信" class="headerlink" title="主机，linux系统，开发板互相通信"></a>主机，linux系统，开发板互相通信</h1><span id="more"></span><h2 id="1-系统之间文件共享-linux系统和windows系统"><a href="#1-系统之间文件共享-linux系统和windows系统" class="headerlink" title="1.系统之间文件共享(linux系统和windows系统)"></a>1.系统之间文件共享(linux系统和windows系统)</h2><blockquote><p>1.点击VMware菜单栏的“虚拟机”，然后点击“设置”，点  击“选项”，点击“共享文件夹”</p></blockquote><img src="/post/601bc42c/image-20250227162840228.png" class="" title="image-20250227162840228"><p>![共享文件夹1](主机，linux系统，开发板互相通信&#x2F;共享文件夹1.png</p><blockquote><p>2.设置主机路径（windows系统的路径，），设置名称（linux系统的文件夹的名称，英文）</p></blockquote><img src="/post/601bc42c/image-20250227162758815.png" class="" title="image-20250227162758815"><blockquote><p>3.然后打开Terminal终端，输入命令cd  <em><strong>*&#x2F;mnt&#x2F;hgfs&#x2F;*</strong></em> 然后按下回车，输入ls命令查看</p></blockquote><img src="/post/601bc42c/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B93.png" class="" title="共享文件夹3"><blockquote><p>4.可以看到share文件夹就是设置好的共享文件夹的名称，切换到该目录即可实现共享。</p></blockquote><img src="/post/601bc42c/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B94.png" class="" title="共享文件夹4"><h2 id="2-ARM开发板"><a href="#2-ARM开发板" class="headerlink" title="2.ARM开发板"></a>2.ARM开发板</h2><blockquote><p>1.进行硬件接线，安装USB转串口线的CH340驱动，检查驱动是否安装成功</p></blockquote><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF1.png" class="" title="开发板1"><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF2.png" class="" title="开发板2"><blockquote><p>2.打开secureCRT软件之后，点击“快速连接”，并选择“serial”协议，进行配置，如下：</p></blockquote><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF3.png" class="" title="开发板3"><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF4.png" class="" title="开发板4"><ul><li><strong>配置完成后，点击“连接”，如果软件左上角出现绿色对勾，说明端口选择正确，如下：</strong></li></ul><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF5.png" class="" title="开发板5"><ul><li><strong>如果端口正确，则打开开发板的电源开关（往上拨），等待系统启动，此时不要按键盘！</strong></li></ul><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF6.png" class="" title="开发板6"><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF7.png" class="" title="开发板7"><ul><li><p><em>注意：如果启动的过程中卡在某一行不动，原因是开发板启动后会自动运行一个应用程序，该应用程序占用了shell终端，此时只需要按</em>**快捷键Ctrl+C**<em>就可以强制结束进程，此时可以顺利使用shell终端。</em></p></li><li><p><strong>由于开发板板载的是Linux系统，所以可以通过secureCRT调试工具发送shell命令</strong></p></li><li><p><strong>点击secureCRT菜单栏“选项”-&gt;“会话选项”-&gt;“外观”，修改字体大小和字符编码：</strong></p></li></ul><img src="/post/601bc42c/%E5%BC%80%E5%8F%91%E6%9D%BF8.png" class="" title="开发板8"><h1 id="3-传输文件-从主机-windows-到开发板-Linux"><a href="#3-传输文件-从主机-windows-到开发板-Linux" class="headerlink" title="3.传输文件 (从主机(windows)到开发板(Linux))"></a>3.传输文件 (从主机(windows)到开发板(Linux))</h1><pre><code>### 3.1检查开发板内存</code></pre><blockquote><p>1.示意图。windows写代码，虚拟机编译，开发板执行</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%931.png" class="" title="传输1"><ul><li><strong>在开发板中创建一个新目录，来存储文件，防止误操作</strong></li></ul><img src="/post/601bc42c/%E4%BC%A0%E8%BE%932.png" class="" title="传输2"><blockquote><p>2.挂载内存 :把硬盘剩余的空间挂在到根文件系统中进行使用。</p><p>[root@GEC6818 &#x2F;]# df  -h #查看根目录磁盘分布情况</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%933.png" class="" title="传输3"><blockquote><p>[root@GEC6818 &#x2F;]# cat  &#x2F;proc&#x2F;partitions #查看分区使用情况</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%934.png" class="" title="传输4"><blockquote><p>[root@GEC6818 &#x2F;]# mkfs.vfat  &#x2F;dev&#x2F;mmcblk0p7  #格式化暂未被使用的硬盘分区mmcblk0p7</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%935.png" class="" title="传输5"><blockquote><p>[root@GEC6818 &#x2F;]# mount  -t  vfat  &#x2F;dev&#x2F;mmcblk0p7   &#x2F;workspace   #把该分区挂载到指定目录下</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%936.png" class="" title="传输6"><ul><li>[root@GEC6818 &#x2F;]# df  -h   #(1) 检测是否挂载成功，分区挂载指令是单次有效的，所以需要把挂载指令写入自启脚本中</li></ul><img src="/post/601bc42c/%E4%BC%A0%E8%BE%937.png" class="" title="传输7"><blockquote><p>[root@GEC6818 &#x2F;]# vi  &#x2F;etc&#x2F;profile  #打开开发板配置文件，该文件是开机自动执行，所以利用vi工具在文件末尾追加内容</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%938.png" class="" title="传输8"><blockquote><p>[root@GEC6818 &#x2F;]# reboot  #重启开发板使配置文件生效</p></blockquote><h3 id="3-2指令传输（单个文件传输）-线传输"><a href="#3-2指令传输（单个文件传输）-线传输" class="headerlink" title="3.2指令传输（单个文件传输）(线传输)"></a>3.2指令传输（单个文件传输）(线传输)</h3><blockquote><p>1.切换到开发板的个人工作路径，然后在secureCRT的shell终端中输入命令：rx 文件名</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%939.png" class="" title="传输9"><blockquote><p>2.点击软件菜单栏的“传输”，然后点击“发送Xmodem”，选择windows系统中的文件：</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9310.png" class="" title="传输10"><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9311.png" class="" title="传输11"><ul><li><strong>等待文件发送完成即可，可以通过进度条来检查文件是否发送完成，具体操作如下所示：</strong></li></ul><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9312.png" class="" title="传输12"><h3 id="3-2指令传输（多个文件传输）（线传输）"><a href="#3-2指令传输（多个文件传输）（线传输）" class="headerlink" title="3.2指令传输（多个文件传输）（线传输）"></a>3.2指令传输（多个文件传输）（线传输）</h3><p><em>注意：并且rx命令也无法一次传输多个文件，并且rx命令的传输速度较慢，为了解决该问题，可以把rz命令传输到开发板的 &#x2F;bin 目录下，这样可以使用rz命令一次传输多个文件，如下：</em></p><blockquote><p>1.在secureCRT的shell终端中输入命令：rx  rz，按下回车，然后找到rz命令所在文件夹</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9313.png" class="" title="传输13"><blockquote><p>2.等待文件传输完成，由于该文件是一个shell命令，所以需要修改权限： chmod 777 rz</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9314.png" class="" title="传输14"><blockquote><p>3.由于系统shell命令的环境变量设置在&#x2F;bin目录下，所以需要把rz命令移动到 &#x2F;bin目录</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9315.png" class="" title="传输15"><blockquote><p>4.测试rz命令是否正常，在secureCRT的shell终端中输入命令：rz  然后按下回车，如：</p></blockquote><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9316.png" class="" title="传输16"><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9317.png" class="" title="传输17"><p><em>注意：可修改secureCRT软件下载文件的路径，固定每次弹出窗口的路径位置，快速定位下载文件，如下所示</em></p><img src="/post/601bc42c/%E4%BC%A0%E8%BE%9318.png" class="" title="传输18"><h3 id="3-3网络传输"><a href="#3-3网络传输" class="headerlink" title="3.3网络传输"></a>3.3网络传输</h3><p><strong>在开发板和计算机处于同一个局域网的情况下，采用网口的方式来传输文件是最高效的一种方式（即通过网线把主机的文件传输到开发板上），此时可以利用tftp工具实现，tftp的全称是 tiny FTP，此工具专用于文件传输，其所为tiny意指匿名传输，是一种轻量级的FTP工具。</strong></p><blockquote><p>在windows中通过C:\Users\G&gt;ipconfig -all  #获得以太网的ip地址，子网掩码，网关和DNS，只要将以上等设置和静态的一样，就可以既可以连接到网络，也可以实现主机，linux，开发板之间的传送</p></blockquote><h4 id="3-3-1简单的介绍"><a href="#3-3-1简单的介绍" class="headerlink" title="3.3.1简单的介绍"></a>3.3.1简单的介绍</h4><h4 id="3-3-2linux网络环境配置"><a href="#3-3-2linux网络环境配置" class="headerlink" title="3.3.2linux网络环境配置"></a>3.3.2linux网络环境配置</h4><p><strong>虚拟机的网络适配器的模式有两种，分别是桥接模式和NAT模式，两者具体区别如下所示：</strong></p><blockquote><p>1.桥接模式：虚拟机跟物理机各自拥有独立的IP地址</p><p>2.NAT模式：虚拟机直接共享物理机的IP，虚拟机本身没有独立的IP地址</p></blockquote><img src="/post/601bc42c/image-20250227221223975.png" class="" title="image-20250227221223975"><p><em>对于桥接模式需要注意，必须要仔细选择桥接的物理网卡，否则会出现无法联网的情形。</em></p><img src="/post/601bc42c/image-20250228001050209.png" class="" title="image-20250228001050209"><ul><li><strong>桥接是指虚拟网卡通过物理机的某一个网络接口，直接连接到路由器去获取 IP 地址。假设物理机有WiFi、以太网等多个网口，其中无线WiFi网口连接到了互联网，而有线以太网口连接到了嵌入式板卡，那么桥接时就要注意需要桥接到哪个网口</strong></li></ul><img src="/post/601bc42c/image-20250228171954371.png" class="" title="image-20250228171954371"><ul><li>注意：如果网络参数经过多次配置导致无法再正确联网，可以通过点击上图中的“还原默认设置”<em>按钮来重置虚拟机的网络</em>。</li></ul><h4 id="3-3-3修改主机的ip"><a href="#3-3-3修改主机的ip" class="headerlink" title="3.3.3修改主机的ip"></a>3.3.3修改主机的ip</h4><blockquote><p>1.比如电脑通过网线连接到教室的网络，也就是物理机通过有线连接到网络</p></blockquote><img src="/post/601bc42c/image-20250228172305369.png" class="" title="image-20250228172305369"><blockquote><p>2.通过查看以太网的网络配置可以知道物理机的IP地址</p></blockquote><img src="/post/601bc42c/image-20250228172339676.png" class="" title="image-20250228172339676"><blockquote><p>3.此时把vmware软件的网络适配器设置为桥接模式，然后修改虚拟机桥接到有线网卡</p></blockquote><img src="/post/601bc42c/image-20250228172415935.png" class="" title="image-20250228172415935"><h4 id="3-3-3修改虚拟机的ip"><a href="#3-3-3修改虚拟机的ip" class="headerlink" title="3.3.3修改虚拟机的ip"></a>3.3.3修改虚拟机的ip</h4><blockquote><p>1.打开ubuntu系统，并通过图形界面来设置ubuntu的网络为静态IP即可</p></blockquote><img src="/post/601bc42c/image-20250228172604586.png" class="" title="image-20250228172604586"><img src="/post/601bc42c/image-20250228172614636.png" class="" title="image-20250228172614636"><blockquote><p>2.终端输入命令ifconfig查看ubuntu的IP地址，可以看到虚拟机和物理机各自有独立IP</p></blockquote><img src="/post/601bc42c/image-20250228172705059.png" class="" title="image-20250228172705059"><blockquote><p>3.通过ping命令测试虚拟机是否网络正常，比如输入命令 ping <a href="http://www.baidu.com/">www.baidu.com</a></p></blockquote><img src="/post/601bc42c/image-20250228172803029.png" class="" title="image-20250228172803029"><p><em>注意：如果准备设置网络时，发现没有ubuntu没有网络图标，则可以选择重置网络管理器</em></p><p><code>gec@ubuntu:$ sudo  service  NetworkManager  stop     //停止网络服务</code></p><p><code>gec@ubuntu:$ sudo  rm  /var/lib/NetworkManager/NetworkManager.state //删除配置文件</code></p><p><code>gec@ubuntu:$ sudo  service  NetworkManager  start          //开启网络服务</code></p><h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p><strong>在NAT模式下Ubuntu主机与物理网络之间的通信使用网络地址转换技术。这种模式下虚拟机共享主机的IP地址，可以访问外部网络，但外部网络无法直接访问虚拟机内部</strong></p><h5 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h5><p><strong>在ubuntu17.10之后的发行版中，网络参数配置可以统一通过 Netplan 来管理。具体的操作就是通过统一对 &#x2F;etc&#x2F;netplan&#x2F; 下的 yaml 文件的配置，Netplan 将读取该 yaml 描述文件来配置网络接口，然后，通过这些描述为任何给定的呈现工具生成必要的配置选项。</strong></p><blockquote><p>gec@ubuntu:~$ sudo cat &#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml    #查看 NetworkManager 配置自动获取IP的信息</p></blockquote><img src="/post/601bc42c/image-20250228173853417.png" class="" title="image-20250228173853417"><hr><p>renderer：指定yaml文件针对配置的网络工具</p><p>ethernets：配置以太网</p><p>ens33：以太网口名称  注意：需要使用ifconfig来查看，不是所有电脑都是一样的</p><p>dhcp4：自动获取IPv4的网络地址</p><p>dhcp6：自动获取IPv6的网络地址</p><p>注意：</p><p>冒号后面必须有空格</p><p>缩进的空格数必须一致</p><p>图片中的IP地址等参数只是例子，大家需要根据实际情况进行修改，否则会导致无法联网。 </p><p>注意：</p><p>想要设置自动获取IP，在终端中可以使用gedit编辑器打开该文件进行编写，但是必须使用sudo获取超级用户权限，否则无法修改该文件。</p><hr><blockquote><p>gec@ubuntu:~$ sudo gedit &#x2F;etc&#x2F;netplan&#x2F;01-network-manager-all.yaml   #使用 netplan 来给 NetworkManager 配置自动获取IP</p></blockquote><img src="/post/601bc42c/image-20250228174254298.png" class="" title="image-20250228174254298"><hr><p>[192.168.100.100&#x2F;24] 中的24代表设定的IP地址的前24比特位为子网掩码，也就是255.255.255.0</p><p>nameservers 代表 DNS 服务器</p><hr><blockquote><p>gec@ubuntu:$ sudo  netplan  apply  #配置好 yaml 文件之后，需要执行如下命令来使之生效</p></blockquote><h4 id="3-3-3修改开发板的ip"><a href="#3-3-3修改开发板的ip" class="headerlink" title="3.3.3修改开发板的ip"></a>3.3.3修改开发板的ip</h4><blockquote><p>1.开发板的网口用网线路由器，电脑用网线连路由器，还得在同一个网段，否则配置IP地址</p></blockquote><blockquote><p>在终端输入shell命令: ifconfig  eth0  192.168.xxx.xxx，xxx指的是用户拥有的IP地址！</p></blockquote><img src="/post/601bc42c/%E7%BD%91%E4%BC%A01.png" class="" title="网传1"><p><em>注意：配置的开发板的IP地址是单次有效的，所以需要把该指令写入到开发板的开机自启动的脚本文件，开发板linux系统中开机自启动的脚本文件的路径是 &#x2F;etc&#x2F;profile，可以使用vi编辑器打开该脚本，并在脚本文件的末尾写入该指令。</em></p><img src="/post/601bc42c/%E7%BD%91%E4%BC%A02-1740644621234-3.png" class="" title="网传2"><blockquote><p>2.重启开发板</p></blockquote><blockquote><p>3.检查ip，测试开发板和计算机是否网络处于连通状态，指令:  ping 计算机IP地址</p></blockquote><img src="/post/601bc42c/%E7%BD%91%E4%BC%A03.png" class="" title="网传3"><h4 id="3-3-4tftp网络传输"><a href="#3-3-4tftp网络传输" class="headerlink" title="3.3.4tftp网络传输"></a>3.3.4tftp网络传输</h4><blockquote><p>1.如果开发板和计算机的网络连通，则打开tftpd32.exe应用程序，然后进行配置</p></blockquote><img src="/post/601bc42c/image-20250302110429050.png" class="" title="image-20250302110429050"><p><em>注意：tftp工具不要关闭，只需要最小化即可，另外，如果文件的路径更改，则需要修改tftp的文件路径</em></p><blockquote><p>[root@root:~]# tftp -g 192.168.xxx.xxx -r xxx   xxx指的是文件名     #把计算机的文件下载到开发板上（IP地址为服务器IP 也就是计算机的IP地址）</p><p>[root@root:~]# tftp -p 192.168.zzz.zzz -r zzz    zzz指的是文件名     #把开发板的文件上传到计算机中（IP地址为服务器IP 也就是计算机的IP地址）</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/post/4a17b156.html"/>
+      <url>/post/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><span id="more"></span><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown语法</title>
+      <link href="/post/3c50d03d.html"/>
+      <url>/post/3c50d03d.html</url>
+      
+        <content type="html"><![CDATA[<p>整理的一些markdown常用语法</p><span id="more"></span><p>[TOC]</p><h2 id="自动生成目录"><a href="#自动生成目录" class="headerlink" title="自动生成目录"></a>自动生成目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[TOC]</span><br></pre></td></tr></table></figure><p>部分软件不支持，例如obsidian</p><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 文本</span></span><br><span class="line">关于标题：</span><br><span class="line"><span class="section"># 一级标题，一般是书籍的章标题或课程的章标题</span></span><br><span class="line"><span class="section">## 二级标题, 一般是节内容</span></span><br><span class="line"><span class="section">### 三级标题, 一般是重要知识点内容</span></span><br><span class="line">四级以上的标题基本上不用, 用加粗或分割线代替, 最大支持六级标题</span><br></pre></td></tr></table></figure><h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**文本**</span>  ctrl + b</span><br></pre></td></tr></table></figure><h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*文本*</span> ctrl + i</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 删除线</span><br><span class="line"></span><br><span class="line"><span class="code">```markdown</span></span><br><span class="line"><span class="code">~~文本~~ 波浪线 alt + shift +5</span></span><br></pre></td></tr></table></figure><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>(按tab按键缩进控制)</p><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 文本</span><br><span class="line"><span class="bullet">2.</span> 文本  </span><br><span class="line">使用数字并加上.号，再加一个空格  使用tab制表符会变颜色(仅仅限于代码块中)</span><br></pre></td></tr></table></figure><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span> 文本</span><br><span class="line"><span class="bullet">*</span> 文本</span><br><span class="line">使用 * ，+，-，再加一个空格作为列表的标记</span><br></pre></td></tr></table></figure><blockquote><p>Enter会进入下个列表，而 shift+enter 不会，则会在原有列表的基础上另起一行，shift + tab 取消列表</p></blockquote><h2 id="引用-支持嵌入"><a href="#引用-支持嵌入" class="headerlink" title="引用(支持嵌入)"></a>引用(支持嵌入)</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 文本</span></span><br><span class="line"><span class="quote">&gt; ~~文本~~</span></span><br></pre></td></tr></table></figure><ul><li>两下Enter则下一行退出引用，</li><li>shift+ tab取消本行的引用</li><li><code>&gt;</code>里面嵌入<code>&gt;</code>,则可以嵌入引用</li></ul><blockquote><blockquote><blockquote></blockquote></blockquote></blockquote><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="网页链接"><a href="#网页链接" class="headerlink" title="网页链接"></a>网页链接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">标题</span>](<span class="link">链接</span>)</span><br><span class="line">例如</span><br><span class="line">[<span class="string">文件引用</span>](<span class="link">./Database/文件.PDF</span>) 其中 ./ 表示当前目录, ../表示上级目录, ../../表示上上级别的目录</span><br><span class="line">[<span class="string">网页</span>](<span class="link">https://www.bilibili.com/</span>)</span><br></pre></td></tr></table></figure><h3 id="图像链接"><a href="#图像链接" class="headerlink" title="图像链接"></a>图像链接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">通用：</span></span><br><span class="line"><span class="code">！[文字信息](图片链接&quot;提示文本信息&quot;)</span></span><br><span class="line"><span class="code">![文字信息](图片链接&quot;提示文本信息&quot;)</span></span><br><span class="line"><span class="code">![湘湖1](https://z3.ax1x.com/2021/08/06/fuNkXq.jpg &quot;湘湖一角&quot;)</span></span><br></pre></td></tr></table></figure><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`代码`</span></span><br></pre></td></tr></table></figure><h3 id="代码块-1"><a href="#代码块-1" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```语言种类</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">代码内容</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure><h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 文本</span><br><span class="line"><span class="bullet">-</span> [X] 含X表示代表事项已完成</span><br></pre></td></tr></table></figure><h2 id="分界线"><a href="#分界线" class="headerlink" title="分界线"></a>分界线</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--- </span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p><strong>Markdown</strong> 的 <strong>注释</strong> 和 <strong>HMTL</strong> 一样，注释的内容在 <strong>渲染界面</strong> <strong>不可见</strong> （部分编辑器可见)</p><blockquote><ul><li><p><strong>注释 的格式：</strong></p></li><li><p><code>&lt;!-- 这里是注释的内容 --&gt;</code></p></li><li><ul><li>注释可以是单行，也可以是多行</li></ul></li></ul></blockquote><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">| 标题1 | 标题2 | 标题3 |</span><br><span class="line">| ----- | ----- | ----- |</span><br><span class="line">| 内容1 | 4     | 7     |</span><br><span class="line">| 2     | 5     | 8     |</span><br><span class="line">| 3     | 6     | 9     |</span><br><span class="line"></span><br><span class="line">其中:</span><br><span class="line">| :----- | ----- | ----- | 左对齐</span><br><span class="line">| :-----: | ----- | ----- | 居中</span><br><span class="line">| -----: | ----- | ----- | 右对齐</span><br></pre></td></tr></table></figure><ul><li><p><strong>|</strong> 是构成表格的主要 <strong>框架</strong></p></li><li><p><strong>-</strong> 区分 <strong>表头</strong> 和 <strong>表格主体</strong></p></li><li><p><strong>:</strong> 控制 表格内 <strong>文本内容</strong> 的 <strong>对齐方式</strong></p></li><li><p><strong>Typora编辑器中</strong> 输入 <strong><code>Ctrl + T</code></strong> 即可快速插入表格，自由定义样式</p></li><li><p>表格中文本内容的换行, 可以在 <strong>中间</strong> 插入一个 <strong><code>&lt;br&gt;</code></strong> （ 换行标签 )</p></li></ul><h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>这是一段加了下划线的文本<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p><u>这是一段加了下划线的文本</u></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
